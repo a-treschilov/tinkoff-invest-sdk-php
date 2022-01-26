@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+    nginx-sdk:
+        image: nginx:latest
+        container_name: tinkoff_invest_sdk_nginx
+        ports:
+            - "4092:80"
+        networks:
+            - tinkoff_invest_sdk_network
+        volumes:
+            - ./hosts:/etc/nginx/conf.d
+            - ./examples:/var/examples
+            - ./logs:/var/log/nginx
+        links:
+            - php-sdk
+    php-sdk:
+        build: ./images/php
+        container_name: tinkoff_invest_sdk_php
+        environment:
+            PHP_IDE_CONFIG: "serverName=tinkoff_invest_sdk_server"
+        networks:
+            - tinkoff_invest_sdk_network
+        volumes:
+            - .:/var
+networks:
+    tinkoff_invest_sdk_network:
+        driver: bridge
