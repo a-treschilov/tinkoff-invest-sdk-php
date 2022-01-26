@@ -1,8 +1,8 @@
 {
   "name": "a.treschilov/tinkoff-invest-api-sdk",
-  "description": "PHP SDK for Tinkoff invest API",
+  "description": "PHP SDK for Tinkoff invest API V2",
   "type": "library",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "authors": [
     {
       "name": "Aleksey Treschilov",

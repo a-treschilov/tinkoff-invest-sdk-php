@@ -6,7 +6,7 @@ Unofficial PHP SDK for Tinkoff invest API V2. See official API [documentation](h
 It's recommended that you use Composer to install.
 
 ```bash
-$ composer require a.treschilov/tinkoff-invest-sdk-php
+$ composer require a.treschilov/tinkoff-invest-api-sdk
 ```
 
 ### SDK requires:
