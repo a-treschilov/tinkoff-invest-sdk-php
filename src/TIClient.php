@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace ATreschilov\TinkoffInvestApiSdk;
 
+use ATreschilov\TinkoffInvestApiSdk\Services\OperationsService;
+use ATreschilov\TinkoffInvestApiSdk\Services\UsersService;
 use Grpc\ChannelCredentials;
 use JetBrains\PhpStorm\ArrayShape;
 
@@ -15,6 +17,9 @@ class TIClient
 
     private string $token;
     private string $cert;
+
+    private UsersService|null $userService = null;
+    private OperationsService|null $operationsService = null;
 
     public function __construct(string $token)
     {
@@ -44,5 +49,21 @@ class TIClient
     public function getHostName(): string
     {
         return self::INKOFF_INVEST_API2_HOST;
+    }
+
+    public function getUser()
+    {
+        if ($this->userService === null) {
+            $this->userService = new UsersService($this);
+        }
+        return $this->userService;
+    }
+
+    public function getOperations()
+    {
+        if ($this->operationsService === null) {
+            $this->operationsService = new OperationsService($this);
+        }
+        return $this->operationsService;
     }
 }

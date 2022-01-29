@@ -18,10 +18,15 @@ require __DIR__ . '/../vendor/autoload.php';
 $token = '<Your Tinkoff Invest Account Token>';
 
 $tiClient = new TIClient($token);
-$userServiceClient = new UsersServiceClient($tiClient->getHostname(), $tiClient->getOptions($token));
+$userServiceClient = new UsersServiceClient($tiClient->getHostname(), $tiClient->getOptions());
 $request = new GetAccountsRequest();
 /** @var GetAccountsResponse $response */
 list($response, $status) = $userServiceClient->GetAccounts($request)->wait();
+
+if ($status->code !== 0) {
+    echo '<pre>' . print_r($status, true) . '</pre>';
+    return;
+}
 
 $accounts = [];
 /** @var Account $account */
