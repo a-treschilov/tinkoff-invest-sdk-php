@@ -85,7 +85,7 @@ try {
   * &#10006; Shares
   * &#10006; GetAccruedInterests
   * &#10006; GetFuturesMargin
-  * &#10006; GetInstrumentBy
+  * &#10004; GetInstrumentBy
   * &#10006; GetDividends
 * [OrdersStream](https://tinkoff.github.io/investAPI/orders/)
   * &#10006; TradesStream

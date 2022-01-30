@@ -19,7 +19,7 @@ class OperationsService
         $this->client = new OperationsServiceClient($client->getHostname(), $client->getOptions());
     }
 
-    public function getPortfolio(string $accountId)
+    public function getPortfolio(string $accountId): PortfolioResponse
     {
         $request = new PortfolioRequest();
         $request->setAccountId($accountId);
@@ -30,6 +30,6 @@ class OperationsService
         if ($status->code !== 0) {
             throw new TIException($status->metadata['message'][0], (int)$status->code);
         }
-        return $response->getPositions();
+        return $response;
     }
 }
