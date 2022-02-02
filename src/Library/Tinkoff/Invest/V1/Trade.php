@@ -42,9 +42,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *Время сделки в часовом поясе UTC по времени биржи.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp timestamp = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 5;</code>
      */
-    protected $timestamp = null;
+    protected $time = null;
 
     /**
      * Constructor.
@@ -60,7 +60,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      *          Цена за 1 лот.
      *     @type int|string $quantity
      *          Количество лотов.
-     *     @type \Google\Protobuf\Timestamp $timestamp
+     *     @type \Google\Protobuf\Timestamp $time
      *          Время сделки в часовом поясе UTC по времени биржи.
      * }
      */
@@ -176,25 +176,25 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *Время сделки в часовом поясе UTC по времени биржи.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp timestamp = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 5;</code>
      * @return \Google\Protobuf\Timestamp
      */
-    public function getTimestamp()
+    public function getTime()
     {
-        return $this->timestamp;
+        return $this->time;
     }
 
     /**
      *Время сделки в часовом поясе UTC по времени биржи.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp timestamp = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 5;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTimestamp($var)
+    public function setTime($var)
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
-        $this->timestamp = $var;
+        $this->time = $var;
 
         return $this;
     }
