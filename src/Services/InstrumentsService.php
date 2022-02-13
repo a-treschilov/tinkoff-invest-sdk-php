@@ -17,7 +17,7 @@ class InstrumentsService
 
     public function __construct(TIClient $client)
     {
-        $this->client = new InstrumentsServiceClient($client->getHostname(), $client->getOptions());;
+        $this->client = new InstrumentsServiceClient($client->getHostname(), $client->getOptions());
     }
 
     /**
@@ -34,7 +34,7 @@ class InstrumentsService
         $request->setId($id);
 
         /** @var InstrumentResponse $response */
-        list($response, $status) = $this->client->GetInstrumentBy($request)->wait();
+        list($response, $status) = $this->client->GetInstrumentBy($request, [], TIClient::SPECIAL_OPTIONS)->wait();
 
         if ($status->code !== 0) {
             throw new TIException($status->metadata['message'][0], (int)$status->code);

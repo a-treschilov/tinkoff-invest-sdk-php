@@ -13,8 +13,9 @@ use JetBrains\PhpStorm\ArrayShape;
 class TIClient
 {
     private const INKOFF_INVEST_API2_HOST = 'invest-public-api.tinkoff.ru';
-    private const TINKOFF_INVEST_API2_PORT = 443;
     private const CERT_FILE = __DIR__ . '/../etc/tinkoff-ru.pem';
+
+    public const SPECIAL_OPTIONS = ['x-app-name' => 'a-treschilov.tinkoff-invest-sdk-php'];
 
     private string $token;
     private string $cert;

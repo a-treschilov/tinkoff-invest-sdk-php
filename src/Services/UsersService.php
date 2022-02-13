@@ -28,7 +28,8 @@ class UsersService
     {
         $request = new GetAccountsRequest();
         /** @var GetAccountsResponse $response */
-        list($response, $status) = $this->usersServiceClient->GetAccounts($request)->wait();
+        list($response, $status) = $this->usersServiceClient->GetAccounts($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
 
         if ($status->code !== 0) {
             throw new TIException($status->metadata['message'][0], (int)$status->code);

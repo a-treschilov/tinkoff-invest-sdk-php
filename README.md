@@ -95,7 +95,7 @@ try {
   * &#10006; GetOrderState
   * &#10006; GetOrders
 * [Operations](https://tinkoff.github.io/investAPI/operations/)
-  * &#10006; GetOperations
+  * &#10004; GetOperations
   * &#10004; GetPortfolio
   * &#10006; GetPositions
   * &#10006; GetWithdrawLimits
