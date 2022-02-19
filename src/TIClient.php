@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace ATreschilov\TinkoffInvestApiSdk;
 
 use ATreschilov\TinkoffInvestApiSdk\Services\InstrumentsService;
+use ATreschilov\TinkoffInvestApiSdk\Services\MarketDataService;
 use ATreschilov\TinkoffInvestApiSdk\Services\OperationsService;
 use ATreschilov\TinkoffInvestApiSdk\Services\UsersService;
 use Grpc\ChannelCredentials;
@@ -23,6 +24,7 @@ class TIClient
     private UsersService|null $userService = null;
     private OperationsService|null $operationsService = null;
     private InstrumentsService|null $instrumentsService = null;
+    private MarketDataService|null $marketDataService = null;
 
     public function __construct(string $token)
     {
@@ -76,5 +78,13 @@ class TIClient
             $this->instrumentsService = new InstrumentsService($this);
         }
         return $this->instrumentsService;
+    }
+
+    public function getMarketData()
+    {
+        if ($this->marketDataService === null) {
+            $this->marketDataService = new MarketDataService($this);
+        }
+        return $this->marketDataService;
     }
 }

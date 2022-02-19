@@ -136,13 +136,13 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     protected $basic_asset_size = null;
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 21;</code>
      */
     protected $country_of_risk = '';
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 22;</code>
      */
@@ -243,9 +243,9 @@ class Future extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $basic_asset_size
      *          Размер основного актива.
      *     @type string $country_of_risk
-     *          Код страны эмитента.
+     *          Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type string $country_of_risk_name
-     *          Наименование страны эмитента.
+     *          Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type string $sector
      *          Сектор экономики.
      *     @type \Google\Protobuf\Timestamp $expiration_date
@@ -790,7 +790,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 21;</code>
      * @return string
@@ -801,7 +801,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 21;</code>
      * @param string $var
@@ -816,7 +816,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 22;</code>
      * @return string
@@ -827,7 +827,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 22;</code>
      * @param string $var

@@ -74,13 +74,13 @@ try {
 * [Instruments](https://tinkoff.github.io/investAPI/instruments/)
   * &#10006; TradingSchedules
   * &#10006; BondBy
-  * &#10006; Bonds
+  * &#10004; Bonds
   * &#10006; CurrencyBy
   * &#10006; Currencies
   * &#10006; EtfBy
   * &#10006; Etfs
   * &#10006; FutureBy
-  * &#10006; Futures
+  * &#10004; Futures
   * &#10006; ShareBy
   * &#10006; Shares
   * &#10006; GetAccruedInterests
@@ -101,7 +101,7 @@ try {
   * &#10006; GetWithdrawLimits
   * &#10006; GetBrokerReport
 * [MarketData](https://tinkoff.github.io/investAPI/marketdata/)
-  * &#10006; GetCandles
+  * &#10004; GetCandles
   * &#10006; GetLastPrices
   * &#10006; GetOrderBook
   * &#10006; GetTradingStatus

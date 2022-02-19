@@ -118,13 +118,13 @@ class Share extends \Google\Protobuf\Internal\Message
      */
     protected $issue_size = 0;
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 19;</code>
      */
     protected $country_of_risk = '';
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 20;</code>
      */
@@ -237,9 +237,9 @@ class Share extends \Google\Protobuf\Internal\Message
      *     @type int|string $issue_size
      *          Размер выпуска.
      *     @type string $country_of_risk
-     *          Код страны эмитента.
+     *          Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type string $country_of_risk_name
-     *          Наименование страны эмитента.
+     *          Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type string $sector
      *          Сектор экономики.
      *     @type int|string $issue_size_plan
@@ -712,7 +712,7 @@ class Share extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 19;</code>
      * @return string
@@ -723,7 +723,7 @@ class Share extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 19;</code>
      * @param string $var
@@ -738,7 +738,7 @@ class Share extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 20;</code>
      * @return string
@@ -749,7 +749,7 @@ class Share extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 20;</code>
      * @param string $var
