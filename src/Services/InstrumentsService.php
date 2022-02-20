@@ -8,11 +8,13 @@ use ATreschilov\TinkoffInvestApiSdk\Exceptions\TIException;
 use ATreschilov\TinkoffInvestApiSdk\TIClient;
 use Google\Protobuf\Internal\RepeatedField;
 use Tinkoff\Invest\V1\BondsResponse;
+use Tinkoff\Invest\V1\EtfsResponse;
 use Tinkoff\Invest\V1\Instrument;
 use Tinkoff\Invest\V1\InstrumentRequest;
 use Tinkoff\Invest\V1\InstrumentResponse;
 use Tinkoff\Invest\V1\InstrumentsRequest;
 use Tinkoff\Invest\V1\InstrumentsServiceClient;
+use Tinkoff\Invest\V1\SharesResponse;
 
 class InstrumentsService
 {
@@ -69,7 +71,7 @@ class InstrumentsService
 
     /**
      * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
-     * @return RepeatedField
+     * @return RepeatedField Bonds Collection
      * @throws TIException
      */
     public function getFutures(?int $instrumentStatus = 1): RepeatedField
@@ -79,6 +81,48 @@ class InstrumentsService
 
         /** @var BondsResponse $response */
         list($response, $status) = $this->client->Futures($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            throw new TIException($status->metadata['message'][0], (int)$status->code);
+        }
+
+        return $response->getInstruments();
+    }
+
+    /**
+     * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
+     * @return RepeatedField Shares Collection
+     * @throws TIException
+     */
+    public function getShares(?int $instrumentStatus = 1): RepeatedField
+    {
+        $request = new InstrumentsRequest();
+        $request->setInstrumentStatus($instrumentStatus);
+
+        /** @var SharesResponse $response */
+        list($response, $status) = $this->client->Shares($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            throw new TIException($status->metadata['message'][0], (int)$status->code);
+        }
+
+        return $response->getInstruments();
+    }
+
+    /**
+     * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
+     * @return RepeatedField Etfs Collection
+     * @throws TIException
+     */
+    public function getEtfs(?int $instrumentStatus = 1): RepeatedField
+    {
+        $request = new InstrumentsRequest();
+        $request->setInstrumentStatus($instrumentStatus);
+
+        /** @var EtfsResponse $response */
+        list($response, $status) = $this->client->Etfs($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
         if ($status->code !== 0) {

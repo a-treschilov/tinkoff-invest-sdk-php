@@ -78,11 +78,11 @@ try {
   * &#10006; CurrencyBy
   * &#10006; Currencies
   * &#10006; EtfBy
-  * &#10006; Etfs
+  * &#10004; Etfs
   * &#10006; FutureBy
   * &#10004; Futures
   * &#10006; ShareBy
-  * &#10006; Shares
+  * &#10004; Shares
   * &#10006; GetAccruedInterests
   * &#10006; GetFuturesMargin
   * &#10004; GetInstrumentBy
