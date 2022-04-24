@@ -46,11 +46,23 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     private $asks;
     /**
-     *Время стакана в часовом поясе UTC.
+     *Время формирования стакана в часовом поясе UTC по времени биржи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 6;</code>
      */
     protected $time = null;
+    /**
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
+     */
+    protected $limit_up = null;
+    /**
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
+     */
+    protected $limit_down = null;
 
     /**
      * Constructor.
@@ -69,7 +81,11 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $asks
      *          Массив спроса.
      *     @type \Google\Protobuf\Timestamp $time
-     *          Время стакана в часовом поясе UTC.
+     *          Время формирования стакана в часовом поясе UTC по времени биржи.
+     *     @type \Tinkoff\Invest\V1\Quotation $limit_up
+     *          Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *     @type \Tinkoff\Invest\V1\Quotation $limit_down
+     *          Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -208,7 +224,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время стакана в часовом поясе UTC.
+     *Время формирования стакана в часовом поясе UTC по времени биржи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 6;</code>
      * @return \Google\Protobuf\Timestamp
@@ -219,7 +235,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время стакана в часовом поясе UTC.
+     *Время формирования стакана в часовом поясе UTC по времени биржи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 6;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -229,6 +245,58 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
+
+        return $this;
+    }
+
+    /**
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
+     * @return \Tinkoff\Invest\V1\Quotation
+     */
+    public function getLimitUp()
+    {
+        return $this->limit_up;
+    }
+
+    /**
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setLimitUp($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->limit_up = $var;
+
+        return $this;
+    }
+
+    /**
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
+     * @return \Tinkoff\Invest\V1\Quotation
+     */
+    public function getLimitDown()
+    {
+        return $this->limit_down;
+    }
+
+    /**
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setLimitDown($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->limit_down = $var;
 
         return $this;
     }

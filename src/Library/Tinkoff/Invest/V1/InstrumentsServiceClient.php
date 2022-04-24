@@ -62,6 +62,21 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод получения графика выплат купонов по облигации
+     * @param \Tinkoff\Invest\V1\GetBondCouponsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetBondCoupons(\Tinkoff\Invest\V1\GetBondCouponsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondCoupons',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetBondCouponsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод получения валюты по её идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
@@ -238,6 +253,66 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetDividends',
         $argument,
         ['\Tinkoff\Invest\V1\GetDividendsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения актива по его идентификатору.
+     * @param \Tinkoff\Invest\V1\AssetRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetAssetBy(\Tinkoff\Invest\V1\AssetRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetBy',
+        $argument,
+        ['\Tinkoff\Invest\V1\AssetResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения списка активов.
+     * @param \Tinkoff\Invest\V1\AssetsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetAssets(\Tinkoff\Invest\V1\AssetsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssets',
+        $argument,
+        ['\Tinkoff\Invest\V1\AssetsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения избранных инструментов.
+     * @param \Tinkoff\Invest\V1\GetFavoritesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetFavorites(\Tinkoff\Invest\V1\GetFavoritesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFavorites',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetFavoritesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод редактирования избранных инструментов.
+     * @param \Tinkoff\Invest\V1\EditFavoritesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function EditFavorites(\Tinkoff\Invest\V1\EditFavoritesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/EditFavorites',
+        $argument,
+        ['\Tinkoff\Invest\V1\EditFavoritesResponse', 'decode'],
         $metadata, $options);
     }
 

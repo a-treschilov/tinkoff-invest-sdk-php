@@ -14,6 +14,8 @@ use Tinkoff\Invest\V1\OperationsResponse;
 use Tinkoff\Invest\V1\OperationsServiceClient;
 use Tinkoff\Invest\V1\PortfolioRequest;
 use Tinkoff\Invest\V1\PortfolioResponse;
+use Tinkoff\Invest\V1\WithdrawLimitsRequest;
+use Tinkoff\Invest\V1\WithdrawLimitsResponse;
 
 class OperationsService
 {
@@ -76,5 +78,20 @@ class OperationsService
         }
 
         return $response->getOperations();
+    }
+
+    public function getWithdrawLimits(string $accountId): WithdrawLimitsResponse
+    {
+        $request = new WithdrawLimitsRequest();
+        $request->setAccountId($accountId);
+
+        /** @var WithdrawLimitsResponse $response */
+        list($response, $status) = $this->client->GetWithdrawLimits($request, [], TIClient::SPECIAL_OPTIONS)->wait();
+
+        if ($status->code !== 0) {
+            throw new TIException($status->metadata['message'][0], (int)$status->code);
+        }
+
+        return $response;
     }
 }

@@ -22,13 +22,13 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      */
     protected $from = null;
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      */
@@ -43,9 +43,9 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Figi-идентификатор инструмента.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало запрашиваемого периода в часовом поясе UTC.
+     *          Начало запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание запрашиваемого периода в часовом поясе UTC.
+     *          Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      * }
      */
     public function __construct($data = NULL) {
@@ -80,7 +80,7 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @return \Google\Protobuf\Timestamp
@@ -91,7 +91,7 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -106,7 +106,7 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @return \Google\Protobuf\Timestamp
@@ -117,7 +117,7 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @param \Google\Protobuf\Timestamp $var

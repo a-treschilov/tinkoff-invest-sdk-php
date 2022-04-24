@@ -98,7 +98,7 @@ try {
   * &#10004; GetOperations
   * &#10004; GetPortfolio
   * &#10006; GetPositions
-  * &#10006; GetWithdrawLimits
+  * &#10004; GetWithdrawLimits
   * &#10006; GetBrokerReport
 * [MarketData](https://tinkoff.github.io/investAPI/marketdata/)
   * &#10004; GetCandles

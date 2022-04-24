@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2.5 - 2022.04.24
+- [feature] Add method GetWithdrawLimits
+- [tech] Update api contract to v1.0.7
+- [tech] Update dependencies
+
 ## v0.2.4 - 2022.02.20
 - [feature] Add method Get Shares
 - [feature] Add method Get Etfs

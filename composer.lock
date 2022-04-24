@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccac557b1a18a5b82790e9fb273b6980",
+    "content-hash": "23f81f5b4cdee945bac0c5758de79ed5",
     "packages": [
         {
             "name": "google/protobuf",
-            "version": "v3.19.3",
+            "version": "v3.20.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040"
+                "reference": "5537a424882b2cbce891330d3e4bdfe363694975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040",
-                "reference": "c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/5537a424882b2cbce891330d3e4bdfe363694975",
+                "reference": "5537a424882b2cbce891330d3e4bdfe363694975",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0"
+                "php": ">=7.0.0"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=4.8.0"
+                "phpunit/phpunit": ">=5.0.0"
             },
             "suggest": {
                 "ext-bcmath": "Need to support JSON deserialization"
@@ -47,9 +47,9 @@
             ],
             "support": {
                 "issues": "https://github.com/protocolbuffers/protobuf-php/issues",
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.19.3"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.20.1"
             },
-            "time": "2022-01-11T17:40:06+00:00"
+            "time": "2022-04-22T01:22:58+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -161,7 +161,7 @@
     "prefer-lowest": false,
     "platform": {
         "php": "^8.0",
-        "ext-grpc": "^1.43"
+        "ext-grpc": "1.43"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"

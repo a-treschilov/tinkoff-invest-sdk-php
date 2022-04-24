@@ -16,25 +16,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class HistoricCandle extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Цена открытия за 1 лот.
+     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 1;</code>
      */
     protected $open = null;
     /**
-     *Максимальная цена за 1 лот.
+     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 2;</code>
      */
     protected $high = null;
     /**
-     *Минимальная цена за 1 лот.
+     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 3;</code>
      */
     protected $low = null;
     /**
-     *Цена закрытия за 1 лот.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 4;</code>
      */
@@ -65,13 +65,13 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\Quotation $open
-     *          Цена открытия за 1 лот.
+     *          Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $high
-     *          Максимальная цена за 1 лот.
+     *          Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $low
-     *          Минимальная цена за 1 лот.
+     *          Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $close
-     *          Цена закрытия за 1 лот.
+     *          Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type int|string $volume
      *          Объём торгов в лотах.
      *     @type \Google\Protobuf\Timestamp $time
@@ -86,7 +86,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена открытия за 1 лот.
+     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 1;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -97,7 +97,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена открытия за 1 лот.
+     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 1;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -112,7 +112,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальная цена за 1 лот.
+     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 2;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -123,7 +123,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальная цена за 1 лот.
+     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 2;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -138,7 +138,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимальная цена за 1 лот.
+     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -149,7 +149,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимальная цена за 1 лот.
+     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -164,7 +164,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 лот.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -175,7 +175,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 лот.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

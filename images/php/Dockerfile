@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install g++ -y \
         protobuf-compiler \
     && docker-php-ext-install zip
 
-RUN pecl install xdebug-3.1.2 \
+RUN pecl install xdebug-3.1.4 \
    && docker-php-ext-enable xdebug
 
 RUN pecl install grpc \
