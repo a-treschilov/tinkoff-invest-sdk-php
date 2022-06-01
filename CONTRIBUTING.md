@@ -17,7 +17,12 @@ make composer-install
 ```
 3. Open browser `http://localhost:4092`
 
+### Get Tinkoff Api resources
+```
+make api-init
+```
+
 ### Update .protos and generate libraries
 ```
-make update-api
+make api-update VERSION=v1.0.8
 ```

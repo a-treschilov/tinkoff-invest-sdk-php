@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.2.5 - 2022.06.01
+- [feature] Added method GetCurrencies
+- [feature] Added method GetCurrencyBy
+- [tech] Updated api contract to v1.0.8
+- [tech] Updated dependencies
+
 ## v0.2.5 - 2022.04.24
 - [feature] Add method GetWithdrawLimits
 - [tech] Update api contract to v1.0.7

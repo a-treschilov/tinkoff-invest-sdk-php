@@ -1,6 +1,10 @@
+VERSION=v1.0.8
+
 start: docker-compose-up
 
-update-api: submodule-update get-from-proto
+api-update: submodule-init get-from-proto
+
+api-init: submodule-update get-from-proto
 
 docker-compose-up:
 	docker-compose up -d --build
@@ -21,5 +25,8 @@ code-sniffer:
 get-from-proto:
 	docker exec -it tinkoff_invest_sdk_php /bin/bash -c "protoc --proto_path=/var/contracts/src/docs/contracts --php_out=/var/src/Library  --plugin=protoc-gen-grpc=/tmp/grpc/cmake/build/grpc_php_plugin --grpc_out=/var/src/Library /var/contracts/src/docs/contracts/*.proto"
 
+submodule-init:
+	git submodule update --init
+
 submodule-update:
-	git submodule update --remote
+	cd contracts && git fetch && git checkout $(VERSION)
