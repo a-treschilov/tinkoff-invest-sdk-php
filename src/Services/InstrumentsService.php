@@ -8,6 +8,9 @@ use ATreschilov\TinkoffInvestApiSdk\Exceptions\TIException;
 use ATreschilov\TinkoffInvestApiSdk\TIClient;
 use Google\Protobuf\Internal\RepeatedField;
 use Tinkoff\Invest\V1\BondsResponse;
+use Tinkoff\Invest\V1\CurrenciesResponse;
+use Tinkoff\Invest\V1\Currency;
+use Tinkoff\Invest\V1\CurrencyResponse;
 use Tinkoff\Invest\V1\EtfsResponse;
 use Tinkoff\Invest\V1\Instrument;
 use Tinkoff\Invest\V1\InstrumentRequest;
@@ -46,6 +49,51 @@ class InstrumentsService
             throw new TIException($status->metadata['message'][0], (int)$status->code);
         }
         return $response->getInstrument();
+    }
+
+    /**
+     * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
+     * @param string|null $classCode Идентификатор class_code. Обязателен при id_type = ticker
+     * @param string $id Идентификатор запрашиваемого инструмента
+     * @return Currency|null
+     * @throws TIException
+     */
+    public function getCurrencyBy(int $idType, ?string $classCode, string $id): Currency|null
+    {
+        $request = new InstrumentRequest();
+        $request->setIdType($idType);
+        $request->setClassCode($classCode);
+        $request->setId($id);
+
+        /** @var CurrencyResponse $response */
+        list($response, $status) = $this->client->CurrencyBy($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            throw new TIException($status->metadata['message'][0], (int)$status->code);
+        }
+        return $response->getInstrument();
+    }
+
+    /**
+     * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
+     * @return RepeatedField Currency[]
+     * @throws TIException
+     */
+    public function getCurrencies(?int $instrumentStatus = 1): RepeatedField
+    {
+        $request = new InstrumentsRequest();
+        $request->setInstrumentStatus($instrumentStatus);
+
+        /** @var CurrenciesResponse $response */
+        list($response, $status) = $this->client->Currencies($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            throw new TIException($status->metadata['message'][0], (int)$status->code);
+        }
+
+        return $response->getInstruments();
     }
 
     /**

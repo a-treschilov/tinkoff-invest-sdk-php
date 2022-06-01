@@ -75,8 +75,8 @@ try {
   * &#10006; TradingSchedules
   * &#10006; BondBy
   * &#10004; Bonds
-  * &#10006; CurrencyBy
-  * &#10006; Currencies
+  * &#10004; CurrencyBy
+  * &#10004; Currencies
   * &#10006; EtfBy
   * &#10004; Etfs
   * &#10006; FutureBy
