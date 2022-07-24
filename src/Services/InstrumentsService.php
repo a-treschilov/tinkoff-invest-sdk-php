@@ -17,6 +17,8 @@ use Tinkoff\Invest\V1\InstrumentRequest;
 use Tinkoff\Invest\V1\InstrumentResponse;
 use Tinkoff\Invest\V1\InstrumentsRequest;
 use Tinkoff\Invest\V1\InstrumentsServiceClient;
+use Tinkoff\Invest\V1\Share;
+use Tinkoff\Invest\V1\ShareResponse;
 use Tinkoff\Invest\V1\SharesResponse;
 
 class InstrumentsService
@@ -157,6 +159,30 @@ class InstrumentsService
         }
 
         return $response->getInstruments();
+    }
+
+    /**
+     * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
+     * @param string|null $classCode Идентификатор class_code. Обязателен при id_type = ticker
+     * @param string $id Идентификатор запрашиваемого инструмента
+     * @return Share|null
+     * @throws TIException
+     */
+    public function getShareBy(int $idType, ?string $classCode, string $id): Share|null
+    {
+        $request = new InstrumentRequest();
+        $request->setIdType($idType);
+        $request->setClassCode($classCode);
+        $request->setId($id);
+
+        /** @var ShareResponse $response */
+        list($response, $status) = $this->client->ShareBy($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            throw new TIException($status->metadata['message'][0], (int)$status->code);
+        }
+        return $response->getInstrument();
     }
 
     /**

@@ -1,6 +1,10 @@
 # Changelog
 
-## v0.2.5 - 2022.06.01
+## v0.2.7 - 2022.07.24
+- [feature] Added method GetShareBy
+- [tech] Updated api contract to v1.10.0
+
+## v0.2.6 - 2022.06.01
 - [feature] Added method GetCurrencies
 - [feature] Added method GetCurrencyBy
 - [tech] Updated api contract to v1.0.8
