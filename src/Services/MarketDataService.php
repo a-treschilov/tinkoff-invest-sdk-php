@@ -49,7 +49,8 @@ class MarketDataService
             ->wait();
 
         if ($status->code !== 0) {
-            throw new TIException($status->metadata['message'][0], (int)$status->code);
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->code);
         }
         return $response->getCandles();
     }

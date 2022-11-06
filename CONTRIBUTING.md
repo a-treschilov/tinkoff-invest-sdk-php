@@ -24,5 +24,5 @@ make api-init
 
 ### Update .protos and generate libraries
 ```
-make api-update VERSION=v1.0.8
+make api-update VERSION=v1.0.14
 ```

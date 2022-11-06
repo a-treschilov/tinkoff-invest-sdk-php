@@ -2,7 +2,7 @@
   "name": "a.treschilov/tinkoff-invest-api-sdk",
   "description": "PHP SDK for Tinkoff invest API V2",
   "type": "library",
-  "version": "v0.2.7",
+  "version": "v0.2.8",
   "license": "Apache-2.0",
   "keywords": ["php", "sdk", "tinkoff", "invest", "v2"],
   "support": {

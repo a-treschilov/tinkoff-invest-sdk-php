@@ -35,7 +35,8 @@ class OperationsService
         list($response, $status) = $this->client->GetPortfolio($request, [], TIClient::SPECIAL_OPTIONS)->wait();
 
         if ($status->code !== 0) {
-            throw new TIException($status->metadata['message'][0], (int)$status->code);
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->code);
         }
         return $response;
     }
@@ -74,7 +75,8 @@ class OperationsService
         list($response, $status) = $this->client->GetOperations($request, [], TIClient::SPECIAL_OPTIONS)->wait();
 
         if ($status->code !== 0) {
-            throw new TIException($status->metadata['message'][0], (int)$status->code);
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->code);
         }
 
         return $response->getOperations();
@@ -89,7 +91,8 @@ class OperationsService
         list($response, $status) = $this->client->GetWithdrawLimits($request, [], TIClient::SPECIAL_OPTIONS)->wait();
 
         if ($status->code !== 0) {
-            throw new TIException($status->metadata['message'][0], (int)$status->code);
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->code);
         }
 
         return $response;
