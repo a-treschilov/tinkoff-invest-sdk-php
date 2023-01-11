@@ -1,8 +1,12 @@
 # Changelog
 
+## v0.2.9 - 2023.01.11
+- [tech] Updated api contract to v1.1
+- [tech] Updated tinkoff-ru.pem
+
 ## v0.2.7 - 2022.07.24
 - [feature] Added method GetShareBy
-- [tech] Updated api contract to v1.10.0
+- [tech] Updated api contract to v1.0.10
 
 ## v0.2.6 - 2022.06.01
 - [feature] Added method GetCurrencies
