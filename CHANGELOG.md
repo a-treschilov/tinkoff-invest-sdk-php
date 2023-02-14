@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.10 - 2023.02.15
+- [tech] Updated PHP image to php 8.2
+- [tech] Updated dependencies and requirements
+
 ## v0.2.9 - 2023.01.11
 - [tech] Updated api contract to v1.1
 - [tech] Updated tinkoff-ru.pem

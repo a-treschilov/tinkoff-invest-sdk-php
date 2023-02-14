@@ -19,6 +19,10 @@ composer-update:
 	docker exec -it tinkoff_invest_sdk_php /bin/bash -c "composer update"
 	echo "Composer update end"
 
+composer-outdated:
+	docker exec -it tinkoff_invest_sdk_php /bin/bash -c "composer outdated --direct"
+
+
 code-sniffer:
 	docker exec -it tinkoff_invest_sdk_php /bin/bash -c "vendor/bin/phpcs --standard=PSR12 examples/ src/ --ignore=*/src/Library/*"
 
