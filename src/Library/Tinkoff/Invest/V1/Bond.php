@@ -124,6 +124,12 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $nominal = null;
     /**
+     *Первоначальный номинал облигации.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_nominal = 20;</code>
+     */
+    protected $initial_nominal = null;
+    /**
      *Дата выпуска облигации в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp state_reg_date = 21;</code>
@@ -232,7 +238,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $min_price_increment = null;
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 39;</code>
      */
@@ -249,6 +255,48 @@ class Bond extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 41;</code>
      */
     protected $real_exchange = 0;
+    /**
+     *Уникальный идентификатор позиции инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 42;</code>
+     */
+    protected $position_uid = '';
+    /**
+     *Признак доступности для ИИС.
+     *
+     * Generated from protobuf field <code>bool for_iis_flag = 51;</code>
+     */
+    protected $for_iis_flag = false;
+    /**
+     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *
+     * Generated from protobuf field <code>bool for_qual_investor_flag = 52;</code>
+     */
+    protected $for_qual_investor_flag = false;
+    /**
+     *Флаг отображающий доступность торговли инструментом по выходным
+     *
+     * Generated from protobuf field <code>bool weekend_flag = 53;</code>
+     */
+    protected $weekend_flag = false;
+    /**
+     *Флаг заблокированного ТКС
+     *
+     * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
+     */
+    protected $blocked_tca_flag = false;
+    /**
+     *Дата первой минутной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 61;</code>
+     */
+    protected $first_1min_candle_date = null;
+    /**
+     *Дата первой дневной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 62;</code>
+     */
+    protected $first_1day_candle_date = null;
 
     /**
      * Constructor.
@@ -292,6 +340,8 @@ class Bond extends \Google\Protobuf\Internal\Message
      *          Дата погашения облигации в часовом поясе UTC.
      *     @type \Tinkoff\Invest\V1\MoneyValue $nominal
      *          Номинал облигации.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $initial_nominal
+     *          Первоначальный номинал облигации.
      *     @type \Google\Protobuf\Timestamp $state_reg_date
      *          Дата выпуска облигации в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $placement_date
@@ -329,11 +379,25 @@ class Bond extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $min_price_increment
      *          Шаг цены.
      *     @type bool $api_trade_available_flag
-     *          Признак доступности торгов через API.
+     *          Параметр указывает на возможность торговать инструментом через API.
      *     @type string $uid
      *          Уникальный идентификатор инструмента.
      *     @type int $real_exchange
      *          Реальная площадка исполнения расчётов.
+     *     @type string $position_uid
+     *          Уникальный идентификатор позиции инструмента.
+     *     @type bool $for_iis_flag
+     *          Признак доступности для ИИС.
+     *     @type bool $for_qual_investor_flag
+     *          Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *     @type bool $weekend_flag
+     *          Флаг отображающий доступность торговли инструментом по выходным
+     *     @type bool $blocked_tca_flag
+     *          Флаг заблокированного ТКС
+     *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
+     *          Дата первой минутной свечи.
+     *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
+     *          Дата первой дневной свечи.
      * }
      */
     public function __construct($data = NULL) {
@@ -810,6 +874,32 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Первоначальный номинал облигации.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_nominal = 20;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue
+     */
+    public function getInitialNominal()
+    {
+        return $this->initial_nominal;
+    }
+
+    /**
+     *Первоначальный номинал облигации.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_nominal = 20;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setInitialNominal($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->initial_nominal = $var;
+
+        return $this;
+    }
+
+    /**
      *Дата выпуска облигации в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp state_reg_date = 21;</code>
@@ -1278,7 +1368,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 39;</code>
      * @return bool
@@ -1289,7 +1379,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 39;</code>
      * @param bool $var
@@ -1351,6 +1441,188 @@ class Bond extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\RealExchange::class);
         $this->real_exchange = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор позиции инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 42;</code>
+     * @return string
+     */
+    public function getPositionUid()
+    {
+        return $this->position_uid;
+    }
+
+    /**
+     *Уникальный идентификатор позиции инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 42;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->position_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Признак доступности для ИИС.
+     *
+     * Generated from protobuf field <code>bool for_iis_flag = 51;</code>
+     * @return bool
+     */
+    public function getForIisFlag()
+    {
+        return $this->for_iis_flag;
+    }
+
+    /**
+     *Признак доступности для ИИС.
+     *
+     * Generated from protobuf field <code>bool for_iis_flag = 51;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setForIisFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->for_iis_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *
+     * Generated from protobuf field <code>bool for_qual_investor_flag = 52;</code>
+     * @return bool
+     */
+    public function getForQualInvestorFlag()
+    {
+        return $this->for_qual_investor_flag;
+    }
+
+    /**
+     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *
+     * Generated from protobuf field <code>bool for_qual_investor_flag = 52;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setForQualInvestorFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->for_qual_investor_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг отображающий доступность торговли инструментом по выходным
+     *
+     * Generated from protobuf field <code>bool weekend_flag = 53;</code>
+     * @return bool
+     */
+    public function getWeekendFlag()
+    {
+        return $this->weekend_flag;
+    }
+
+    /**
+     *Флаг отображающий доступность торговли инструментом по выходным
+     *
+     * Generated from protobuf field <code>bool weekend_flag = 53;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWeekendFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->weekend_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг заблокированного ТКС
+     *
+     * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
+     * @return bool
+     */
+    public function getBlockedTcaFlag()
+    {
+        return $this->blocked_tca_flag;
+    }
+
+    /**
+     *Флаг заблокированного ТКС
+     *
+     * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setBlockedTcaFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->blocked_tca_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Дата первой минутной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 61;</code>
+     * @return \Google\Protobuf\Timestamp
+     */
+    public function getFirst1MinCandleDate()
+    {
+        return $this->first_1min_candle_date;
+    }
+
+    /**
+     *Дата первой минутной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 61;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setFirst1MinCandleDate($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->first_1min_candle_date = $var;
+
+        return $this;
+    }
+
+    /**
+     *Дата первой дневной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 62;</code>
+     * @return \Google\Protobuf\Timestamp
+     */
+    public function getFirst1DayCandleDate()
+    {
+        return $this->first_1day_candle_date;
+    }
+
+    /**
+     *Дата первой дневной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 62;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setFirst1DayCandleDate($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->first_1day_candle_date = $var;
 
         return $this;
     }

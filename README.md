@@ -73,7 +73,7 @@ try {
   * &#10006; GetInfo
 * [Instruments](https://tinkoff.github.io/investAPI/instruments/)
   * &#10006; TradingSchedules
-  * &#10006; BondBy
+  * &#10004; BondBy
   * &#10004; Bonds
   * &#10006; GetBondCoupons
   * &#10004; CurrencyBy
@@ -82,12 +82,14 @@ try {
   * &#10004; Etfs
   * &#10006; FutureBy
   * &#10004; Futures
+  * &#10006; Option
+  * &#10006; OptionBy
   * &#10004; ShareBy
   * &#10004; Shares
   * &#10006; GetAccruedInterests
   * &#10006; GetFuturesMargin
   * &#10004; GetInstrumentBy
-  * &#10006; GetDividends
+  * &#10004; GetDividends
   * &#10006; GetAssetBy
   * &#10006; GetAssets
   * &#10006; GetFavorites
@@ -114,14 +116,18 @@ try {
   * &#10006; GetOperationsByCursor
 * [OperationsStream](https://tinkoff.github.io/investAPI/operations/)
   * &#10006; PortfolioStream
+  * &#10006; PositionsStream
 * [MarketData](https://tinkoff.github.io/investAPI/marketdata/)
   * &#10004; GetCandles
   * &#10006; GetLastPrices
   * &#10006; GetOrderBook
   * &#10006; GetTradingStatus
+  * &#10006; GetTradingStatuses
   * &#10006; GetLastTrades
+  * &#10006; GetClosePrice
 * [MarketDataStream](https://tinkoff.github.io/investAPI/marketdata/#marketdatastreamservice)
   * &#10006; MarketDataStream
+  * &#10006; MarketDataServerSideStream
 * [StopOrders](https://tinkoff.github.io/investAPI/stoporders/)
   * &#10006; PostStopOrder
   * &#10006; GetStopOrders
@@ -136,8 +142,10 @@ try {
   * &#10006; GetSandboxOrderState
   * &#10006; GetSandboxPositions
   * &#10006; GetSandboxOperations
+  * &#10006; GetSandboxOperationsByCursor
   * &#10006; GetSandboxPortfolio
   * &#10006; SandboxPayIn
+  * &#10006; GetSandboxWithdrawLimits
 
 ### Advance usage (full methods support)
 ```php

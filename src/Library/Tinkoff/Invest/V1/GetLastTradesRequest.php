@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос последних обезличенных сделок по инструменту.
+ *Запрос обезличенных сделок за последний час.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetLastTradesRequest</code>
  */
@@ -33,6 +33,12 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      */
     protected $to = null;
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4;</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -46,6 +52,8 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *          Начало запрашиваемого периода в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $to
      *          Окончание запрашиваемого периода в часовом поясе UTC.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента, принимает значение figi или instrument_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -127,6 +135,32 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4;</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

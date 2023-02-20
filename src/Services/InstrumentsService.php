@@ -7,11 +7,18 @@ namespace ATreschilov\TinkoffInvestApiSdk\Services;
 use ATreschilov\TinkoffInvestApiSdk\Exceptions\TIException;
 use ATreschilov\TinkoffInvestApiSdk\TIClient;
 use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\Timestamp;
+use Tinkoff\Invest\V1\Bond;
+use Tinkoff\Invest\V1\BondResponse;
 use Tinkoff\Invest\V1\BondsResponse;
 use Tinkoff\Invest\V1\CurrenciesResponse;
 use Tinkoff\Invest\V1\Currency;
 use Tinkoff\Invest\V1\CurrencyResponse;
 use Tinkoff\Invest\V1\EtfsResponse;
+use Tinkoff\Invest\V1\GetBondCouponsRequest;
+use Tinkoff\Invest\V1\GetBondCouponsResponse;
+use Tinkoff\Invest\V1\GetDividendsRequest;
+use Tinkoff\Invest\V1\GetDividendsResponse;
 use Tinkoff\Invest\V1\Instrument;
 use Tinkoff\Invest\V1\InstrumentRequest;
 use Tinkoff\Invest\V1\InstrumentResponse;
@@ -121,6 +128,83 @@ class InstrumentsService
         }
 
         return $response->getInstruments();
+    }
+
+    /**
+     * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
+     * @param string|null $classCode Идентификатор class_code. Обязателен при id_type = ticker
+     * @param string $id
+     * @return Bond|null
+     * @throws TIException
+     */
+    public function getBondBy(int $idType, ?string $classCode, string $id): Bond|null
+    {
+        $request = new InstrumentRequest();
+        $request->setIdType($idType);
+        $request->setClassCode($classCode);
+        $request->setId($id);
+
+        /** @var BondResponse $response */
+        list($response, $status) = $this->client->BondBy($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->code);
+        }
+        return $response->getInstrument();
+    }
+
+    /**
+     * @param string $figi
+     * @param \DateTime $from
+     * @param \DateTime $to
+     * @return RepeatedField Coupon Collection
+     * @throws TIException
+     */
+    public function getBondCoupons(string $figi, \DateTime $from, \DateTime $to): RepeatedField
+    {
+        $request = new GetBondCouponsRequest();
+        $request->setFigi($figi);
+        $request->setFrom(new Timestamp(['seconds' => $from->getTimestamp()]));
+        $request->setTo(new Timestamp(['seconds' => $to->getTimestamp()]));
+
+        /** @var GetBondCouponsResponse $response */
+        list($response, $status) = $this->client->GetBondCoupons($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->code);
+        }
+
+        return $response->getEvents();
+    }
+
+    /**
+     * @param string $figi
+     * @param \DateTime $from
+     * @param \DateTime $to
+     * @return RepeatedField Dividend[]
+     * @throws TIException
+     */
+    public function getDividends(string $figi, \DateTime $from, \DateTime $to): RepeatedField
+    {
+        $request = new GetDividendsRequest();
+        $request->setFigi($figi);
+        $request->setFrom(new Timestamp(['seconds' => $from->getTimestamp()]));
+        $request->setTo(new Timestamp(['seconds' => $to->getTimestamp()]));
+
+        /** @var GetDividendsResponse $response */
+        list($response, $status) = $this->client->GetDividends($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->code);
+        }
+
+        return $response->getDividends();
     }
 
     /**

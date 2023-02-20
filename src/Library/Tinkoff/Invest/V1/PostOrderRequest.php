@@ -28,7 +28,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = 0;
     /**
-     *Цена одного инструмента. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      */
@@ -57,6 +57,12 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string order_id = 7;</code>
      */
     protected $order_id = '';
+    /**
+     *Идентификатор инструмента, принимает значения Figi или Instrument_uid.
+     *
+     * Generated from protobuf field <code>string instrument_id = 8;</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -69,7 +75,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      *     @type int|string $quantity
      *          Количество лотов.
      *     @type \Tinkoff\Invest\V1\Quotation $price
-     *          Цена одного инструмента. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *          Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *     @type int $direction
      *          Направление операции.
      *     @type string $account_id
@@ -78,6 +84,8 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      *          Тип заявки.
      *     @type string $order_id
      *          Идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента, принимает значения Figi или Instrument_uid.
      * }
      */
     public function __construct($data = NULL) {
@@ -138,7 +146,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена одного инструмента. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -149,7 +157,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена одного инструмента. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -263,6 +271,32 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->order_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значения Figi или Instrument_uid.
+     *
+     * Generated from protobuf field <code>string instrument_id = 8;</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значения Figi или Instrument_uid.
+     *
+     * Generated from protobuf field <code>string instrument_id = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

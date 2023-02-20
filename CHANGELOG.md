@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2.11 - 2023.02.20
+- [feature] Added method GetBondBy
+- [feature] Added method GetBondCoupons
+- [feature] Added method GetDividends
+
 ## v0.2.10 - 2023.02.15
 - [tech] Updated PHP image to php 8.2
 - [tech] Updated dependencies and requirements

@@ -21,6 +21,12 @@ class TradeInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string figi = 1;</code>
      */
     protected $figi = '';
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -30,6 +36,8 @@ class TradeInstrument extends \Google\Protobuf\Internal\Message
      *
      *     @type string $figi
      *          Figi-идентификатор инструмента.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента, принимает значение figi или instrument_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +67,32 @@ class TradeInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->figi = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

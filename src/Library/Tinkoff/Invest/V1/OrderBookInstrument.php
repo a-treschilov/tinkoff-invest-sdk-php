@@ -27,6 +27,12 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 depth = 2;</code>
      */
     protected $depth = 0;
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 3;</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
      *          Figi-идентификатор инструмента.
      *     @type int $depth
      *          Глубина стакана.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента, принимает значение figi или instrument_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -93,6 +101,32 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->depth = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 3;</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

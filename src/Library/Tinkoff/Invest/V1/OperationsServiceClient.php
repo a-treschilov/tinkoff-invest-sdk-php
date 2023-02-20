@@ -17,7 +17,8 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка операций по счёту.
+     * Метод получения списка операций по счёту.При работе с данным методом необходимо учитывать
+     * [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -103,6 +104,22 @@ class OperationsServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OperationsService/GetDividendsForeignIssuer',
         $argument,
         ['\Tinkoff\Invest\V1\GetDividendsForeignIssuerResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения списка операций по счёту с пагинацией. При работе с данным методом необходимо учитывать
+     * [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
+     * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetOperationsByCursor(\Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OperationsService/GetOperationsByCursor',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetOperationsByCursorResponse', 'decode'],
         $metadata, $options);
     }
 

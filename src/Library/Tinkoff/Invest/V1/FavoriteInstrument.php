@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Избранный инструмент.
+ *Массив избранных инструментов.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.FavoriteInstrument</code>
  */
@@ -52,7 +52,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $otc_flag = false;
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 17;</code>
      */
@@ -77,7 +77,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      *     @type bool $otc_flag
      *          Признак внебиржевой ценной бумаги.
      *     @type bool $api_trade_available_flag
-     *          Признак доступности торгов через API.
+     *          Параметр указывает на возможность торговать инструментом через API.
      * }
      */
     public function __construct($data = NULL) {
@@ -242,7 +242,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 17;</code>
      * @return bool
@@ -253,7 +253,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 17;</code>
      * @param bool $var

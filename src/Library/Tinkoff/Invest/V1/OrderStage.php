@@ -28,7 +28,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = 0;
     /**
-     *Идентификатор торговой операции.
+     *Идентификатор сделки.
      *
      * Generated from protobuf field <code>string trade_id = 3;</code>
      */
@@ -45,7 +45,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      *     @type int|string $quantity
      *          Количество лотов.
      *     @type string $trade_id
-     *          Идентификатор торговой операции.
+     *          Идентификатор сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -106,7 +106,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор торговой операции.
+     *Идентификатор сделки.
      *
      * Generated from protobuf field <code>string trade_id = 3;</code>
      * @return string
@@ -117,7 +117,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор торговой операции.
+     *Идентификатор сделки.
      *
      * Generated from protobuf field <code>string trade_id = 3;</code>
      * @param string $var
