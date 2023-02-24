@@ -119,7 +119,7 @@ try {
   * &#10006; PositionsStream
 * [MarketData](https://tinkoff.github.io/investAPI/marketdata/)
   * &#10004; GetCandles
-  * &#10006; GetLastPrices
+  * &#10004; GetLastPrices
   * &#10006; GetOrderBook
   * &#10006; GetTradingStatus
   * &#10006; GetTradingStatuses

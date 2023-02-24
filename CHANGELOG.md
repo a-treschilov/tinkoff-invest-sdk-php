@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2.12 - 2023.02.24
+- [feature] Added method GetLastPrices
+- [feature] Added param instrument_id to GetHistoryCandles
+- [tech] Updated api contract to v1.3
+
 ## v0.2.11 - 2023.02.20
 - [feature] Added method GetBondBy
 - [feature] Added method GetBondCoupons
