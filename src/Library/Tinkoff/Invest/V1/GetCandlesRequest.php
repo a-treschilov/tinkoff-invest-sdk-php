@@ -16,9 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetCandlesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      */
     protected $figi = '';
     /**
@@ -40,7 +40,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 5;</code>
      */
@@ -53,7 +53,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type \Google\Protobuf\Timestamp $from
      *          Начало запрашиваемого периода в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $to
@@ -61,7 +61,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *     @type int $interval
      *          Интервал запрошенных свечей.
      *     @type string $instrument_id
-     *          Идентификатор инструмента, принимает значение figi или instrument_uid
+     *          Идентификатор инструмента, принимает значение figi или instrument_uid.
      * }
      */
     public function __construct($data = NULL) {
@@ -70,9 +70,9 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
      */
     public function getFigi()
@@ -81,9 +81,9 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */
@@ -174,7 +174,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 5;</code>
      * @return string
@@ -185,7 +185,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 5;</code>
      * @param string $var

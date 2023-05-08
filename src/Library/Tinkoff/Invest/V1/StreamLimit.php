@@ -16,17 +16,23 @@ use Google\Protobuf\Internal\GPBUtil;
 class StreamLimit extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Максимальное количество stream-соединений
+     *Максимальное количество stream-соединений.
      *
      * Generated from protobuf field <code>int32 limit = 1;</code>
      */
     protected $limit = 0;
     /**
-     *Названия stream-методов
+     *Названия stream-методов.
      *
      * Generated from protobuf field <code>repeated string streams = 2;</code>
      */
     private $streams;
+    /**
+     *Текущее количество открытых stream-соединений.
+     *
+     * Generated from protobuf field <code>int32 open = 3;</code>
+     */
+    protected $open = 0;
 
     /**
      * Constructor.
@@ -35,9 +41,11 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $limit
-     *          Максимальное количество stream-соединений
+     *          Максимальное количество stream-соединений.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $streams
-     *          Названия stream-методов
+     *          Названия stream-методов.
+     *     @type int $open
+     *          Текущее количество открытых stream-соединений.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +54,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальное количество stream-соединений
+     *Максимальное количество stream-соединений.
      *
      * Generated from protobuf field <code>int32 limit = 1;</code>
      * @return int
@@ -57,7 +65,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальное количество stream-соединений
+     *Максимальное количество stream-соединений.
      *
      * Generated from protobuf field <code>int32 limit = 1;</code>
      * @param int $var
@@ -72,7 +80,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Названия stream-методов
+     *Названия stream-методов.
      *
      * Generated from protobuf field <code>repeated string streams = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -83,7 +91,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Названия stream-методов
+     *Названия stream-методов.
      *
      * Generated from protobuf field <code>repeated string streams = 2;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -93,6 +101,32 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->streams = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Текущее количество открытых stream-соединений.
+     *
+     * Generated from protobuf field <code>int32 open = 3;</code>
+     * @return int
+     */
+    public function getOpen()
+    {
+        return $this->open;
+    }
+
+    /**
+     *Текущее количество открытых stream-соединений.
+     *
+     * Generated from protobuf field <code>int32 open = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOpen($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->open = $var;
 
         return $this;
     }

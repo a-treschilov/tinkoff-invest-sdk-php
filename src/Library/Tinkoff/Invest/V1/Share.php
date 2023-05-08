@@ -238,6 +238,12 @@ class Share extends \Google\Protobuf\Internal\Message
      */
     protected $blocked_tca_flag = false;
     /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 50;</code>
+     */
+    protected $liquidity_flag = false;
+    /**
      *Дата первой минутной свечи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 56;</code>
@@ -330,6 +336,8 @@ class Share extends \Google\Protobuf\Internal\Message
      *          Флаг отображающий доступность торговли инструментом по выходным
      *     @type bool $blocked_tca_flag
      *          Флаг заблокированного ТКС
+     *     @type bool $liquidity_flag
+     *          Флаг достаточной ликвидности
      *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
@@ -1299,6 +1307,32 @@ class Share extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->blocked_tca_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 50;</code>
+     * @return bool
+     */
+    public function getLiquidityFlag()
+    {
+        return $this->liquidity_flag;
+    }
+
+    /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 50;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setLiquidityFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->liquidity_flag = $var;
 
         return $this;
     }

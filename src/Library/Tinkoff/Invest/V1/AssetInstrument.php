@@ -51,6 +51,18 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentLink links = 6;</code>
      */
     private $links;
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     */
+    protected $instrument_kind = 0;
+    /**
+     *id позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 11;</code>
+     */
+    protected $position_uid = '';
 
     /**
      * Constructor.
@@ -70,6 +82,10 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      *          Класс-код (секция торгов).
      *     @type \Tinkoff\Invest\V1\InstrumentLink[]|\Google\Protobuf\Internal\RepeatedField $links
      *          Массив связанных инструментов.
+     *     @type int $instrument_kind
+     *          Тип инструмента.
+     *     @type string $position_uid
+     *          id позиции.
      * }
      */
     public function __construct($data = NULL) {
@@ -229,6 +245,58 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\InstrumentLink::class);
         $this->links = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     * @return int
+     */
+    public function getInstrumentKind()
+    {
+        return $this->instrument_kind;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentKind($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
+        $this->instrument_kind = $var;
+
+        return $this;
+    }
+
+    /**
+     *id позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 11;</code>
+     * @return string
+     */
+    public function getPositionUid()
+    {
+        return $this->position_uid;
+    }
+
+    /**
+     *id позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->position_uid = $var;
 
         return $this;
     }

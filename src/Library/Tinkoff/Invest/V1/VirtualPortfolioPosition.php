@@ -68,7 +68,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $expire_date = null;
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 10;</code>
      */
@@ -105,7 +105,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $expire_date
      *          Дата до которой нужно продать виртуальные бумаги, после этой даты виртуальная позиция "сгорит"
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
-     *          Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
+     *          Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
      *          Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      * }
@@ -350,7 +350,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 10;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue
@@ -361,7 +361,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 10;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

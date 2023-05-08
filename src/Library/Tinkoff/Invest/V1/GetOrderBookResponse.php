@@ -82,7 +82,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     protected $orderbook_ts = null;
     /**
-     *Uid инструмента
+     *Uid инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 9;</code>
      */
@@ -117,7 +117,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $orderbook_ts
      *          Время формирования стакана на бирже.
      *     @type string $instrument_uid
-     *          Uid инструмента
+     *          Uid инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -412,7 +412,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *Uid инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 9;</code>
      * @return string
@@ -423,7 +423,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *Uid инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 9;</code>
      * @param string $var

@@ -286,6 +286,18 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $blocked_tca_flag = false;
     /**
+     *Признак субординированной облигации.
+     *
+     * Generated from protobuf field <code>bool subordinated_flag = 55;</code>
+     */
+    protected $subordinated_flag = false;
+    /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 56;</code>
+     */
+    protected $liquidity_flag = false;
+    /**
      *Дата первой минутной свечи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 61;</code>
@@ -297,6 +309,12 @@ class Bond extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 62;</code>
      */
     protected $first_1day_candle_date = null;
+    /**
+     *Уровень риска.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskLevel risk_level = 63;</code>
+     */
+    protected $risk_level = 0;
 
     /**
      * Constructor.
@@ -394,10 +412,16 @@ class Bond extends \Google\Protobuf\Internal\Message
      *          Флаг отображающий доступность торговли инструментом по выходным
      *     @type bool $blocked_tca_flag
      *          Флаг заблокированного ТКС
+     *     @type bool $subordinated_flag
+     *          Признак субординированной облигации.
+     *     @type bool $liquidity_flag
+     *          Флаг достаточной ликвидности
      *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
      *          Дата первой дневной свечи.
+     *     @type int $risk_level
+     *          Уровень риска.
      * }
      */
     public function __construct($data = NULL) {
@@ -1576,6 +1600,58 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Признак субординированной облигации.
+     *
+     * Generated from protobuf field <code>bool subordinated_flag = 55;</code>
+     * @return bool
+     */
+    public function getSubordinatedFlag()
+    {
+        return $this->subordinated_flag;
+    }
+
+    /**
+     *Признак субординированной облигации.
+     *
+     * Generated from protobuf field <code>bool subordinated_flag = 55;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSubordinatedFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->subordinated_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 56;</code>
+     * @return bool
+     */
+    public function getLiquidityFlag()
+    {
+        return $this->liquidity_flag;
+    }
+
+    /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 56;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setLiquidityFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->liquidity_flag = $var;
+
+        return $this;
+    }
+
+    /**
      *Дата первой минутной свечи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 61;</code>
@@ -1623,6 +1699,32 @@ class Bond extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1day_candle_date = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уровень риска.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskLevel risk_level = 63;</code>
+     * @return int
+     */
+    public function getRiskLevel()
+    {
+        return $this->risk_level;
+    }
+
+    /**
+     *Уровень риска.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskLevel risk_level = 63;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRiskLevel($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\RiskLevel::class);
+        $this->risk_level = $var;
 
         return $this;
     }

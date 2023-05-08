@@ -16,9 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class CandleInstrument extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     * Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      */
     protected $figi = '';
     /**
@@ -41,7 +41,7 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *           Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type int $interval
      *          Интервал свечей.
      *     @type string $instrument_id
@@ -54,9 +54,9 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     * Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
      */
     public function getFigi()
@@ -65,9 +65,9 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     * Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */

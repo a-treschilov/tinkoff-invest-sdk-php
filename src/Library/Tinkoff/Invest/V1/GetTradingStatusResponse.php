@@ -46,7 +46,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      */
     protected $api_trade_available_flag = false;
     /**
-     *Uid инструмента
+     *Uid инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      */
@@ -69,7 +69,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      *     @type bool $api_trade_available_flag
      *          Признак доступности торгов через API.
      *     @type string $instrument_uid
-     *          Uid инструмента
+     *          Uid инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -208,7 +208,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *Uid инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      * @return string
@@ -219,7 +219,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *Uid инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      * @param string $var

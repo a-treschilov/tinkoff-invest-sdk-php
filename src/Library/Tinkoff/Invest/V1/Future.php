@@ -232,13 +232,13 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     protected $for_qual_investor_flag = false;
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 43;</code>
      */
     protected $weekend_flag = false;
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 44;</code>
      */
@@ -335,9 +335,9 @@ class Future extends \Google\Protobuf\Internal\Message
      *     @type bool $for_qual_investor_flag
      *          Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *     @type bool $weekend_flag
-     *          Флаг отображающий доступность торговли инструментом по выходным
+     *          Флаг отображающий доступность торговли инструментом по выходным.
      *     @type bool $blocked_tca_flag
-     *          Флаг заблокированного ТКС
+     *          Флаг заблокированного ТКС.
      *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
@@ -1286,7 +1286,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 43;</code>
      * @return bool
@@ -1297,7 +1297,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 43;</code>
      * @param bool $var
@@ -1312,7 +1312,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 44;</code>
      * @return bool
@@ -1323,7 +1323,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 44;</code>
      * @param bool $var

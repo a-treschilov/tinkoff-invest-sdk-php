@@ -84,6 +84,7 @@ try {
   * &#10004; Futures
   * &#10006; Option
   * &#10006; OptionBy
+  * &#10006; OptionsBy
   * &#10004; ShareBy
   * &#10004; Shares
   * &#10006; GetAccruedInterests
@@ -137,6 +138,7 @@ try {
   * &#10006; GetSandboxAccounts
   * &#10006; CloseSandboxAccount
   * &#10006; PostSandboxOrder
+  * &#10006; ReplaceSandboxOrders
   * &#10006; GetSandboxOrders
   * &#10006; CancelSandboxOrder
   * &#10006; GetSandboxOrderState

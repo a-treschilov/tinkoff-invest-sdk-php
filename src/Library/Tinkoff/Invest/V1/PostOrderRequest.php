@@ -16,9 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class PostOrderRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      */
     protected $figi = '';
     /**
@@ -71,7 +71,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type int|string $quantity
      *          Количество лотов.
      *     @type \Tinkoff\Invest\V1\Quotation $price
@@ -94,9 +94,9 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
      */
     public function getFigi()
@@ -105,9 +105,9 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */

@@ -82,7 +82,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     protected $stop_price = null;
     /**
-     *instrument_uid идентификатор инструмента
+     *instrument_uid идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 12;</code>
      */
@@ -117,7 +117,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $stop_price
      *          Цена активации стоп-заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type string $instrument_uid
-     *          instrument_uid идентификатор инструмента
+     *          instrument_uid идентификатор инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -412,7 +412,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *instrument_uid идентификатор инструмента
+     *instrument_uid идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 12;</code>
      * @return string
@@ -423,7 +423,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *instrument_uid идентификатор инструмента
+     *instrument_uid идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 12;</code>
      * @param string $var

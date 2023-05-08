@@ -16,9 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      */
     protected $figi = '';
     /**
@@ -28,7 +28,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
      */
     protected $depth = 0;
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 3;</code>
      */
@@ -41,11 +41,11 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type int $depth
      *          Глубина стакана.
      *     @type string $instrument_id
-     *          Идентификатор инструмента, принимает значение figi или instrument_uid
+     *          Идентификатор инструмента, принимает значение figi или instrument_uid.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,9 +54,9 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
      */
     public function getFigi()
@@ -65,9 +65,9 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      */
@@ -106,7 +106,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 3;</code>
      * @return string
@@ -117,7 +117,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 3;</code>
      * @param string $var

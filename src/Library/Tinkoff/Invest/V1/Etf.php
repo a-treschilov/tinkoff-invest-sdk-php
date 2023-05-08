@@ -220,17 +220,23 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     protected $for_qual_investor_flag = false;
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 43;</code>
      */
     protected $weekend_flag = false;
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 44;</code>
      */
     protected $blocked_tca_flag = false;
+    /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 45;</code>
+     */
+    protected $liquidity_flag = false;
     /**
      *Дата первой минутной свечи.
      *
@@ -319,9 +325,11 @@ class Etf extends \Google\Protobuf\Internal\Message
      *     @type bool $for_qual_investor_flag
      *          Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *     @type bool $weekend_flag
-     *          Флаг отображающий доступность торговли инструментом по выходным
+     *          Флаг отображающий доступность торговли инструментом по выходным.
      *     @type bool $blocked_tca_flag
-     *          Флаг заблокированного ТКС
+     *          Флаг заблокированного ТКС.
+     *     @type bool $liquidity_flag
+     *          Флаг достаточной ликвидности
      *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
@@ -1218,7 +1226,7 @@ class Etf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 43;</code>
      * @return bool
@@ -1229,7 +1237,7 @@ class Etf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 43;</code>
      * @param bool $var
@@ -1244,7 +1252,7 @@ class Etf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 44;</code>
      * @return bool
@@ -1255,7 +1263,7 @@ class Etf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 44;</code>
      * @param bool $var
@@ -1265,6 +1273,32 @@ class Etf extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->blocked_tca_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 45;</code>
+     * @return bool
+     */
+    public function getLiquidityFlag()
+    {
+        return $this->liquidity_flag;
+    }
+
+    /**
+     *Флаг достаточной ликвидности
+     *
+     * Generated from protobuf field <code>bool liquidity_flag = 45;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setLiquidityFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->liquidity_flag = $var;
 
         return $this;
     }

@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив figi-идентификаторов инструментов.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>repeated string figi = 1;</code>
+     * Generated from protobuf field <code>repeated string figi = 1 [deprecated = true];</code>
      */
     private $figi;
     /**
-     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid
+     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      */
@@ -35,9 +35,9 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $figi
-     *          Массив figi-идентификаторов инструментов.
+     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $instrument_id
-     *          Массив идентификаторов инструмента, принимает значения figi или instrument_uid
+     *          Массив идентификаторов инструмента, принимает значения figi или instrument_uid.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,9 +46,9 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив figi-идентификаторов инструментов.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>repeated string figi = 1;</code>
+     * Generated from protobuf field <code>repeated string figi = 1 [deprecated = true];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFigi()
@@ -57,9 +57,9 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив figi-идентификаторов инструментов.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>repeated string figi = 1;</code>
+     * Generated from protobuf field <code>repeated string figi = 1 [deprecated = true];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -72,7 +72,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid
+     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -83,7 +83,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid
+     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
