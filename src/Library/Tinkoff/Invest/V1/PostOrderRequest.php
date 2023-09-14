@@ -52,7 +52,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $order_type = 0;
     /**
-     *Идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов.
+     *Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
      *
      * Generated from protobuf field <code>string order_id = 7;</code>
      */
@@ -83,7 +83,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      *     @type int $order_type
      *          Тип заявки.
      *     @type string $order_id
-     *          Идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов.
+     *          Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
      *     @type string $instrument_id
      *          Идентификатор инструмента, принимает значения Figi или Instrument_uid.
      * }
@@ -250,7 +250,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов.
+     *Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
      *
      * Generated from protobuf field <code>string order_id = 7;</code>
      * @return string
@@ -261,7 +261,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов.
+     *Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
      *
      * Generated from protobuf field <code>string order_id = 7;</code>
      * @param string $var

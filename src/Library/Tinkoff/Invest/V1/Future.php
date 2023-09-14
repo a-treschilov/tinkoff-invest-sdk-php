@@ -46,37 +46,37 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     protected $currency = '';
     /**
-     *Коэффициент ставки риска длинной позиции по клиенту.
+     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 6;</code>
      */
     protected $klong = null;
     /**
-     *Коэффициент ставки риска короткой позиции по клиенту.
+     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 7;</code>
      */
     protected $kshort = null;
     /**
-     *Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 8;</code>
      */
     protected $dlong = null;
     /**
-     *Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 9;</code>
      */
     protected $dshort = null;
     /**
-     *Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 10;</code>
      */
     protected $dlong_min = null;
     /**
-     *Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 11;</code>
      */
@@ -94,7 +94,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     protected $name = '';
     /**
-     *Торговая площадка.
+     *Tорговая площадка (секция биржи).
      *
      * Generated from protobuf field <code>string exchange = 14;</code>
      */
@@ -202,7 +202,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     protected $uid = '';
     /**
-     *Реальная площадка исполнения расчётов.
+     *Реальная площадка исполнения расчётов (биржа).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 32;</code>
      */
@@ -273,23 +273,23 @@ class Future extends \Google\Protobuf\Internal\Message
      *     @type string $currency
      *          Валюта расчётов.
      *     @type \Tinkoff\Invest\V1\Quotation $klong
-     *          Коэффициент ставки риска длинной позиции по клиенту.
+     *          Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *     @type \Tinkoff\Invest\V1\Quotation $kshort
-     *          Коэффициент ставки риска короткой позиции по клиенту.
+     *          Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *     @type \Tinkoff\Invest\V1\Quotation $dlong
-     *          Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *          Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *     @type \Tinkoff\Invest\V1\Quotation $dshort
-     *          Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *          Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *     @type \Tinkoff\Invest\V1\Quotation $dlong_min
-     *          Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *          Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *     @type \Tinkoff\Invest\V1\Quotation $dshort_min
-     *          Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *          Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *     @type bool $short_enabled_flag
      *          Признак доступности для операций шорт.
      *     @type string $name
      *          Название инструмента.
      *     @type string $exchange
-     *          Торговая площадка.
+     *          Tорговая площадка (секция биржи).
      *     @type \Google\Protobuf\Timestamp $first_trade_date
      *          Дата начала обращения контракта в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $last_trade_date
@@ -325,7 +325,7 @@ class Future extends \Google\Protobuf\Internal\Message
      *     @type string $uid
      *          Уникальный идентификатор инструмента.
      *     @type int $real_exchange
-     *          Реальная площадка исполнения расчётов.
+     *          Реальная площадка исполнения расчётов (биржа).
      *     @type string $position_uid
      *          Уникальный идентификатор позиции инструмента.
      *     @type string $basic_asset_position_uid
@@ -480,7 +480,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент ставки риска длинной позиции по клиенту.
+     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -491,7 +491,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент ставки риска длинной позиции по клиенту.
+     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -506,7 +506,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент ставки риска короткой позиции по клиенту.
+     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 7;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -517,7 +517,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент ставки риска короткой позиции по клиенту.
+     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -532,7 +532,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 8;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -543,7 +543,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -558,7 +558,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 9;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -569,7 +569,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 9;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -584,7 +584,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 10;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -595,7 +595,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 10;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -610,7 +610,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 11;</code>
      * @return \Tinkoff\Invest\V1\Quotation
@@ -621,7 +621,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 11;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -688,7 +688,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Торговая площадка.
+     *Tорговая площадка (секция биржи).
      *
      * Generated from protobuf field <code>string exchange = 14;</code>
      * @return string
@@ -699,7 +699,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Торговая площадка.
+     *Tорговая площадка (секция биржи).
      *
      * Generated from protobuf field <code>string exchange = 14;</code>
      * @param string $var
@@ -1156,7 +1156,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Реальная площадка исполнения расчётов.
+     *Реальная площадка исполнения расчётов (биржа).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 32;</code>
      * @return int
@@ -1167,7 +1167,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Реальная площадка исполнения расчётов.
+     *Реальная площадка исполнения расчётов (биржа).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 32;</code>
      * @param int $var

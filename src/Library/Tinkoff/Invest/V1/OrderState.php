@@ -130,7 +130,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
-     *Идентификатор ключа идемпотентности, переданный клиентом.
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *
      * Generated from protobuf field <code>string order_request_id = 20;</code>
      */
@@ -181,7 +181,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_uid
      *          UID идентификатор инструмента.
      *     @type string $order_request_id
-     *          Идентификатор ключа идемпотентности, переданный клиентом.
+     *          Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      * }
      */
     public function __construct($data = NULL) {
@@ -684,7 +684,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор ключа идемпотентности, переданный клиентом.
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *
      * Generated from protobuf field <code>string order_request_id = 20;</code>
      * @return string
@@ -695,7 +695,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор ключа идемпотентности, переданный клиентом.
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *
      * Generated from protobuf field <code>string order_request_id = 20;</code>
      * @param string $var

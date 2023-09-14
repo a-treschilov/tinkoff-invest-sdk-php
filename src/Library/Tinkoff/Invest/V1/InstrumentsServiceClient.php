@@ -317,7 +317,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка активов.
+     * Метод получения списка активов. Метод работает для всех инструментов, за исключением срочных - опционов и фьючерсов.
      * @param \Tinkoff\Invest\V1\AssetsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
