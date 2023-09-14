@@ -33,7 +33,7 @@ class UsersService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
 
         $accounts = [];

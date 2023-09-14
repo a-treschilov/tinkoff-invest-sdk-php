@@ -56,7 +56,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
         return $response->getInstrument();
     }
@@ -81,7 +81,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
         return $response->getInstrument();
     }
@@ -102,7 +102,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
 
         return $response->getInstruments();
@@ -124,7 +124,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
 
         return $response->getInstruments();
@@ -150,7 +150,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
         return $response->getInstrument();
     }
@@ -175,7 +175,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
 
         return $response->getEvents();
@@ -201,7 +201,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
 
         return $response->getDividends();
@@ -223,7 +223,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
 
         return $response->getInstruments();
@@ -245,7 +245,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
 
         return $response->getInstruments();
@@ -271,7 +271,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
         return $response->getInstrument();
     }
@@ -292,7 +292,7 @@ class InstrumentsService
 
         if ($status->code !== 0) {
             $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->code);
+            throw new TIException($message, (int)$status->details);
         }
 
         return $response->getInstruments();
