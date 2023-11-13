@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.2.15 - 2023.11.13
+- [tech] Update tinkoff api certificate
+
+## v0.2.14 - 2023.09.14
+- [tech] Updated api contract to v1.5
+- [tech] More detailed errors from Tinkoff API
+
 ## v0.2.13 - 2023.05.09
 - [tech] Updated api contract to v1.4
 
