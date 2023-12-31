@@ -18,33 +18,33 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
      *Начало периода (по UTC).
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
      */
     protected $from = null;
     /**
      *Окончание периода (по UTC).
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
      */
     protected $to = null;
     /**
      *Статус запрашиваемых операций.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
      */
-    protected $state = 0;
+    protected $state = null;
     /**
      *Figi-идентификатор инструмента для фильтрации.
      *
-     * Generated from protobuf field <code>string figi = 5;</code>
+     * Generated from protobuf field <code>optional string figi = 5;</code>
      */
-    protected $figi = '';
+    protected $figi = null;
 
     /**
      * Constructor.
@@ -72,7 +72,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -83,7 +83,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -98,18 +98,28 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало периода (по UTC).
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFrom()
     {
         return $this->from;
     }
 
+    public function hasFrom()
+    {
+        return isset($this->from);
+    }
+
+    public function clearFrom()
+    {
+        unset($this->from);
+    }
+
     /**
      *Начало периода (по UTC).
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -124,18 +134,28 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Окончание периода (по UTC).
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getTo()
     {
         return $this->to;
     }
 
+    public function hasTo()
+    {
+        return isset($this->to);
+    }
+
+    public function clearTo()
+    {
+        unset($this->to);
+    }
+
     /**
      *Окончание периода (по UTC).
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -150,18 +170,28 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых операций.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
      * @return int
      */
     public function getState()
     {
-        return $this->state;
+        return isset($this->state) ? $this->state : 0;
+    }
+
+    public function hasState()
+    {
+        return isset($this->state);
+    }
+
+    public function clearState()
+    {
+        unset($this->state);
     }
 
     /**
      *Статус запрашиваемых операций.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -176,18 +206,28 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Figi-идентификатор инструмента для фильтрации.
      *
-     * Generated from protobuf field <code>string figi = 5;</code>
+     * Generated from protobuf field <code>optional string figi = 5;</code>
      * @return string
      */
     public function getFigi()
     {
-        return $this->figi;
+        return isset($this->figi) ? $this->figi : '';
+    }
+
+    public function hasFigi()
+    {
+        return isset($this->figi);
+    }
+
+    public function clearFigi()
+    {
+        unset($this->figi);
     }
 
     /**
      *Figi-идентификатор инструмента для фильтрации.
      *
-     * Generated from protobuf field <code>string figi = 5;</code>
+     * Generated from protobuf field <code>optional string figi = 5;</code>
      * @param string $var
      * @return $this
      */

@@ -156,16 +156,16 @@ class InstrumentsService
     }
 
     /**
-     * @param string $figi
+     * @param string $instrumentId
      * @param \DateTime $from
      * @param \DateTime $to
      * @return RepeatedField Coupon Collection
      * @throws TIException
      */
-    public function getBondCoupons(string $figi, \DateTime $from, \DateTime $to): RepeatedField
+    public function getBondCoupons(string $instrumentId, \DateTime $from, \DateTime $to): RepeatedField
     {
         $request = new GetBondCouponsRequest();
-        $request->setFigi($figi);
+        $request->setInstrumentId($instrumentId);
         $request->setFrom(new Timestamp(['seconds' => $from->getTimestamp()]));
         $request->setTo(new Timestamp(['seconds' => $to->getTimestamp()]));
 
@@ -182,16 +182,16 @@ class InstrumentsService
     }
 
     /**
-     * @param string $figi
+     * @param string $instrumentId
      * @param \DateTime $from
      * @param \DateTime $to
      * @return RepeatedField Dividend[]
      * @throws TIException
      */
-    public function getDividends(string $figi, \DateTime $from, \DateTime $to): RepeatedField
+    public function getDividends(string $instrumentId, \DateTime $from, \DateTime $to): RepeatedField
     {
         $request = new GetDividendsRequest();
-        $request->setFigi($figi);
+        $request->setInstrumentId($instrumentId);
         $request->setFrom(new Timestamp(['seconds' => $from->getTimestamp()]));
         $request->setTo(new Timestamp(['seconds' => $to->getTimestamp()]));
 

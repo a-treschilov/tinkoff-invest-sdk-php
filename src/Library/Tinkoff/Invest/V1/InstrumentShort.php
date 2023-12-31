@@ -447,11 +447,21 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      *Дата первой минутной свечи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 26;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirst1MinCandleDate()
     {
         return $this->first_1min_candle_date;
+    }
+
+    public function hasFirst1MinCandleDate()
+    {
+        return isset($this->first_1min_candle_date);
+    }
+
+    public function clearFirst1MinCandleDate()
+    {
+        unset($this->first_1min_candle_date);
     }
 
     /**
@@ -473,11 +483,21 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      *Дата первой дневной свечи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 27;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirst1DayCandleDate()
     {
         return $this->first_1day_candle_date;
+    }
+
+    public function hasFirst1DayCandleDate()
+    {
+        return isset($this->first_1day_candle_date);
+    }
+
+    public function clearFirst1DayCandleDate()
+    {
+        unset($this->first_1day_candle_date);
     }
 
     /**

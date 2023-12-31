@@ -146,11 +146,16 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      *Акция. Заполняется только для акций (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = share).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetShare share = 3;</code>
-     * @return \Tinkoff\Invest\V1\AssetShare
+     * @return \Tinkoff\Invest\V1\AssetShare|null
      */
     public function getShare()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasShare()
+    {
+        return $this->hasOneof(3);
     }
 
     /**
@@ -172,11 +177,16 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      *Облигация. Заполняется только для облигаций (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = bond).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetBond bond = 4;</code>
-     * @return \Tinkoff\Invest\V1\AssetBond
+     * @return \Tinkoff\Invest\V1\AssetBond|null
      */
     public function getBond()
     {
         return $this->readOneof(4);
+    }
+
+    public function hasBond()
+    {
+        return $this->hasOneof(4);
     }
 
     /**
@@ -198,11 +208,16 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      *Структурная нота. Заполняется только для структурных продуктов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = sp).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetStructuredProduct sp = 5;</code>
-     * @return \Tinkoff\Invest\V1\AssetStructuredProduct
+     * @return \Tinkoff\Invest\V1\AssetStructuredProduct|null
      */
     public function getSp()
     {
         return $this->readOneof(5);
+    }
+
+    public function hasSp()
+    {
+        return $this->hasOneof(5);
     }
 
     /**
@@ -224,11 +239,16 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * Фонд. Заполняется только для фондов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = etf).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetEtf etf = 6;</code>
-     * @return \Tinkoff\Invest\V1\AssetEtf
+     * @return \Tinkoff\Invest\V1\AssetEtf|null
      */
     public function getEtf()
     {
         return $this->readOneof(6);
+    }
+
+    public function hasEtf()
+    {
+        return $this->hasOneof(6);
     }
 
     /**
@@ -250,11 +270,16 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * Клиринговый сертификат участия. Заполняется только для клиринговых сертификатов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = clearing_certificate).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetClearingCertificate clearing_certificate = 7;</code>
-     * @return \Tinkoff\Invest\V1\AssetClearingCertificate
+     * @return \Tinkoff\Invest\V1\AssetClearingCertificate|null
      */
     public function getClearingCertificate()
     {
         return $this->readOneof(7);
+    }
+
+    public function hasClearingCertificate()
+    {
+        return $this->hasOneof(7);
     }
 
     /**

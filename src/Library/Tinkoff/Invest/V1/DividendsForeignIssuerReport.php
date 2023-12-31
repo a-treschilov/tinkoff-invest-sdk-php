@@ -129,11 +129,21 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *Дата фиксации реестра.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp record_date = 1;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRecordDate()
     {
         return $this->record_date;
+    }
+
+    public function hasRecordDate()
+    {
+        return isset($this->record_date);
+    }
+
+    public function clearRecordDate()
+    {
+        unset($this->record_date);
     }
 
     /**
@@ -155,11 +165,21 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *Дата выплаты.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp payment_date = 2;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getPaymentDate()
     {
         return $this->payment_date;
+    }
+
+    public function hasPaymentDate()
+    {
+        return isset($this->payment_date);
+    }
+
+    public function clearPaymentDate()
+    {
+        unset($this->payment_date);
     }
 
     /**
@@ -285,11 +305,21 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *Выплаты на одну бумагу
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dividend = 7;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDividend()
     {
         return $this->dividend;
+    }
+
+    public function hasDividend()
+    {
+        return isset($this->dividend);
+    }
+
+    public function clearDividend()
+    {
+        unset($this->dividend);
     }
 
     /**
@@ -311,11 +341,21 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *Комиссия внешних платёжных агентов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation external_commission = 8;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getExternalCommission()
     {
         return $this->external_commission;
+    }
+
+    public function hasExternalCommission()
+    {
+        return isset($this->external_commission);
+    }
+
+    public function clearExternalCommission()
+    {
+        unset($this->external_commission);
     }
 
     /**
@@ -337,11 +377,21 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *Сумма до удержания налога.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dividend_gross = 9;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDividendGross()
     {
         return $this->dividend_gross;
+    }
+
+    public function hasDividendGross()
+    {
+        return isset($this->dividend_gross);
+    }
+
+    public function clearDividendGross()
+    {
+        unset($this->dividend_gross);
     }
 
     /**
@@ -363,11 +413,21 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *Сумма налога, удержанного агентом.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation tax = 10;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getTax()
     {
         return $this->tax;
+    }
+
+    public function hasTax()
+    {
+        return isset($this->tax);
+    }
+
+    public function clearTax()
+    {
+        unset($this->tax);
     }
 
     /**
@@ -389,11 +449,21 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *Итоговая сумма выплаты.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dividend_amount = 11;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDividendAmount()
     {
         return $this->dividend_amount;
+    }
+
+    public function hasDividendAmount()
+    {
+        return isset($this->dividend_amount);
+    }
+
+    public function clearDividendAmount()
+    {
+        unset($this->dividend_amount);
     }
 
     /**

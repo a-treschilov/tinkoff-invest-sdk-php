@@ -40,11 +40,16 @@ class PortfolioStreamResponse extends \Google\Protobuf\Internal\Message
      *Объект результата подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioSubscriptionResult subscriptions = 1;</code>
-     * @return \Tinkoff\Invest\V1\PortfolioSubscriptionResult
+     * @return \Tinkoff\Invest\V1\PortfolioSubscriptionResult|null
      */
     public function getSubscriptions()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasSubscriptions()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -66,11 +71,16 @@ class PortfolioStreamResponse extends \Google\Protobuf\Internal\Message
      *Объект стриминга портфеля.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioResponse portfolio = 2;</code>
-     * @return \Tinkoff\Invest\V1\PortfolioResponse
+     * @return \Tinkoff\Invest\V1\PortfolioResponse|null
      */
     public function getPortfolio()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasPortfolio()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -92,11 +102,16 @@ class PortfolioStreamResponse extends \Google\Protobuf\Internal\Message
      *Проверка активности стрима.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Ping ping = 3;</code>
-     * @return \Tinkoff\Invest\V1\Ping
+     * @return \Tinkoff\Invest\V1\Ping|null
      */
     public function getPing()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasPing()
+    {
+        return $this->hasOneof(3);
     }
 
     /**

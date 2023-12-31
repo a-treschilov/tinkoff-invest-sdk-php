@@ -28,7 +28,7 @@ class EditFavoritesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\FavoriteInstrument[]|\Google\Protobuf\Internal\RepeatedField $favorite_instruments
+     *     @type array<\Tinkoff\Invest\V1\FavoriteInstrument>|\Google\Protobuf\Internal\RepeatedField $favorite_instruments
      *          Массив инструментов
      * }
      */
@@ -52,7 +52,7 @@ class EditFavoritesResponse extends \Google\Protobuf\Internal\Message
      *Массив инструментов
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
-     * @param \Tinkoff\Invest\V1\FavoriteInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\FavoriteInstrument>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFavoriteInstruments($var)

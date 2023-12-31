@@ -41,11 +41,21 @@ class AssetResponse extends \Google\Protobuf\Internal\Message
      *Актив.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetFull asset = 1;</code>
-     * @return \Tinkoff\Invest\V1\AssetFull
+     * @return \Tinkoff\Invest\V1\AssetFull|null
      */
     public function getAsset()
     {
         return $this->asset;
+    }
+
+    public function hasAsset()
+    {
+        return isset($this->asset);
+    }
+
+    public function clearAsset()
+    {
+        unset($this->asset);
     }
 
     /**

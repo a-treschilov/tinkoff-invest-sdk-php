@@ -34,6 +34,12 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      */
     protected $price = null;
     /**
+     *Цена последней сделки с вечерней сессии
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation evening_session_price = 12;</code>
+     */
+    protected $evening_session_price = null;
+    /**
      *Дата совершения торгов.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 21;</code>
@@ -52,6 +58,8 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      *          Uid инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $price
      *          Цена закрытия торговой сессии.
+     *     @type \Tinkoff\Invest\V1\Quotation $evening_session_price
+     *          Цена последней сделки с вечерней сессии
      *     @type \Google\Protobuf\Timestamp $time
      *          Дата совершения торгов.
      * }
@@ -117,11 +125,21 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      *Цена закрытия торговой сессии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 11;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function hasPrice()
+    {
+        return isset($this->price);
+    }
+
+    public function clearPrice()
+    {
+        unset($this->price);
     }
 
     /**
@@ -140,14 +158,60 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Цена последней сделки с вечерней сессии
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation evening_session_price = 12;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getEveningSessionPrice()
+    {
+        return $this->evening_session_price;
+    }
+
+    public function hasEveningSessionPrice()
+    {
+        return isset($this->evening_session_price);
+    }
+
+    public function clearEveningSessionPrice()
+    {
+        unset($this->evening_session_price);
+    }
+
+    /**
+     *Цена последней сделки с вечерней сессии
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation evening_session_price = 12;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setEveningSessionPrice($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->evening_session_price = $var;
+
+        return $this;
+    }
+
+    /**
      *Дата совершения торгов.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 21;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getTime()
     {
         return $this->time;
+    }
+
+    public function hasTime()
+    {
+        return isset($this->time);
+    }
+
+    public function clearTime()
+    {
+        unset($this->time);
     }
 
     /**

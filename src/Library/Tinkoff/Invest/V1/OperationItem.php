@@ -379,11 +379,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Дата поручения.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 21;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDate()
     {
         return $this->date;
+    }
+
+    public function hasDate()
+    {
+        return isset($this->date);
+    }
+
+    public function clearDate()
+    {
+        unset($this->date);
     }
 
     /**
@@ -613,11 +623,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Сумма операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue payment = 41;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPayment()
     {
         return $this->payment;
+    }
+
+    public function hasPayment()
+    {
+        return isset($this->payment);
+    }
+
+    public function clearPayment()
+    {
+        unset($this->payment);
     }
 
     /**
@@ -639,11 +659,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Цена операции за 1 инструмент.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 42;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function hasPrice()
+    {
+        return isset($this->price);
+    }
+
+    public function clearPrice()
+    {
+        unset($this->price);
     }
 
     /**
@@ -665,11 +695,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Комиссия.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue commission = 43;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getCommission()
     {
         return $this->commission;
+    }
+
+    public function hasCommission()
+    {
+        return isset($this->commission);
+    }
+
+    public function clearCommission()
+    {
+        unset($this->commission);
     }
 
     /**
@@ -691,11 +731,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Доходность.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue yield = 44;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getYield()
     {
         return $this->yield;
+    }
+
+    public function hasYield()
+    {
+        return isset($this->yield);
+    }
+
+    public function clearYield()
+    {
+        unset($this->yield);
     }
 
     /**
@@ -717,11 +767,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Относительная доходность.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation yield_relative = 45;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getYieldRelative()
     {
         return $this->yield_relative;
+    }
+
+    public function hasYieldRelative()
+    {
+        return isset($this->yield_relative);
+    }
+
+    public function clearYieldRelative()
+    {
+        unset($this->yield_relative);
     }
 
     /**
@@ -743,11 +803,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Накопленный купонный доход.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue accrued_int = 46;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getAccruedInt()
     {
         return $this->accrued_int;
+    }
+
+    public function hasAccruedInt()
+    {
+        return isset($this->accrued_int);
+    }
+
+    public function clearAccruedInt()
+    {
+        unset($this->accrued_int);
     }
 
     /**
@@ -847,11 +917,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Дата и время снятия заявки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp cancel_date_time = 56;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCancelDateTime()
     {
         return $this->cancel_date_time;
+    }
+
+    public function hasCancelDateTime()
+    {
+        return isset($this->cancel_date_time);
+    }
+
+    public function clearCancelDateTime()
+    {
+        unset($this->cancel_date_time);
     }
 
     /**
@@ -899,11 +979,21 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Массив сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationItemTrades trades_info = 61;</code>
-     * @return \Tinkoff\Invest\V1\OperationItemTrades
+     * @return \Tinkoff\Invest\V1\OperationItemTrades|null
      */
     public function getTradesInfo()
     {
         return $this->trades_info;
+    }
+
+    public function hasTradesInfo()
+    {
+        return isset($this->trades_info);
+    }
+
+    public function clearTradesInfo()
+    {
+        unset($this->trades_info);
     }
 
     /**

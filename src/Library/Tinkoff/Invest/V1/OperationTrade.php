@@ -91,11 +91,21 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      *Дата и время сделки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 2;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDateTime()
     {
         return $this->date_time;
+    }
+
+    public function hasDateTime()
+    {
+        return isset($this->date_time);
+    }
+
+    public function clearDateTime()
+    {
+        unset($this->date_time);
     }
 
     /**
@@ -143,11 +153,21 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 4;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function hasPrice()
+    {
+        return isset($this->price);
+    }
+
+    public function clearPrice()
+    {
+        unset($this->price);
     }
 
     /**

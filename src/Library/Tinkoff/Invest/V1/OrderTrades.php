@@ -72,7 +72,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *          Направление сделки.
      *     @type string $figi
      *          Figi-идентификатор инструмента.
-     *     @type \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
+     *     @type array<\Tinkoff\Invest\V1\OrderTrade>|\Google\Protobuf\Internal\RepeatedField $trades
      *          Массив сделок.
      *     @type string $account_id
      *          Идентификатор счёта.
@@ -115,11 +115,21 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *Дата и время создания сообщения в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 2;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreatedAt()
     {
         return $this->created_at;
+    }
+
+    public function hasCreatedAt()
+    {
+        return isset($this->created_at);
+    }
+
+    public function clearCreatedAt()
+    {
+        unset($this->created_at);
     }
 
     /**
@@ -204,7 +214,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 5;</code>
-     * @param \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\OrderTrade>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTrades($var)

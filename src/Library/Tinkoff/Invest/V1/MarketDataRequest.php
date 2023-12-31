@@ -46,11 +46,16 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *Запрос подписки на свечи.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeCandlesRequest subscribe_candles_request = 1;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeCandlesRequest
+     * @return \Tinkoff\Invest\V1\SubscribeCandlesRequest|null
      */
     public function getSubscribeCandlesRequest()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasSubscribeCandlesRequest()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -72,11 +77,16 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *Запрос подписки на стаканы.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeOrderBookRequest subscribe_order_book_request = 2;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeOrderBookRequest
+     * @return \Tinkoff\Invest\V1\SubscribeOrderBookRequest|null
      */
     public function getSubscribeOrderBookRequest()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasSubscribeOrderBookRequest()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -98,11 +108,16 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *Запрос подписки на ленту обезличенных сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeTradesRequest subscribe_trades_request = 3;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeTradesRequest
+     * @return \Tinkoff\Invest\V1\SubscribeTradesRequest|null
      */
     public function getSubscribeTradesRequest()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasSubscribeTradesRequest()
+    {
+        return $this->hasOneof(3);
     }
 
     /**
@@ -124,11 +139,16 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *Запрос подписки на торговые статусы инструментов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeInfoRequest subscribe_info_request = 4;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeInfoRequest
+     * @return \Tinkoff\Invest\V1\SubscribeInfoRequest|null
      */
     public function getSubscribeInfoRequest()
     {
         return $this->readOneof(4);
+    }
+
+    public function hasSubscribeInfoRequest()
+    {
+        return $this->hasOneof(4);
     }
 
     /**
@@ -150,11 +170,16 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *Запрос подписки на цены последних сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeLastPriceRequest
+     * @return \Tinkoff\Invest\V1\SubscribeLastPriceRequest|null
      */
     public function getSubscribeLastPriceRequest()
     {
         return $this->readOneof(5);
+    }
+
+    public function hasSubscribeLastPriceRequest()
+    {
+        return $this->hasOneof(5);
     }
 
     /**
@@ -176,11 +201,16 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *Запрос своих подписок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetMySubscriptions get_my_subscriptions = 6;</code>
-     * @return \Tinkoff\Invest\V1\GetMySubscriptions
+     * @return \Tinkoff\Invest\V1\GetMySubscriptions|null
      */
     public function getGetMySubscriptions()
     {
         return $this->readOneof(6);
+    }
+
+    public function hasGetMySubscriptions()
+    {
+        return $this->hasOneof(6);
     }
 
     /**

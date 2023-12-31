@@ -28,7 +28,7 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Идентификаторы счетов.
      * }
      */
@@ -52,7 +52,7 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
      *Идентификаторы счетов.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAccounts($var)

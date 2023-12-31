@@ -46,7 +46,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     protected $initial_order_price = null;
     /**
-     *Исполненная средняя цена 1 одного инструмента в заявки.
+     *Исполненная средняя цена одного инструмента в заявке.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
      */
@@ -70,7 +70,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     protected $executed_commission = null;
     /**
-     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon)
+     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://russianinvestments.github.io/investAPI/head-orders#coupon)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue aci_value = 10;</code>
      */
@@ -117,6 +117,18 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 17;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 20;</code>
+     */
+    protected $order_request_id = '';
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     */
+    protected $response_metadata = null;
 
     /**
      * Constructor.
@@ -135,7 +147,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_order_price
      *          Начальная цена заявки. Произведение количества запрошенных лотов на цену.
      *     @type \Tinkoff\Invest\V1\MoneyValue $executed_order_price
-     *          Исполненная средняя цена 1 одного инструмента в заявки.
+     *          Исполненная средняя цена одного инструмента в заявке.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_order_amount
      *          Итоговая стоимость заявки, включающая все комиссии.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_commission
@@ -143,7 +155,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $executed_commission
      *          Фактическая комиссия по итогам исполнения заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $aci_value
-     *          Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon)
+     *          Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://russianinvestments.github.io/investAPI/head-orders#coupon)
      *     @type string $figi
      *           Figi-идентификатор инструмента.
      *     @type int $direction
@@ -158,6 +170,10 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *          Начальная цена заявки в пунктах (для фьючерсов).
      *     @type string $instrument_uid
      *          UID идентификатор инструмента.
+     *     @type string $order_request_id
+     *          Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *     @type \Tinkoff\Invest\V1\ResponseMetadata $response_metadata
+     *          Метадата
      * }
      */
     public function __construct($data = NULL) {
@@ -273,11 +289,21 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Начальная цена заявки. Произведение количества запрошенных лотов на цену.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_order_price = 5;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getInitialOrderPrice()
     {
         return $this->initial_order_price;
+    }
+
+    public function hasInitialOrderPrice()
+    {
+        return isset($this->initial_order_price);
+    }
+
+    public function clearInitialOrderPrice()
+    {
+        unset($this->initial_order_price);
     }
 
     /**
@@ -296,18 +322,28 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполненная средняя цена 1 одного инструмента в заявки.
+     *Исполненная средняя цена одного инструмента в заявке.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getExecutedOrderPrice()
     {
         return $this->executed_order_price;
     }
 
+    public function hasExecutedOrderPrice()
+    {
+        return isset($this->executed_order_price);
+    }
+
+    public function clearExecutedOrderPrice()
+    {
+        unset($this->executed_order_price);
+    }
+
     /**
-     *Исполненная средняя цена 1 одного инструмента в заявки.
+     *Исполненная средняя цена одного инструмента в заявке.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -325,11 +361,21 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Итоговая стоимость заявки, включающая все комиссии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_order_amount = 7;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalOrderAmount()
     {
         return $this->total_order_amount;
+    }
+
+    public function hasTotalOrderAmount()
+    {
+        return isset($this->total_order_amount);
+    }
+
+    public function clearTotalOrderAmount()
+    {
+        unset($this->total_order_amount);
     }
 
     /**
@@ -351,11 +397,21 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Начальная комиссия. Комиссия рассчитанная при выставлении заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_commission = 8;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getInitialCommission()
     {
         return $this->initial_commission;
+    }
+
+    public function hasInitialCommission()
+    {
+        return isset($this->initial_commission);
+    }
+
+    public function clearInitialCommission()
+    {
+        unset($this->initial_commission);
     }
 
     /**
@@ -377,11 +433,21 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Фактическая комиссия по итогам исполнения заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_commission = 9;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getExecutedCommission()
     {
         return $this->executed_commission;
+    }
+
+    public function hasExecutedCommission()
+    {
+        return isset($this->executed_commission);
+    }
+
+    public function clearExecutedCommission()
+    {
+        unset($this->executed_commission);
     }
 
     /**
@@ -400,18 +466,28 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon)
+     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://russianinvestments.github.io/investAPI/head-orders#coupon)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue aci_value = 10;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getAciValue()
     {
         return $this->aci_value;
     }
 
+    public function hasAciValue()
+    {
+        return isset($this->aci_value);
+    }
+
+    public function clearAciValue()
+    {
+        unset($this->aci_value);
+    }
+
     /**
-     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon)
+     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://russianinvestments.github.io/investAPI/head-orders#coupon)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue aci_value = 10;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -481,11 +557,21 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_security_price = 13;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getInitialSecurityPrice()
     {
         return $this->initial_security_price;
+    }
+
+    public function hasInitialSecurityPrice()
+    {
+        return isset($this->initial_security_price);
+    }
+
+    public function clearInitialSecurityPrice()
+    {
+        unset($this->initial_security_price);
     }
 
     /**
@@ -559,11 +645,21 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Начальная цена заявки в пунктах (для фьючерсов).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation initial_order_price_pt = 16;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getInitialOrderPricePt()
     {
         return $this->initial_order_price_pt;
+    }
+
+    public function hasInitialOrderPricePt()
+    {
+        return isset($this->initial_order_price_pt);
+    }
+
+    public function clearInitialOrderPricePt()
+    {
+        unset($this->initial_order_price_pt);
     }
 
     /**
@@ -603,6 +699,68 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 20;</code>
+     * @return string
+     */
+    public function getOrderRequestId()
+    {
+        return $this->order_request_id;
+    }
+
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 20;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setOrderRequestId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->order_request_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     * @return \Tinkoff\Invest\V1\ResponseMetadata|null
+     */
+    public function getResponseMetadata()
+    {
+        return $this->response_metadata;
+    }
+
+    public function hasResponseMetadata()
+    {
+        return isset($this->response_metadata);
+    }
+
+    public function clearResponseMetadata()
+    {
+        unset($this->response_metadata);
+    }
+
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     * @param \Tinkoff\Invest\V1\ResponseMetadata $var
+     * @return $this
+     */
+    public function setResponseMetadata($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\ResponseMetadata::class);
+        $this->response_metadata = $var;
 
         return $this;
     }

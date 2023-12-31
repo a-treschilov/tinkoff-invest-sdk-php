@@ -38,11 +38,16 @@ class TradesStreamResponse extends \Google\Protobuf\Internal\Message
      *Информация об исполнении торгового поручения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderTrades order_trades = 1;</code>
-     * @return \Tinkoff\Invest\V1\OrderTrades
+     * @return \Tinkoff\Invest\V1\OrderTrades|null
      */
     public function getOrderTrades()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasOrderTrades()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -64,11 +69,16 @@ class TradesStreamResponse extends \Google\Protobuf\Internal\Message
      *Проверка активности стрима.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Ping ping = 2;</code>
-     * @return \Tinkoff\Invest\V1\Ping
+     * @return \Tinkoff\Invest\V1\Ping|null
      */
     public function getPing()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasPing()
+    {
+        return $this->hasOneof(2);
     }
 
     /**

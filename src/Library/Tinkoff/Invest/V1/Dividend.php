@@ -113,11 +113,21 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *Величина дивиденда на 1 ценную бумагу (включая валюту).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue dividend_net = 1;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getDividendNet()
     {
         return $this->dividend_net;
+    }
+
+    public function hasDividendNet()
+    {
+        return isset($this->dividend_net);
+    }
+
+    public function clearDividendNet()
+    {
+        unset($this->dividend_net);
     }
 
     /**
@@ -139,11 +149,21 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *Дата фактических выплат в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp payment_date = 2;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getPaymentDate()
     {
         return $this->payment_date;
+    }
+
+    public function hasPaymentDate()
+    {
+        return isset($this->payment_date);
+    }
+
+    public function clearPaymentDate()
+    {
+        unset($this->payment_date);
     }
 
     /**
@@ -165,11 +185,21 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *Дата объявления дивидендов в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp declared_date = 3;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDeclaredDate()
     {
         return $this->declared_date;
+    }
+
+    public function hasDeclaredDate()
+    {
+        return isset($this->declared_date);
+    }
+
+    public function clearDeclaredDate()
+    {
+        unset($this->declared_date);
     }
 
     /**
@@ -191,11 +221,21 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_buy_date = 4;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastBuyDate()
     {
         return $this->last_buy_date;
+    }
+
+    public function hasLastBuyDate()
+    {
+        return isset($this->last_buy_date);
+    }
+
+    public function clearLastBuyDate()
+    {
+        unset($this->last_buy_date);
     }
 
     /**
@@ -243,11 +283,21 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *Дата фиксации реестра в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp record_date = 6;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRecordDate()
     {
         return $this->record_date;
+    }
+
+    public function hasRecordDate()
+    {
+        return isset($this->record_date);
+    }
+
+    public function clearRecordDate()
+    {
+        unset($this->record_date);
     }
 
     /**
@@ -295,11 +345,21 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *Цена закрытия инструмента на момент ex_dividend_date.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue close_price = 8;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getClosePrice()
     {
         return $this->close_price;
+    }
+
+    public function hasClosePrice()
+    {
+        return isset($this->close_price);
+    }
+
+    public function clearClosePrice()
+    {
+        unset($this->close_price);
     }
 
     /**
@@ -321,11 +381,21 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *Величина доходности.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation yield_value = 9;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getYieldValue()
     {
         return $this->yield_value;
+    }
+
+    public function hasYieldValue()
+    {
+        return isset($this->yield_value);
+    }
+
+    public function clearYieldValue()
+    {
+        unset($this->yield_value);
     }
 
     /**
@@ -347,11 +417,21 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *Дата и время создания записи в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 10;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreatedAt()
     {
         return $this->created_at;
+    }
+
+    public function hasCreatedAt()
+    {
+        return isset($this->created_at);
+    }
+
+    public function clearCreatedAt()
+    {
+        unset($this->created_at);
     }
 
     /**

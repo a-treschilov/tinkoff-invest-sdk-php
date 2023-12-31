@@ -56,11 +56,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Результат подписки на свечи.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeCandlesResponse subscribe_candles_response = 1;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeCandlesResponse
+     * @return \Tinkoff\Invest\V1\SubscribeCandlesResponse|null
      */
     public function getSubscribeCandlesResponse()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasSubscribeCandlesResponse()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -82,11 +87,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Результат подписки на стаканы.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeOrderBookResponse subscribe_order_book_response = 2;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeOrderBookResponse
+     * @return \Tinkoff\Invest\V1\SubscribeOrderBookResponse|null
      */
     public function getSubscribeOrderBookResponse()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasSubscribeOrderBookResponse()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -108,11 +118,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Результат подписки на поток обезличенных сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeTradesResponse subscribe_trades_response = 3;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeTradesResponse
+     * @return \Tinkoff\Invest\V1\SubscribeTradesResponse|null
      */
     public function getSubscribeTradesResponse()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasSubscribeTradesResponse()
+    {
+        return $this->hasOneof(3);
     }
 
     /**
@@ -134,11 +149,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Результат подписки на торговые статусы инструментов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeInfoResponse subscribe_info_response = 4;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeInfoResponse
+     * @return \Tinkoff\Invest\V1\SubscribeInfoResponse|null
      */
     public function getSubscribeInfoResponse()
     {
         return $this->readOneof(4);
+    }
+
+    public function hasSubscribeInfoResponse()
+    {
+        return $this->hasOneof(4);
     }
 
     /**
@@ -160,11 +180,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Свеча.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Candle candle = 5;</code>
-     * @return \Tinkoff\Invest\V1\Candle
+     * @return \Tinkoff\Invest\V1\Candle|null
      */
     public function getCandle()
     {
         return $this->readOneof(5);
+    }
+
+    public function hasCandle()
+    {
+        return $this->hasOneof(5);
     }
 
     /**
@@ -186,11 +211,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Trade trade = 6;</code>
-     * @return \Tinkoff\Invest\V1\Trade
+     * @return \Tinkoff\Invest\V1\Trade|null
      */
     public function getTrade()
     {
         return $this->readOneof(6);
+    }
+
+    public function hasTrade()
+    {
+        return $this->hasOneof(6);
     }
 
     /**
@@ -212,11 +242,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Стакан.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBook orderbook = 7;</code>
-     * @return \Tinkoff\Invest\V1\OrderBook
+     * @return \Tinkoff\Invest\V1\OrderBook|null
      */
     public function getOrderbook()
     {
         return $this->readOneof(7);
+    }
+
+    public function hasOrderbook()
+    {
+        return $this->hasOneof(7);
     }
 
     /**
@@ -238,11 +273,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Торговый статус.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradingStatus trading_status = 8;</code>
-     * @return \Tinkoff\Invest\V1\TradingStatus
+     * @return \Tinkoff\Invest\V1\TradingStatus|null
      */
     public function getTradingStatus()
     {
         return $this->readOneof(8);
+    }
+
+    public function hasTradingStatus()
+    {
+        return $this->hasOneof(8);
     }
 
     /**
@@ -264,11 +304,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Проверка активности стрима.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Ping ping = 9;</code>
-     * @return \Tinkoff\Invest\V1\Ping
+     * @return \Tinkoff\Invest\V1\Ping|null
      */
     public function getPing()
     {
         return $this->readOneof(9);
+    }
+
+    public function hasPing()
+    {
+        return $this->hasOneof(9);
     }
 
     /**
@@ -290,11 +335,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Результат подписки на цены последние сделок по инструментам.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceResponse subscribe_last_price_response = 10;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeLastPriceResponse
+     * @return \Tinkoff\Invest\V1\SubscribeLastPriceResponse|null
      */
     public function getSubscribeLastPriceResponse()
     {
         return $this->readOneof(10);
+    }
+
+    public function hasSubscribeLastPriceResponse()
+    {
+        return $this->hasOneof(10);
     }
 
     /**
@@ -316,11 +366,16 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *Цена последней сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPrice last_price = 11;</code>
-     * @return \Tinkoff\Invest\V1\LastPrice
+     * @return \Tinkoff\Invest\V1\LastPrice|null
      */
     public function getLastPrice()
     {
         return $this->readOneof(11);
+    }
+
+    public function hasLastPrice()
+    {
+        return $this->hasOneof(11);
     }
 
     /**

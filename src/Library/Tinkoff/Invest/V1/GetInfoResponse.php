@@ -28,7 +28,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      */
     protected $qual_status = false;
     /**
-     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://tinkoff.github.io/investAPI/faq_users/).
+     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://russianinvestments.github.io/investAPI/faq_users/).
      *
      * Generated from protobuf field <code>repeated string qualified_for_work_with = 3;</code>
      */
@@ -50,8 +50,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *          Признак премиум клиента.
      *     @type bool $qual_status
      *          Признак квалифицированного инвестора.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $qualified_for_work_with
-     *          Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://tinkoff.github.io/investAPI/faq_users/).
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $qualified_for_work_with
+     *          Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://russianinvestments.github.io/investAPI/faq_users/).
      *     @type string $tariff
      *          Наименование тарифа пользователя.
      * }
@@ -114,7 +114,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://tinkoff.github.io/investAPI/faq_users/).
+     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://russianinvestments.github.io/investAPI/faq_users/).
      *
      * Generated from protobuf field <code>repeated string qualified_for_work_with = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -125,10 +125,10 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://tinkoff.github.io/investAPI/faq_users/).
+     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://russianinvestments.github.io/investAPI/faq_users/).
      *
      * Generated from protobuf field <code>repeated string qualified_for_work_with = 3;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setQualifiedForWorkWith($var)

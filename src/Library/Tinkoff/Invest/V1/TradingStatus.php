@@ -133,11 +133,21 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
      *Время изменения торгового статуса в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getTime()
     {
         return $this->time;
+    }
+
+    public function hasTime()
+    {
+        return isset($this->time);
+    }
+
+    public function clearTime()
+    {
+        unset($this->time);
     }
 
     /**

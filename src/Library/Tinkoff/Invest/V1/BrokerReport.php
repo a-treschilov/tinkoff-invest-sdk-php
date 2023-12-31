@@ -351,11 +351,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Дата и время заключения в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp trade_datetime = 5;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getTradeDatetime()
     {
         return $this->trade_datetime;
+    }
+
+    public function hasTradeDatetime()
+    {
+        return isset($this->trade_datetime);
+    }
+
+    public function clearTradeDatetime()
+    {
+        unset($this->trade_datetime);
     }
 
     /**
@@ -507,11 +517,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Цена за единицу.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 11;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function hasPrice()
+    {
+        return isset($this->price);
+    }
+
+    public function clearPrice()
+    {
+        unset($this->price);
     }
 
     /**
@@ -559,11 +579,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Сумма (без НКД).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_amount = 13;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getOrderAmount()
     {
         return $this->order_amount;
+    }
+
+    public function hasOrderAmount()
+    {
+        return isset($this->order_amount);
+    }
+
+    public function clearOrderAmount()
+    {
+        unset($this->order_amount);
     }
 
     /**
@@ -585,11 +615,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *НКД.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation aci_value = 14;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getAciValue()
     {
         return $this->aci_value;
+    }
+
+    public function hasAciValue()
+    {
+        return isset($this->aci_value);
+    }
+
+    public function clearAciValue()
+    {
+        unset($this->aci_value);
     }
 
     /**
@@ -611,11 +651,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Сумма сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_order_amount = 15;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalOrderAmount()
     {
         return $this->total_order_amount;
+    }
+
+    public function hasTotalOrderAmount()
+    {
+        return isset($this->total_order_amount);
+    }
+
+    public function clearTotalOrderAmount()
+    {
+        unset($this->total_order_amount);
     }
 
     /**
@@ -637,11 +687,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Комиссия брокера.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue broker_commission = 16;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getBrokerCommission()
     {
         return $this->broker_commission;
+    }
+
+    public function hasBrokerCommission()
+    {
+        return isset($this->broker_commission);
+    }
+
+    public function clearBrokerCommission()
+    {
+        unset($this->broker_commission);
     }
 
     /**
@@ -663,11 +723,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Комиссия биржи.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_commission = 17;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getExchangeCommission()
     {
         return $this->exchange_commission;
+    }
+
+    public function hasExchangeCommission()
+    {
+        return isset($this->exchange_commission);
+    }
+
+    public function clearExchangeCommission()
+    {
+        unset($this->exchange_commission);
     }
 
     /**
@@ -689,11 +759,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Комиссия клир. центра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_clearing_commission = 18;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getExchangeClearingCommission()
     {
         return $this->exchange_clearing_commission;
+    }
+
+    public function hasExchangeClearingCommission()
+    {
+        return isset($this->exchange_clearing_commission);
+    }
+
+    public function clearExchangeClearingCommission()
+    {
+        unset($this->exchange_clearing_commission);
     }
 
     /**
@@ -715,11 +795,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Ставка РЕПО (%).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation repo_rate = 19;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getRepoRate()
     {
         return $this->repo_rate;
+    }
+
+    public function hasRepoRate()
+    {
+        return isset($this->repo_rate);
+    }
+
+    public function clearRepoRate()
+    {
+        unset($this->repo_rate);
     }
 
     /**
@@ -767,11 +857,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Дата расчётов в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp clear_value_date = 21;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getClearValueDate()
     {
         return $this->clear_value_date;
+    }
+
+    public function hasClearValueDate()
+    {
+        return isset($this->clear_value_date);
+    }
+
+    public function clearClearValueDate()
+    {
+        unset($this->clear_value_date);
     }
 
     /**
@@ -793,11 +893,21 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *Дата поставки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp sec_value_date = 22;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getSecValueDate()
     {
         return $this->sec_value_date;
+    }
+
+    public function hasSecValueDate()
+    {
+        return isset($this->sec_value_date);
+    }
+
+    public function clearSecValueDate()
+    {
+        unset($this->sec_value_date);
     }
 
     /**

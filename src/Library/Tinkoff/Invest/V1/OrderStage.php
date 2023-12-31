@@ -57,11 +57,21 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 1;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function hasPrice()
+    {
+        return isset($this->price);
+    }
+
+    public function clearPrice()
+    {
+        unset($this->price);
     }
 
     /**

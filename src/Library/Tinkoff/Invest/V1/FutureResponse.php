@@ -41,11 +41,21 @@ class FutureResponse extends \Google\Protobuf\Internal\Message
      * Информация о фьючерсу.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Future instrument = 1;</code>
-     * @return \Tinkoff\Invest\V1\Future
+     * @return \Tinkoff\Invest\V1\Future|null
      */
     public function getInstrument()
     {
         return $this->instrument;
+    }
+
+    public function hasInstrument()
+    {
+        return isset($this->instrument);
+    }
+
+    public function clearInstrument()
+    {
+        unset($this->instrument);
     }
 
     /**

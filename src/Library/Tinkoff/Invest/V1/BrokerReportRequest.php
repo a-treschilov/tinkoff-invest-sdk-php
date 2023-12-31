@@ -32,11 +32,16 @@ class BrokerReportRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GenerateBrokerReportRequest generate_broker_report_request = 1;</code>
-     * @return \Tinkoff\Invest\V1\GenerateBrokerReportRequest
+     * @return \Tinkoff\Invest\V1\GenerateBrokerReportRequest|null
      */
     public function getGenerateBrokerReportRequest()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasGenerateBrokerReportRequest()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -54,11 +59,16 @@ class BrokerReportRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBrokerReportRequest get_broker_report_request = 2;</code>
-     * @return \Tinkoff\Invest\V1\GetBrokerReportRequest
+     * @return \Tinkoff\Invest\V1\GetBrokerReportRequest|null
      */
     public function getGetBrokerReportRequest()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasGetBrokerReportRequest()
+    {
+        return $this->hasOneof(2);
     }
 
     /**

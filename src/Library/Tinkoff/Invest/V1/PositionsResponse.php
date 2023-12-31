@@ -58,17 +58,17 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $money
+     *     @type array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $money
      *          Массив валютных позиций портфеля.
-     *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $blocked
+     *     @type array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $blocked
      *          Массив заблокированных валютных позиций портфеля.
-     *     @type \Tinkoff\Invest\V1\PositionsSecurities[]|\Google\Protobuf\Internal\RepeatedField $securities
+     *     @type array<\Tinkoff\Invest\V1\PositionsSecurities>|\Google\Protobuf\Internal\RepeatedField $securities
      *          Список ценно-бумажных позиций портфеля.
      *     @type bool $limits_loading_in_progress
      *          Признак идущей в данный момент выгрузки лимитов.
-     *     @type \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $futures
+     *     @type array<\Tinkoff\Invest\V1\PositionsFutures>|\Google\Protobuf\Internal\RepeatedField $futures
      *          Список фьючерсов портфеля.
-     *     @type \Tinkoff\Invest\V1\PositionsOptions[]|\Google\Protobuf\Internal\RepeatedField $options
+     *     @type array<\Tinkoff\Invest\V1\PositionsOptions>|\Google\Protobuf\Internal\RepeatedField $options
      *          Список опционов портфеля.
      * }
      */
@@ -92,7 +92,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 1;</code>
-     * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMoney($var)
@@ -118,7 +118,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *Массив заблокированных валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked = 2;</code>
-     * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBlocked($var)
@@ -144,7 +144,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *Список ценно-бумажных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsSecurities securities = 3;</code>
-     * @param \Tinkoff\Invest\V1\PositionsSecurities[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\PositionsSecurities>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSecurities($var)
@@ -196,7 +196,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *Список фьючерсов портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 5;</code>
-     * @param \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\PositionsFutures>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFutures($var)
@@ -222,7 +222,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *Список опционов портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsOptions options = 6;</code>
-     * @param \Tinkoff\Invest\V1\PositionsOptions[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\PositionsOptions>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOptions($var)

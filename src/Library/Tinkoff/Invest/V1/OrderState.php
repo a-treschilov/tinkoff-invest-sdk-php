@@ -168,7 +168,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *          Направление заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_security_price
      *          Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
-     *     @type \Tinkoff\Invest\V1\OrderStage[]|\Google\Protobuf\Internal\RepeatedField $stages
+     *     @type array<\Tinkoff\Invest\V1\OrderStage>|\Google\Protobuf\Internal\RepeatedField $stages
      *          Стадии выполнения заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $service_commission
      *          Сервисная комиссия.
@@ -297,11 +297,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Начальная цена заявки. Произведение количества запрошенных лотов на цену.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_order_price = 5;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getInitialOrderPrice()
     {
         return $this->initial_order_price;
+    }
+
+    public function hasInitialOrderPrice()
+    {
+        return isset($this->initial_order_price);
+    }
+
+    public function clearInitialOrderPrice()
+    {
+        unset($this->initial_order_price);
     }
 
     /**
@@ -323,11 +333,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Исполненная цена заявки. Произведение средней цены покупки на количество лотов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getExecutedOrderPrice()
     {
         return $this->executed_order_price;
+    }
+
+    public function hasExecutedOrderPrice()
+    {
+        return isset($this->executed_order_price);
+    }
+
+    public function clearExecutedOrderPrice()
+    {
+        unset($this->executed_order_price);
     }
 
     /**
@@ -349,11 +369,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Итоговая стоимость заявки, включающая все комиссии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_order_amount = 7;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalOrderAmount()
     {
         return $this->total_order_amount;
+    }
+
+    public function hasTotalOrderAmount()
+    {
+        return isset($this->total_order_amount);
+    }
+
+    public function clearTotalOrderAmount()
+    {
+        unset($this->total_order_amount);
     }
 
     /**
@@ -375,11 +405,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Средняя цена позиции по сделке.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 8;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getAveragePositionPrice()
     {
         return $this->average_position_price;
+    }
+
+    public function hasAveragePositionPrice()
+    {
+        return isset($this->average_position_price);
+    }
+
+    public function clearAveragePositionPrice()
+    {
+        unset($this->average_position_price);
     }
 
     /**
@@ -401,11 +441,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Начальная комиссия. Комиссия, рассчитанная на момент подачи заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_commission = 9;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getInitialCommission()
     {
         return $this->initial_commission;
+    }
+
+    public function hasInitialCommission()
+    {
+        return isset($this->initial_commission);
+    }
+
+    public function clearInitialCommission()
+    {
+        unset($this->initial_commission);
     }
 
     /**
@@ -427,11 +477,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Фактическая комиссия по итогам исполнения заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_commission = 10;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getExecutedCommission()
     {
         return $this->executed_commission;
+    }
+
+    public function hasExecutedCommission()
+    {
+        return isset($this->executed_commission);
+    }
+
+    public function clearExecutedCommission()
+    {
+        unset($this->executed_commission);
     }
 
     /**
@@ -505,11 +565,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_security_price = 13;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getInitialSecurityPrice()
     {
         return $this->initial_security_price;
+    }
+
+    public function hasInitialSecurityPrice()
+    {
+        return isset($this->initial_security_price);
+    }
+
+    public function clearInitialSecurityPrice()
+    {
+        unset($this->initial_security_price);
     }
 
     /**
@@ -542,7 +612,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Стадии выполнения заявки.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderStage stages = 14;</code>
-     * @param \Tinkoff\Invest\V1\OrderStage[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\OrderStage>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStages($var)
@@ -557,11 +627,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Сервисная комиссия.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue service_commission = 15;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getServiceCommission()
     {
         return $this->service_commission;
+    }
+
+    public function hasServiceCommission()
+    {
+        return isset($this->service_commission);
+    }
+
+    public function clearServiceCommission()
+    {
+        unset($this->service_commission);
     }
 
     /**
@@ -635,11 +715,21 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Дата и время выставления заявки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp order_date = 18;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getOrderDate()
     {
         return $this->order_date;
+    }
+
+    public function hasOrderDate()
+    {
+        return isset($this->order_date);
+    }
+
+    public function clearOrderDate()
+    {
+        unset($this->order_date);
     }
 
     /**

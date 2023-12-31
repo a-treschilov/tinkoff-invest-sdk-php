@@ -81,11 +81,21 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * Ликвидная стоимость портфеля. Подробнее: [что такое ликвидный портфель?](https://help.tinkoff.ru/margin-trade/short/liquid-portfolio/).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue liquid_portfolio = 1;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getLiquidPortfolio()
     {
         return $this->liquid_portfolio;
+    }
+
+    public function hasLiquidPortfolio()
+    {
+        return isset($this->liquid_portfolio);
+    }
+
+    public function clearLiquidPortfolio()
+    {
+        unset($this->liquid_portfolio);
     }
 
     /**
@@ -107,11 +117,21 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * Начальная маржа — начальное обеспечение для совершения новой сделки. Подробнее: [начальная и минимальная маржа](https://help.tinkoff.ru/margin-trade/short/initial-and-maintenance-margin/).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue starting_margin = 2;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getStartingMargin()
     {
         return $this->starting_margin;
+    }
+
+    public function hasStartingMargin()
+    {
+        return isset($this->starting_margin);
+    }
+
+    public function clearStartingMargin()
+    {
+        unset($this->starting_margin);
     }
 
     /**
@@ -133,11 +153,21 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. Подробнее: [начальная и минимальная маржа](https://help.tinkoff.ru/margin-trade/short/initial-and-maintenance-margin/).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue minimal_margin = 3;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getMinimalMargin()
     {
         return $this->minimal_margin;
+    }
+
+    public function hasMinimalMargin()
+    {
+        return isset($this->minimal_margin);
+    }
+
+    public function clearMinimalMargin()
+    {
+        unset($this->minimal_margin);
     }
 
     /**
@@ -159,11 +189,21 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * Уровень достаточности средств. Соотношение стоимости ликвидного портфеля к начальной марже.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation funds_sufficiency_level = 4;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getFundsSufficiencyLevel()
     {
         return $this->funds_sufficiency_level;
+    }
+
+    public function hasFundsSufficiencyLevel()
+    {
+        return isset($this->funds_sufficiency_level);
+    }
+
+    public function clearFundsSufficiencyLevel()
+    {
+        unset($this->funds_sufficiency_level);
     }
 
     /**
@@ -185,11 +225,21 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * Объем недостающих средств. Разница между стартовой маржой и ликвидной стоимости портфеля.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount_of_missing_funds = 5;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getAmountOfMissingFunds()
     {
         return $this->amount_of_missing_funds;
+    }
+
+    public function hasAmountOfMissingFunds()
+    {
+        return isset($this->amount_of_missing_funds);
+    }
+
+    public function clearAmountOfMissingFunds()
+    {
+        unset($this->amount_of_missing_funds);
     }
 
     /**
@@ -211,11 +261,21 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * Скорректированная маржа.Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue corrected_margin = 6;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getCorrectedMargin()
     {
         return $this->corrected_margin;
+    }
+
+    public function hasCorrectedMargin()
+    {
+        return isset($this->corrected_margin);
+    }
+
+    public function clearCorrectedMargin()
+    {
+        unset($this->corrected_margin);
     }
 
     /**

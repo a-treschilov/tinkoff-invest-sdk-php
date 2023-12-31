@@ -40,11 +40,16 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      *Объект результата подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PositionsSubscriptionResult subscriptions = 1;</code>
-     * @return \Tinkoff\Invest\V1\PositionsSubscriptionResult
+     * @return \Tinkoff\Invest\V1\PositionsSubscriptionResult|null
      */
     public function getSubscriptions()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasSubscriptions()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -66,11 +71,16 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      *Объект стриминга позиций.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PositionData position = 2;</code>
-     * @return \Tinkoff\Invest\V1\PositionData
+     * @return \Tinkoff\Invest\V1\PositionData|null
      */
     public function getPosition()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasPosition()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -92,11 +102,16 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      *Проверка активности стрима.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Ping ping = 3;</code>
-     * @return \Tinkoff\Invest\V1\Ping
+     * @return \Tinkoff\Invest\V1\Ping|null
      */
     public function getPing()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasPing()
+    {
+        return $this->hasOneof(3);
     }
 
     /**

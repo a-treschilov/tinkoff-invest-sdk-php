@@ -223,11 +223,21 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *Количество инструмента в портфеле в штуках.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity = 5;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getQuantity()
     {
         return $this->quantity;
+    }
+
+    public function hasQuantity()
+    {
+        return isset($this->quantity);
+    }
+
+    public function clearQuantity()
+    {
+        unset($this->quantity);
     }
 
     /**
@@ -249,11 +259,21 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 6;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getAveragePositionPrice()
     {
         return $this->average_position_price;
+    }
+
+    public function hasAveragePositionPrice()
+    {
+        return isset($this->average_position_price);
+    }
+
+    public function clearAveragePositionPrice()
+    {
+        unset($this->average_position_price);
     }
 
     /**
@@ -275,11 +295,21 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *Текущая рассчитанная доходность позиции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 7;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getExpectedYield()
     {
         return $this->expected_yield;
+    }
+
+    public function hasExpectedYield()
+    {
+        return isset($this->expected_yield);
+    }
+
+    public function clearExpectedYield()
+    {
+        unset($this->expected_yield);
     }
 
     /**
@@ -301,11 +331,21 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *Текущая рассчитанная доходность позиции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield_fifo = 8;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getExpectedYieldFifo()
     {
         return $this->expected_yield_fifo;
+    }
+
+    public function hasExpectedYieldFifo()
+    {
+        return isset($this->expected_yield_fifo);
+    }
+
+    public function clearExpectedYieldFifo()
+    {
+        unset($this->expected_yield_fifo);
     }
 
     /**
@@ -327,11 +367,21 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *Дата до которой нужно продать виртуальные бумаги, после этой даты виртуальная позиция "сгорит"
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpireDate()
     {
         return $this->expire_date;
+    }
+
+    public function hasExpireDate()
+    {
+        return isset($this->expire_date);
+    }
+
+    public function clearExpireDate()
+    {
+        unset($this->expire_date);
     }
 
     /**
@@ -353,11 +403,21 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 10;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getCurrentPrice()
     {
         return $this->current_price;
+    }
+
+    public function hasCurrentPrice()
+    {
+        return isset($this->current_price);
+    }
+
+    public function clearCurrentPrice()
+    {
+        unset($this->current_price);
     }
 
     /**
@@ -379,11 +439,21 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 11;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getAveragePositionPriceFifo()
     {
         return $this->average_position_price_fifo;
+    }
+
+    public function hasAveragePositionPriceFifo()
+    {
+        return isset($this->average_position_price_fifo);
+    }
+
+    public function clearAveragePositionPriceFifo()
+    {
+        unset($this->average_position_price_fifo);
     }
 
     /**

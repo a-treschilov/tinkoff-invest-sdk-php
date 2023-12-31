@@ -40,7 +40,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     protected $isin = '';
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      */
@@ -235,7 +235,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      *     @type string $isin
      *          Isin-идентификатор инструмента.
      *     @type int $lot
-     *          Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+     *          Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot)
      *     @type string $currency
      *          Валюта расчётов.
      *     @type \Tinkoff\Invest\V1\Quotation $klong
@@ -406,7 +406,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      * @return int
@@ -417,7 +417,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      * @param int $var
@@ -461,11 +461,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 7;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getKlong()
     {
         return $this->klong;
+    }
+
+    public function hasKlong()
+    {
+        return isset($this->klong);
+    }
+
+    public function clearKlong()
+    {
+        unset($this->klong);
     }
 
     /**
@@ -487,11 +497,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 8;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getKshort()
     {
         return $this->kshort;
+    }
+
+    public function hasKshort()
+    {
+        return isset($this->kshort);
+    }
+
+    public function clearKshort()
+    {
+        unset($this->kshort);
     }
 
     /**
@@ -513,11 +533,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDlong()
     {
         return $this->dlong;
+    }
+
+    public function hasDlong()
+    {
+        return isset($this->dlong);
+    }
+
+    public function clearDlong()
+    {
+        unset($this->dlong);
     }
 
     /**
@@ -539,11 +569,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDshort()
     {
         return $this->dshort;
+    }
+
+    public function hasDshort()
+    {
+        return isset($this->dshort);
+    }
+
+    public function clearDshort()
+    {
+        unset($this->dshort);
     }
 
     /**
@@ -565,11 +605,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDlongMin()
     {
         return $this->dlong_min;
+    }
+
+    public function hasDlongMin()
+    {
+        return isset($this->dlong_min);
+    }
+
+    public function clearDlongMin()
+    {
+        unset($this->dlong_min);
     }
 
     /**
@@ -591,11 +641,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDshortMin()
     {
         return $this->dshort_min;
+    }
+
+    public function hasDshortMin()
+    {
+        return isset($this->dshort_min);
+    }
+
+    public function clearDshortMin()
+    {
+        unset($this->dshort_min);
     }
 
     /**
@@ -695,11 +755,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Номинал.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue nominal = 17;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getNominal()
     {
         return $this->nominal;
+    }
+
+    public function hasNominal()
+    {
+        return isset($this->nominal);
+    }
+
+    public function clearNominal()
+    {
+        unset($this->nominal);
     }
 
     /**
@@ -903,11 +973,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Шаг цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 25;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getMinPriceIncrement()
     {
         return $this->min_price_increment;
+    }
+
+    public function hasMinPriceIncrement()
+    {
+        return isset($this->min_price_increment);
+    }
+
+    public function clearMinPriceIncrement()
+    {
+        unset($this->min_price_increment);
     }
 
     /**
@@ -1137,11 +1217,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Дата первой минутной свечи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 56;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirst1MinCandleDate()
     {
         return $this->first_1min_candle_date;
+    }
+
+    public function hasFirst1MinCandleDate()
+    {
+        return isset($this->first_1min_candle_date);
+    }
+
+    public function clearFirst1MinCandleDate()
+    {
+        unset($this->first_1min_candle_date);
     }
 
     /**
@@ -1163,11 +1253,21 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Дата первой дневной свечи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 57;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirst1DayCandleDate()
     {
         return $this->first_1day_candle_date;
+    }
+
+    public function hasFirst1DayCandleDate()
+    {
+        return isset($this->first_1day_candle_date);
+    }
+
+    public function clearFirst1DayCandleDate()
+    {
+        unset($this->first_1day_candle_date);
     }
 
     /**

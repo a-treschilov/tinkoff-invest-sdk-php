@@ -14,6 +14,8 @@ use UnexpectedValueException;
 class RiskLevel
 {
     /**
+     *не указан
+     *
      * Generated from protobuf enum <code>RISK_LEVEL_UNSPECIFIED = 0;</code>
      */
     const RISK_LEVEL_UNSPECIFIED = 0;

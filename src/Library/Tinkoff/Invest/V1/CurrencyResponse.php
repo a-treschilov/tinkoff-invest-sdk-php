@@ -41,11 +41,21 @@ class CurrencyResponse extends \Google\Protobuf\Internal\Message
      * Информация о валюте.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Currency instrument = 1;</code>
-     * @return \Tinkoff\Invest\V1\Currency
+     * @return \Tinkoff\Invest\V1\Currency|null
      */
     public function getInstrument()
     {
         return $this->instrument;
+    }
+
+    public function hasInstrument()
+    {
+        return isset($this->instrument);
+    }
+
+    public function clearInstrument()
+    {
+        unset($this->instrument);
     }
 
     /**

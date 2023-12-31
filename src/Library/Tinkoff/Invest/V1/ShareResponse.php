@@ -41,11 +41,21 @@ class ShareResponse extends \Google\Protobuf\Internal\Message
      * Информация об акции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Share instrument = 1;</code>
-     * @return \Tinkoff\Invest\V1\Share
+     * @return \Tinkoff\Invest\V1\Share|null
      */
     public function getInstrument()
     {
         return $this->instrument;
+    }
+
+    public function hasInstrument()
+    {
+        return isset($this->instrument);
+    }
+
+    public function clearInstrument()
+    {
+        unset($this->instrument);
     }
 
     /**

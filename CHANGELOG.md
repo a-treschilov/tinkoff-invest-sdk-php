@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2.16 - 2023.12.31
+- [tech] Updated api contract to v1.8
+- [tech] Migrate to new git repo `russianInvestments`
+- [tech] Replace figi to instrument_id
+
 ## v0.2.15 - 2023.11.13
 - [tech] Update tinkoff api certificate
 

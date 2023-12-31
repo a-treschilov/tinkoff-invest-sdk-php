@@ -49,11 +49,21 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      *Доступное количество валютный позиций.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue available_value = 1;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getAvailableValue()
     {
         return $this->available_value;
+    }
+
+    public function hasAvailableValue()
+    {
+        return isset($this->available_value);
+    }
+
+    public function clearAvailableValue()
+    {
+        unset($this->available_value);
     }
 
     /**
@@ -75,11 +85,21 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      *Заблокированное количество валютный позиций.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue blocked_value = 2;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getBlockedValue()
     {
         return $this->blocked_value;
+    }
+
+    public function hasBlockedValue()
+    {
+        return isset($this->blocked_value);
+    }
+
+    public function clearBlockedValue()
+    {
+        unset($this->blocked_value);
     }
 
     /**

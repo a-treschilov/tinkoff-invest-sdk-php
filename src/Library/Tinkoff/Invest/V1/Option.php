@@ -931,11 +931,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Размер основного актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation basic_asset_size = 211;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getBasicAssetSize()
     {
         return $this->basic_asset_size;
+    }
+
+    public function hasBasicAssetSize()
+    {
+        return isset($this->basic_asset_size);
+    }
+
+    public function clearBasicAssetSize()
+    {
+        unset($this->basic_asset_size);
     }
 
     /**
@@ -957,11 +967,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 221;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getKlong()
     {
         return $this->klong;
+    }
+
+    public function hasKlong()
+    {
+        return isset($this->klong);
+    }
+
+    public function clearKlong()
+    {
+        unset($this->klong);
     }
 
     /**
@@ -983,11 +1003,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 222;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getKshort()
     {
         return $this->kshort;
+    }
+
+    public function hasKshort()
+    {
+        return isset($this->kshort);
+    }
+
+    public function clearKshort()
+    {
+        unset($this->kshort);
     }
 
     /**
@@ -1009,11 +1039,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 223;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDlong()
     {
         return $this->dlong;
+    }
+
+    public function hasDlong()
+    {
+        return isset($this->dlong);
+    }
+
+    public function clearDlong()
+    {
+        unset($this->dlong);
     }
 
     /**
@@ -1035,11 +1075,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Ставка риска начальной маржи для КСУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 224;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDshort()
     {
         return $this->dshort;
+    }
+
+    public function hasDshort()
+    {
+        return isset($this->dshort);
+    }
+
+    public function clearDshort()
+    {
+        unset($this->dshort);
     }
 
     /**
@@ -1061,11 +1111,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 225;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDlongMin()
     {
         return $this->dlong_min;
+    }
+
+    public function hasDlongMin()
+    {
+        return isset($this->dlong_min);
+    }
+
+    public function clearDlongMin()
+    {
+        unset($this->dlong_min);
     }
 
     /**
@@ -1087,11 +1147,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Ставка риска начальной маржи для КПУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 226;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDshortMin()
     {
         return $this->dshort_min;
+    }
+
+    public function hasDshortMin()
+    {
+        return isset($this->dshort_min);
+    }
+
+    public function clearDshortMin()
+    {
+        unset($this->dshort_min);
     }
 
     /**
@@ -1113,11 +1183,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Минимальный шаг цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 231;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getMinPriceIncrement()
     {
         return $this->min_price_increment;
+    }
+
+    public function hasMinPriceIncrement()
+    {
+        return isset($this->min_price_increment);
+    }
+
+    public function clearMinPriceIncrement()
+    {
+        unset($this->min_price_increment);
     }
 
     /**
@@ -1139,11 +1219,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Цена страйка.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue strike_price = 241;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getStrikePrice()
     {
         return $this->strike_price;
+    }
+
+    public function hasStrikePrice()
+    {
+        return isset($this->strike_price);
+    }
+
+    public function clearStrikePrice()
+    {
+        unset($this->strike_price);
     }
 
     /**
@@ -1165,11 +1255,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Дата истечения срока в формате UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiration_date = 301;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpirationDate()
     {
         return $this->expiration_date;
+    }
+
+    public function hasExpirationDate()
+    {
+        return isset($this->expiration_date);
+    }
+
+    public function clearExpirationDate()
+    {
+        unset($this->expiration_date);
     }
 
     /**
@@ -1191,11 +1291,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Дата начала обращения контракта в формате UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_trade_date = 311;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirstTradeDate()
     {
         return $this->first_trade_date;
+    }
+
+    public function hasFirstTradeDate()
+    {
+        return isset($this->first_trade_date);
+    }
+
+    public function clearFirstTradeDate()
+    {
+        unset($this->first_trade_date);
     }
 
     /**
@@ -1217,11 +1327,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Дата исполнения в формате UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_trade_date = 312;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastTradeDate()
     {
         return $this->last_trade_date;
+    }
+
+    public function hasLastTradeDate()
+    {
+        return isset($this->last_trade_date);
+    }
+
+    public function clearLastTradeDate()
+    {
+        unset($this->last_trade_date);
     }
 
     /**
@@ -1243,11 +1363,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Дата первой минутной свечи в формате UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 321;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirst1MinCandleDate()
     {
         return $this->first_1min_candle_date;
+    }
+
+    public function hasFirst1MinCandleDate()
+    {
+        return isset($this->first_1min_candle_date);
+    }
+
+    public function clearFirst1MinCandleDate()
+    {
+        unset($this->first_1min_candle_date);
     }
 
     /**
@@ -1269,11 +1399,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *Дата первой дневной свечи в формате UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 322;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirst1DayCandleDate()
     {
         return $this->first_1day_candle_date;
+    }
+
+    public function hasFirst1DayCandleDate()
+    {
+        return isset($this->first_1day_candle_date);
+    }
+
+    public function clearFirst1DayCandleDate()
+    {
+        unset($this->first_1day_candle_date);
     }
 
     /**

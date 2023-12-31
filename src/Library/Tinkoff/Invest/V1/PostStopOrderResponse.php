@@ -16,11 +16,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      */
     protected $stop_order_id = '';
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     */
+    protected $response_metadata = null;
 
     /**
      * Constructor.
@@ -29,7 +35,9 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $stop_order_id
-     *          Уникальный идентификатор стоп-заявки.
+     *          Уникальный идентификатор стоп-заявки
+     *     @type \Tinkoff\Invest\V1\ResponseMetadata $response_metadata
+     *          Метадата
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +46,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @return string
@@ -49,7 +57,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @param string $var
@@ -59,6 +67,42 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->stop_order_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     * @return \Tinkoff\Invest\V1\ResponseMetadata|null
+     */
+    public function getResponseMetadata()
+    {
+        return $this->response_metadata;
+    }
+
+    public function hasResponseMetadata()
+    {
+        return isset($this->response_metadata);
+    }
+
+    public function clearResponseMetadata()
+    {
+        unset($this->response_metadata);
+    }
+
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     * @param \Tinkoff\Invest\V1\ResponseMetadata $var
+     * @return $this
+     */
+    public function setResponseMetadata($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\ResponseMetadata::class);
+        $this->response_metadata = $var;
 
         return $this;
     }

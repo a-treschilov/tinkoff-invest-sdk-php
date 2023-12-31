@@ -150,7 +150,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *          Текстовое описание типа операции.
      *     @type int $operation_type
      *          Тип операции.
-     *     @type \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
+     *     @type array<\Tinkoff\Invest\V1\OperationTrade>|\Google\Protobuf\Internal\RepeatedField $trades
      *          Массив сделок.
      *     @type string $asset_uid
      *          Идентификатор актива
@@ -247,11 +247,21 @@ class Operation extends \Google\Protobuf\Internal\Message
      *Сумма операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue payment = 4;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPayment()
     {
         return $this->payment;
+    }
+
+    public function hasPayment()
+    {
+        return isset($this->payment);
+    }
+
+    public function clearPayment()
+    {
+        unset($this->payment);
     }
 
     /**
@@ -273,11 +283,21 @@ class Operation extends \Google\Protobuf\Internal\Message
      *Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 5;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function hasPrice()
+    {
+        return isset($this->price);
+    }
+
+    public function clearPrice()
+    {
+        unset($this->price);
     }
 
     /**
@@ -429,11 +449,21 @@ class Operation extends \Google\Protobuf\Internal\Message
      *Дата и время операции в формате часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 11;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDate()
     {
         return $this->date;
+    }
+
+    public function hasDate()
+    {
+        return isset($this->date);
+    }
+
+    public function clearDate()
+    {
+        unset($this->date);
     }
 
     /**
@@ -518,7 +548,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
-     * @param \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\OperationTrade>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTrades($var)

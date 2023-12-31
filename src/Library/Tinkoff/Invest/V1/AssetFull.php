@@ -129,7 +129,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *          Описание актива.
      *     @type \Google\Protobuf\Timestamp $deleted_at
      *          Дата и время удаления актива.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тестирование клиентов.
      *     @type \Tinkoff\Invest\V1\AssetCurrency $currency
      *          Валюта. Обязательно и заполняется только для type = "ASSET_TYPE_CURRENCY".
@@ -151,7 +151,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *          Код типа ц.б. по классификации Банка России.
      *     @type string $br_code_name
      *          Наименование кода типа ц.б. по классификации Банка России.
-     *     @type \Tinkoff\Invest\V1\AssetInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type array<\Tinkoff\Invest\V1\AssetInstrument>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив идентификаторов инструментов.
      * }
      */
@@ -294,11 +294,21 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Дата и время удаления актива.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp deleted_at = 6;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDeletedAt()
     {
         return $this->deleted_at;
+    }
+
+    public function hasDeletedAt()
+    {
+        return isset($this->deleted_at);
+    }
+
+    public function clearDeletedAt()
+    {
+        unset($this->deleted_at);
     }
 
     /**
@@ -331,7 +341,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Тестирование клиентов.
      *
      * Generated from protobuf field <code>repeated string required_tests = 7;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredTests($var)
@@ -346,11 +356,16 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Валюта. Обязательно и заполняется только для type = "ASSET_TYPE_CURRENCY".
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetCurrency currency = 8;</code>
-     * @return \Tinkoff\Invest\V1\AssetCurrency
+     * @return \Tinkoff\Invest\V1\AssetCurrency|null
      */
     public function getCurrency()
     {
         return $this->readOneof(8);
+    }
+
+    public function hasCurrency()
+    {
+        return $this->hasOneof(8);
     }
 
     /**
@@ -372,11 +387,16 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Ценная бумага. Обязательно и заполняется только для type = "ASSET_TYPE_SECURITY".
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetSecurity security = 9;</code>
-     * @return \Tinkoff\Invest\V1\AssetSecurity
+     * @return \Tinkoff\Invest\V1\AssetSecurity|null
      */
     public function getSecurity()
     {
         return $this->readOneof(9);
+    }
+
+    public function hasSecurity()
+    {
+        return $this->hasOneof(9);
     }
 
     /**
@@ -502,11 +522,21 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Бренд.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Brand brand = 14;</code>
-     * @return \Tinkoff\Invest\V1\Brand
+     * @return \Tinkoff\Invest\V1\Brand|null
      */
     public function getBrand()
     {
         return $this->brand;
+    }
+
+    public function hasBrand()
+    {
+        return isset($this->brand);
+    }
+
+    public function clearBrand()
+    {
+        unset($this->brand);
     }
 
     /**
@@ -528,11 +558,21 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Дата и время последнего обновления записи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated_at = 15;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdatedAt()
     {
         return $this->updated_at;
+    }
+
+    public function hasUpdatedAt()
+    {
+        return isset($this->updated_at);
+    }
+
+    public function clearUpdatedAt()
+    {
+        unset($this->updated_at);
     }
 
     /**
@@ -617,7 +657,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Массив идентификаторов инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.AssetInstrument instruments = 18;</code>
-     * @param \Tinkoff\Invest\V1\AssetInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\AssetInstrument>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)

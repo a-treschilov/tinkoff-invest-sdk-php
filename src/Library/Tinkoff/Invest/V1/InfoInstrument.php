@@ -19,6 +19,7 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * @deprecated
      */
     protected $figi = '';
     /**
@@ -50,9 +51,11 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
+     * @deprecated
      */
     public function getFigi()
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         return $this->figi;
     }
 
@@ -62,9 +65,11 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
+     * @deprecated
      */
     public function setFigi($var)
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkString($var, True);
         $this->figi = $var;
 

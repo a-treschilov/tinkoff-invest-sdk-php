@@ -36,7 +36,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type int $subscription_action
      *          Изменение статуса подписки.
-     *     @type \Tinkoff\Invest\V1\TradeInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type array<\Tinkoff\Invest\V1\TradeInstrument>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов для подписки на поток обезличенных сделок.
      * }
      */
@@ -86,7 +86,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *Массив инструментов для подписки на поток обезличенных сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradeInstrument instruments = 2;</code>
-     * @param \Tinkoff\Invest\V1\TradeInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\TradeInstrument>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)

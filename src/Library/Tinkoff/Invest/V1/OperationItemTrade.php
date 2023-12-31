@@ -107,11 +107,21 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      *Дата сделки
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 6;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDate()
     {
         return $this->date;
+    }
+
+    public function hasDate()
+    {
+        return isset($this->date);
+    }
+
+    public function clearDate()
+    {
+        unset($this->date);
     }
 
     /**
@@ -159,11 +169,21 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      *Цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 16;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function hasPrice()
+    {
+        return isset($this->price);
+    }
+
+    public function clearPrice()
+    {
+        unset($this->price);
     }
 
     /**
@@ -185,11 +205,21 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      *Доходность.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue yield = 21;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getYield()
     {
         return $this->yield;
+    }
+
+    public function hasYield()
+    {
+        return isset($this->yield);
+    }
+
+    public function clearYield()
+    {
+        unset($this->yield);
     }
 
     /**
@@ -211,11 +241,21 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      *Относительная доходность.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation yield_relative = 22;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getYieldRelative()
     {
         return $this->yield_relative;
+    }
+
+    public function hasYieldRelative()
+    {
+        return isset($this->yield_relative);
+    }
+
+    public function clearYieldRelative()
+    {
+        unset($this->yield_relative);
     }
 
     /**

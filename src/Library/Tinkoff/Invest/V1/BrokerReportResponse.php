@@ -32,11 +32,16 @@ class BrokerReportResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GenerateBrokerReportResponse generate_broker_report_response = 1;</code>
-     * @return \Tinkoff\Invest\V1\GenerateBrokerReportResponse
+     * @return \Tinkoff\Invest\V1\GenerateBrokerReportResponse|null
      */
     public function getGenerateBrokerReportResponse()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasGenerateBrokerReportResponse()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -54,11 +59,16 @@ class BrokerReportResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBrokerReportResponse get_broker_report_response = 2;</code>
-     * @return \Tinkoff\Invest\V1\GetBrokerReportResponse
+     * @return \Tinkoff\Invest\V1\GetBrokerReportResponse|null
      */
     public function getGetBrokerReportResponse()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasGetBrokerReportResponse()
+    {
+        return $this->hasOneof(2);
     }
 
     /**

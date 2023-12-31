@@ -18,15 +18,16 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
+     * @deprecated
      */
-    protected $figi = '';
+    protected $figi = null;
     /**
      *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
-     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      */
-    protected $instrument_id = '';
+    protected $instrument_id = null;
 
     /**
      * Constructor.
@@ -48,23 +49,39 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
+     * @deprecated
      */
     public function getFigi()
     {
-        return $this->figi;
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        return isset($this->figi) ? $this->figi : '';
+    }
+
+    public function hasFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        return isset($this->figi);
+    }
+
+    public function clearFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        unset($this->figi);
     }
 
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
+     * @deprecated
      */
     public function setFigi($var)
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkString($var, True);
         $this->figi = $var;
 
@@ -74,18 +91,28 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
-     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      * @return string
      */
     public function getInstrumentId()
     {
-        return $this->instrument_id;
+        return isset($this->instrument_id) ? $this->instrument_id : '';
+    }
+
+    public function hasInstrumentId()
+    {
+        return isset($this->instrument_id);
+    }
+
+    public function clearInstrumentId()
+    {
+        unset($this->instrument_id);
     }
 
     /**
      *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
-     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      * @param string $var
      * @return $this
      */

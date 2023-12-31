@@ -36,7 +36,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      *
      *     @type int $limit_per_minute
      *          Количество unary-запросов в минуту.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $methods
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $methods
      *          Названия методов.
      * }
      */
@@ -86,7 +86,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      *Названия методов.
      *
      * Generated from protobuf field <code>repeated string methods = 2;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMethods($var)

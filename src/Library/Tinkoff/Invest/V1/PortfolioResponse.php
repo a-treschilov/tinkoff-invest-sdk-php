@@ -106,7 +106,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *          Общая стоимость фьючерсов в портфеле.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая относительная доходность портфеля, в %.
-     *     @type \Tinkoff\Invest\V1\PortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $positions
+     *     @type array<\Tinkoff\Invest\V1\PortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $positions
      *          Список позиций портфеля.
      *     @type string $account_id
      *          Идентификатор счёта пользователя.
@@ -116,7 +116,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *          Общая стоимость структурных нот в портфеле.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_portfolio
      *          Общая стоимость портфеля.
-     *     @type \Tinkoff\Invest\V1\VirtualPortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $virtual_positions
+     *     @type array<\Tinkoff\Invest\V1\VirtualPortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $virtual_positions
      *          Массив виртуальных позиций портфеля.
      * }
      */
@@ -129,11 +129,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Общая стоимость акций в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_shares = 1;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalAmountShares()
     {
         return $this->total_amount_shares;
+    }
+
+    public function hasTotalAmountShares()
+    {
+        return isset($this->total_amount_shares);
+    }
+
+    public function clearTotalAmountShares()
+    {
+        unset($this->total_amount_shares);
     }
 
     /**
@@ -155,11 +165,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Общая стоимость облигаций в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_bonds = 2;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalAmountBonds()
     {
         return $this->total_amount_bonds;
+    }
+
+    public function hasTotalAmountBonds()
+    {
+        return isset($this->total_amount_bonds);
+    }
+
+    public function clearTotalAmountBonds()
+    {
+        unset($this->total_amount_bonds);
     }
 
     /**
@@ -181,11 +201,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Общая стоимость фондов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_etf = 3;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalAmountEtf()
     {
         return $this->total_amount_etf;
+    }
+
+    public function hasTotalAmountEtf()
+    {
+        return isset($this->total_amount_etf);
+    }
+
+    public function clearTotalAmountEtf()
+    {
+        unset($this->total_amount_etf);
     }
 
     /**
@@ -207,11 +237,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Общая стоимость валют в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_currencies = 4;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalAmountCurrencies()
     {
         return $this->total_amount_currencies;
+    }
+
+    public function hasTotalAmountCurrencies()
+    {
+        return isset($this->total_amount_currencies);
+    }
+
+    public function clearTotalAmountCurrencies()
+    {
+        unset($this->total_amount_currencies);
     }
 
     /**
@@ -233,11 +273,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Общая стоимость фьючерсов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_futures = 5;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalAmountFutures()
     {
         return $this->total_amount_futures;
+    }
+
+    public function hasTotalAmountFutures()
+    {
+        return isset($this->total_amount_futures);
+    }
+
+    public function clearTotalAmountFutures()
+    {
+        unset($this->total_amount_futures);
     }
 
     /**
@@ -259,11 +309,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Текущая относительная доходность портфеля, в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getExpectedYield()
     {
         return $this->expected_yield;
+    }
+
+    public function hasExpectedYield()
+    {
+        return isset($this->expected_yield);
+    }
+
+    public function clearExpectedYield()
+    {
+        unset($this->expected_yield);
     }
 
     /**
@@ -296,7 +356,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Список позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PortfolioPosition positions = 7;</code>
-     * @param \Tinkoff\Invest\V1\PortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\PortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPositions($var)
@@ -337,11 +397,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Общая стоимость опционов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_options = 9;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalAmountOptions()
     {
         return $this->total_amount_options;
+    }
+
+    public function hasTotalAmountOptions()
+    {
+        return isset($this->total_amount_options);
+    }
+
+    public function clearTotalAmountOptions()
+    {
+        unset($this->total_amount_options);
     }
 
     /**
@@ -363,11 +433,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Общая стоимость структурных нот в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_sp = 10;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalAmountSp()
     {
         return $this->total_amount_sp;
+    }
+
+    public function hasTotalAmountSp()
+    {
+        return isset($this->total_amount_sp);
+    }
+
+    public function clearTotalAmountSp()
+    {
+        unset($this->total_amount_sp);
     }
 
     /**
@@ -389,11 +469,21 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Общая стоимость портфеля.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_portfolio = 11;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getTotalAmountPortfolio()
     {
         return $this->total_amount_portfolio;
+    }
+
+    public function hasTotalAmountPortfolio()
+    {
+        return isset($this->total_amount_portfolio);
+    }
+
+    public function clearTotalAmountPortfolio()
+    {
+        unset($this->total_amount_portfolio);
     }
 
     /**
@@ -426,7 +516,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Массив виртуальных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.VirtualPortfolioPosition virtual_positions = 12;</code>
-     * @param \Tinkoff\Invest\V1\VirtualPortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\VirtualPortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setVirtualPositions($var)

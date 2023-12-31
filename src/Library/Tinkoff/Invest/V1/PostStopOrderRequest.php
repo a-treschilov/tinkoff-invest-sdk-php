@@ -18,63 +18,88 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
+     * @deprecated
      */
-    protected $figi = '';
+    protected $figi = null;
     /**
-     *Количество лотов.
+     *Количество лотов
      *
-     * Generated from protobuf field <code>int64 quantity = 2;</code>
+     * Generated from protobuf field <code>int64 quantity = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $quantity = 0;
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      */
     protected $price = null;
     /**
      *Стоп-цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
      */
     protected $stop_price = null;
     /**
-     *Направление операции.
+     *Направление операции
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $direction = 0;
     /**
-     *Номер счёта.
+     *Номер счёта
      *
-     * Generated from protobuf field <code>string account_id = 6;</code>
+     * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
-     *Тип экспирации заявки.
+     *Тип экспирации заявки
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $expiration_type = 0;
     /**
-     *Тип заявки.
+     *Тип заявки
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $stop_order_type = 0;
     /**
      *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
      */
     protected $expire_date = null;
     /**
      *Идентификатор инструмента, принимает значения Figi или instrument_uid.
      *
-     * Generated from protobuf field <code>string instrument_id = 10;</code>
+     * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $instrument_id = '';
+    /**
+     *Тип дочерней биржевой заявки для тейкпрофита
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
+     */
+    protected $exchange_order_type = 0;
+    /**
+     *Подтип стоп-заявки TakeProfit
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TakeProfitType take_profit_type = 12;</code>
+     */
+    protected $take_profit_type = 0;
+    /**
+     *Массив с параметрами трейлинг-стопа
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PostStopOrderRequest.TrailingData trailing_data = 13;</code>
+     */
+    protected $trailing_data = null;
+    /**
+     *Тип цены
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 14;</code>
+     */
+    protected $price_type = 0;
 
     /**
      * Constructor.
@@ -85,23 +110,31 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type int|string $quantity
-     *          Количество лотов.
+     *          Количество лотов
      *     @type \Tinkoff\Invest\V1\Quotation $price
      *          Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $stop_price
      *          Стоп-цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type int $direction
-     *          Направление операции.
+     *          Направление операции
      *     @type string $account_id
-     *          Номер счёта.
+     *          Номер счёта
      *     @type int $expiration_type
-     *          Тип экспирации заявки.
+     *          Тип экспирации заявки
      *     @type int $stop_order_type
-     *          Тип заявки.
+     *          Тип заявки
      *     @type \Google\Protobuf\Timestamp $expire_date
      *          Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
      *     @type string $instrument_id
      *          Идентификатор инструмента, принимает значения Figi или instrument_uid.
+     *     @type int $exchange_order_type
+     *          Тип дочерней биржевой заявки для тейкпрофита
+     *     @type int $take_profit_type
+     *          Подтип стоп-заявки TakeProfit
+     *     @type \Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData $trailing_data
+     *          Массив с параметрами трейлинг-стопа
+     *     @type int $price_type
+     *          Тип цены
      * }
      */
     public function __construct($data = NULL) {
@@ -112,23 +145,39 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
+     * @deprecated
      */
     public function getFigi()
     {
-        return $this->figi;
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        return isset($this->figi) ? $this->figi : '';
+    }
+
+    public function hasFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        return isset($this->figi);
+    }
+
+    public function clearFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        unset($this->figi);
     }
 
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
+     * @deprecated
      */
     public function setFigi($var)
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkString($var, True);
         $this->figi = $var;
 
@@ -136,9 +185,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов.
+     *Количество лотов
      *
-     * Generated from protobuf field <code>int64 quantity = 2;</code>
+     * Generated from protobuf field <code>int64 quantity = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int|string
      */
     public function getQuantity()
@@ -147,9 +196,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов.
+     *Количество лотов
      *
-     * Generated from protobuf field <code>int64 quantity = 2;</code>
+     * Generated from protobuf field <code>int64 quantity = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int|string $var
      * @return $this
      */
@@ -164,18 +213,28 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPrice()
     {
         return $this->price;
     }
 
+    public function hasPrice()
+    {
+        return isset($this->price);
+    }
+
+    public function clearPrice()
+    {
+        unset($this->price);
+    }
+
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -190,18 +249,28 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Стоп-цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getStopPrice()
     {
         return $this->stop_price;
     }
 
+    public function hasStopPrice()
+    {
+        return isset($this->stop_price);
+    }
+
+    public function clearStopPrice()
+    {
+        unset($this->stop_price);
+    }
+
     /**
      *Стоп-цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -214,9 +283,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление операции.
+     *Направление операции
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
      */
     public function getDirection()
@@ -225,9 +294,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление операции.
+     *Направление операции
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
      * @return $this
      */
@@ -240,9 +309,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счёта
      *
-     * Generated from protobuf field <code>string account_id = 6;</code>
+     * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -251,9 +320,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счёта
      *
-     * Generated from protobuf field <code>string account_id = 6;</code>
+     * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -266,9 +335,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип экспирации заявки.
+     *Тип экспирации заявки
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
      */
     public function getExpirationType()
@@ -277,9 +346,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип экспирации заявки.
+     *Тип экспирации заявки
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
      * @return $this
      */
@@ -292,9 +361,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип заявки.
+     *Тип заявки
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
      */
     public function getStopOrderType()
@@ -303,9 +372,9 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип заявки.
+     *Тип заявки
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
      * @return $this
      */
@@ -320,18 +389,28 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpireDate()
     {
         return $this->expire_date;
     }
 
+    public function hasExpireDate()
+    {
+        return isset($this->expire_date);
+    }
+
+    public function clearExpireDate()
+    {
+        unset($this->expire_date);
+    }
+
     /**
      *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -346,7 +425,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор инструмента, принимает значения Figi или instrument_uid.
      *
-     * Generated from protobuf field <code>string instrument_id = 10;</code>
+     * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getInstrumentId()
@@ -357,7 +436,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор инструмента, принимает значения Figi или instrument_uid.
      *
-     * Generated from protobuf field <code>string instrument_id = 10;</code>
+     * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -365,6 +444,120 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип дочерней биржевой заявки для тейкпрофита
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
+     * @return int
+     */
+    public function getExchangeOrderType()
+    {
+        return $this->exchange_order_type;
+    }
+
+    /**
+     *Тип дочерней биржевой заявки для тейкпрофита
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setExchangeOrderType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\ExchangeOrderType::class);
+        $this->exchange_order_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Подтип стоп-заявки TakeProfit
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TakeProfitType take_profit_type = 12;</code>
+     * @return int
+     */
+    public function getTakeProfitType()
+    {
+        return $this->take_profit_type;
+    }
+
+    /**
+     *Подтип стоп-заявки TakeProfit
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TakeProfitType take_profit_type = 12;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTakeProfitType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TakeProfitType::class);
+        $this->take_profit_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Массив с параметрами трейлинг-стопа
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PostStopOrderRequest.TrailingData trailing_data = 13;</code>
+     * @return \Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData|null
+     */
+    public function getTrailingData()
+    {
+        return $this->trailing_data;
+    }
+
+    public function hasTrailingData()
+    {
+        return isset($this->trailing_data);
+    }
+
+    public function clearTrailingData()
+    {
+        unset($this->trailing_data);
+    }
+
+    /**
+     *Массив с параметрами трейлинг-стопа
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PostStopOrderRequest.TrailingData trailing_data = 13;</code>
+     * @param \Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData $var
+     * @return $this
+     */
+    public function setTrailingData($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData::class);
+        $this->trailing_data = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип цены
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 14;</code>
+     * @return int
+     */
+    public function getPriceType()
+    {
+        return $this->price_type;
+    }
+
+    /**
+     *Тип цены
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 14;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPriceType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PriceType::class);
+        $this->price_type = $var;
 
         return $this;
     }

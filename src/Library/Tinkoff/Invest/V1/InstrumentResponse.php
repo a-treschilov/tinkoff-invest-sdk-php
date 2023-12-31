@@ -41,11 +41,21 @@ class InstrumentResponse extends \Google\Protobuf\Internal\Message
      * Основная информация об инструменте.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Instrument instrument = 1;</code>
-     * @return \Tinkoff\Invest\V1\Instrument
+     * @return \Tinkoff\Invest\V1\Instrument|null
      */
     public function getInstrument()
     {
         return $this->instrument;
+    }
+
+    public function hasInstrument()
+    {
+        return isset($this->instrument);
+    }
+
+    public function clearInstrument()
+    {
+        unset($this->instrument);
     }
 
     /**

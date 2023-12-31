@@ -65,11 +65,21 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      *Дата и время выплаты в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 1;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDate()
     {
         return $this->date;
+    }
+
+    public function hasDate()
+    {
+        return isset($this->date);
+    }
+
+    public function clearDate()
+    {
+        unset($this->date);
     }
 
     /**
@@ -91,11 +101,21 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      *Величина выплаты.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value = 2;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getValue()
     {
         return $this->value;
+    }
+
+    public function hasValue()
+    {
+        return isset($this->value);
+    }
+
+    public function clearValue()
+    {
+        unset($this->value);
     }
 
     /**
@@ -117,11 +137,21 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      *Величина выплаты в процентах от номинала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value_percent = 3;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getValuePercent()
     {
         return $this->value_percent;
+    }
+
+    public function hasValuePercent()
+    {
+        return isset($this->value_percent);
+    }
+
+    public function clearValuePercent()
+    {
+        unset($this->value_percent);
     }
 
     /**
@@ -143,11 +173,21 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      *Номинал облигации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation nominal = 4;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getNominal()
     {
         return $this->nominal;
+    }
+
+    public function hasNominal()
+    {
+        return isset($this->nominal);
+    }
+
+    public function clearNominal()
+    {
+        unset($this->nominal);
     }
 
     /**

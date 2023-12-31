@@ -1,10 +1,10 @@
-FROM atreschilov/php-grpc:v0.1.3
+FROM atreschilov/php-grpc:v0.1.4
 
 RUN apt-get update && apt-get install g++ -y \
         cmake \
         protobuf-compiler
 
-RUN pecl install xdebug-3.2.0 \
+RUN pecl install xdebug-3.3.1 \
    && docker-php-ext-enable xdebug
 
 ADD ./php.ini /usr/local/etc/php

@@ -131,11 +131,21 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *Дата выплаты купона.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_date = 2;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCouponDate()
     {
         return $this->coupon_date;
+    }
+
+    public function hasCouponDate()
+    {
+        return isset($this->coupon_date);
+    }
+
+    public function clearCouponDate()
+    {
+        unset($this->coupon_date);
     }
 
     /**
@@ -183,11 +193,21 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *(Опционально) Дата фиксации реестра для выплаты купона.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 4;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFixDate()
     {
         return $this->fix_date;
+    }
+
+    public function hasFixDate()
+    {
+        return isset($this->fix_date);
+    }
+
+    public function clearFixDate()
+    {
+        unset($this->fix_date);
     }
 
     /**
@@ -209,11 +229,21 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *Выплата на одну облигацию.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue pay_one_bond = 5;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getPayOneBond()
     {
         return $this->pay_one_bond;
+    }
+
+    public function hasPayOneBond()
+    {
+        return isset($this->pay_one_bond);
+    }
+
+    public function clearPayOneBond()
+    {
+        unset($this->pay_one_bond);
     }
 
     /**
@@ -261,11 +291,21 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *Начало купонного периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_start_date = 7;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCouponStartDate()
     {
         return $this->coupon_start_date;
+    }
+
+    public function hasCouponStartDate()
+    {
+        return isset($this->coupon_start_date);
+    }
+
+    public function clearCouponStartDate()
+    {
+        unset($this->coupon_start_date);
     }
 
     /**
@@ -287,11 +327,21 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *Окончание купонного периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_end_date = 8;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCouponEndDate()
     {
         return $this->coupon_end_date;
+    }
+
+    public function hasCouponEndDate()
+    {
+        return isset($this->coupon_end_date);
+    }
+
+    public function clearCouponEndDate()
+    {
+        unset($this->coupon_end_date);
     }
 
     /**

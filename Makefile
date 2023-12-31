@@ -1,4 +1,4 @@
-VERSION=v1.5
+VERSION=V1.8
 
 start: docker-compose-up
 
@@ -26,7 +26,7 @@ code-sniffer:
 	docker exec -it tinkoff_invest_sdk_php /bin/bash -c "vendor/bin/phpcs --standard=PSR12 examples/ src/ --ignore=*/src/Library/*"
 
 get-from-proto:
-	docker exec -it tinkoff_invest_sdk_php /bin/bash -c "protoc --proto_path=/var/contracts/src/docs/contracts --php_out=/var/src/Library  --plugin=protoc-gen-grpc=/tmp/grpc/cmake/build/grpc_php_plugin --grpc_out=/var/src/Library /var/contracts/src/docs/contracts/*.proto"
+	docker exec -it tinkoff_invest_sdk_php /bin/bash -c "protoc --experimental_allow_proto3_optional --proto_path=/var/contracts/src/docs/contracts --php_out=/var/src/Library  --plugin=protoc-gen-grpc=/tmp/grpc/cmake/build/grpc_php_plugin --grpc_out=/var/src/Library /var/contracts/src/docs/contracts/*.proto"
 
 submodule-init:
 	git submodule update --init

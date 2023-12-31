@@ -65,11 +65,21 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      *Гарантийное обеспечение при покупке.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_margin_on_buy = 1;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getInitialMarginOnBuy()
     {
         return $this->initial_margin_on_buy;
+    }
+
+    public function hasInitialMarginOnBuy()
+    {
+        return isset($this->initial_margin_on_buy);
+    }
+
+    public function clearInitialMarginOnBuy()
+    {
+        unset($this->initial_margin_on_buy);
     }
 
     /**
@@ -91,11 +101,21 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      *Гарантийное обеспечение при продаже.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_margin_on_sell = 2;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getInitialMarginOnSell()
     {
         return $this->initial_margin_on_sell;
+    }
+
+    public function hasInitialMarginOnSell()
+    {
+        return isset($this->initial_margin_on_sell);
+    }
+
+    public function clearInitialMarginOnSell()
+    {
+        unset($this->initial_margin_on_sell);
     }
 
     /**
@@ -117,11 +137,21 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      *Шаг цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 3;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getMinPriceIncrement()
     {
         return $this->min_price_increment;
+    }
+
+    public function hasMinPriceIncrement()
+    {
+        return isset($this->min_price_increment);
+    }
+
+    public function clearMinPriceIncrement()
+    {
+        unset($this->min_price_increment);
     }
 
     /**
@@ -143,11 +173,21 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      *Стоимость шага цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment_amount = 4;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getMinPriceIncrementAmount()
     {
         return $this->min_price_increment_amount;
+    }
+
+    public function hasMinPriceIncrementAmount()
+    {
+        return isset($this->min_price_increment_amount);
+    }
+
+    public function clearMinPriceIncrementAmount()
+    {
+        unset($this->min_price_increment_amount);
     }
 
     /**

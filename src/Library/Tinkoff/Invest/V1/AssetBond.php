@@ -201,11 +201,21 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *Текущий номинал.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation current_nominal = 1;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getCurrentNominal()
     {
         return $this->current_nominal;
+    }
+
+    public function hasCurrentNominal()
+    {
+        return isset($this->current_nominal);
+    }
+
+    public function clearCurrentNominal()
+    {
+        unset($this->current_nominal);
     }
 
     /**
@@ -253,11 +263,21 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *Объем эмиссии облигации (стоимость).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size = 3;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getIssueSize()
     {
         return $this->issue_size;
+    }
+
+    public function hasIssueSize()
+    {
+        return isset($this->issue_size);
+    }
+
+    public function clearIssueSize()
+    {
+        unset($this->issue_size);
     }
 
     /**
@@ -279,11 +299,21 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *Номинал облигации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation nominal = 4;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getNominal()
     {
         return $this->nominal;
+    }
+
+    public function hasNominal()
+    {
+        return isset($this->nominal);
+    }
+
+    public function clearNominal()
+    {
+        unset($this->nominal);
     }
 
     /**
@@ -591,11 +621,21 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *Дата погашения облигации.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp maturity_date = 16;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getMaturityDate()
     {
         return $this->maturity_date;
+    }
+
+    public function hasMaturityDate()
+    {
+        return isset($this->maturity_date);
+    }
+
+    public function clearMaturityDate()
+    {
+        unset($this->maturity_date);
     }
 
     /**
@@ -643,11 +683,21 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *Дата выпуска облигации.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp state_reg_date = 18;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getStateRegDate()
     {
         return $this->state_reg_date;
+    }
+
+    public function hasStateRegDate()
+    {
+        return isset($this->state_reg_date);
+    }
+
+    public function clearStateRegDate()
+    {
+        unset($this->state_reg_date);
     }
 
     /**
@@ -669,11 +719,21 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *Дата размещения облигации.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp placement_date = 19;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getPlacementDate()
     {
         return $this->placement_date;
+    }
+
+    public function hasPlacementDate()
+    {
+        return isset($this->placement_date);
+    }
+
+    public function clearPlacementDate()
+    {
+        unset($this->placement_date);
     }
 
     /**
@@ -695,11 +755,21 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *Цена размещения облигации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation placement_price = 20;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPlacementPrice()
     {
         return $this->placement_price;
+    }
+
+    public function hasPlacementPrice()
+    {
+        return isset($this->placement_price);
+    }
+
+    public function clearPlacementPrice()
+    {
+        unset($this->placement_price);
     }
 
     /**
@@ -721,11 +791,21 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *Объявленное количество шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 21;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getIssueSizePlan()
     {
         return $this->issue_size_plan;
+    }
+
+    public function hasIssueSizePlan()
+    {
+        return isset($this->issue_size_plan);
+    }
+
+    public function clearIssueSizePlan()
+    {
+        unset($this->issue_size_plan);
     }
 
     /**

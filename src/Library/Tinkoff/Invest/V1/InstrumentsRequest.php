@@ -18,9 +18,9 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus)
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      */
-    protected $instrument_status = 0;
+    protected $instrument_status = null;
 
     /**
      * Constructor.
@@ -40,18 +40,28 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus)
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      * @return int
      */
     public function getInstrumentStatus()
     {
-        return $this->instrument_status;
+        return isset($this->instrument_status) ? $this->instrument_status : 0;
+    }
+
+    public function hasInstrumentStatus()
+    {
+        return isset($this->instrument_status);
+    }
+
+    public function clearInstrumentStatus()
+    {
+        unset($this->instrument_status);
     }
 
     /**
      *Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus)
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      * @param int $var
      * @return $this
      */

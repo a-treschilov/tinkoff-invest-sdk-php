@@ -179,11 +179,21 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Объем выпуска (шт.).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size = 2;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getIssueSize()
     {
         return $this->issue_size;
+    }
+
+    public function hasIssueSize()
+    {
+        return isset($this->issue_size);
+    }
+
+    public function clearIssueSize()
+    {
+        unset($this->issue_size);
     }
 
     /**
@@ -205,11 +215,21 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Номинал.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation nominal = 3;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getNominal()
     {
         return $this->nominal;
+    }
+
+    public function hasNominal()
+    {
+        return isset($this->nominal);
+    }
+
+    public function clearNominal()
+    {
+        unset($this->nominal);
     }
 
     /**
@@ -283,11 +303,21 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Ставка дивиденда (для привилегированных акций).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dividend_rate = 6;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDividendRate()
     {
         return $this->dividend_rate;
+    }
+
+    public function hasDividendRate()
+    {
+        return isset($this->dividend_rate);
+    }
+
+    public function clearDividendRate()
+    {
+        unset($this->dividend_rate);
     }
 
     /**
@@ -335,11 +365,21 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Дата IPO.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp ipo_date = 8;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getIpoDate()
     {
         return $this->ipo_date;
+    }
+
+    public function hasIpoDate()
+    {
+        return isset($this->ipo_date);
+    }
+
+    public function clearIpoDate()
+    {
+        unset($this->ipo_date);
     }
 
     /**
@@ -361,11 +401,21 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Дата регистрации.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp registry_date = 9;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRegistryDate()
     {
         return $this->registry_date;
+    }
+
+    public function hasRegistryDate()
+    {
+        return isset($this->registry_date);
+    }
+
+    public function clearRegistryDate()
+    {
+        unset($this->registry_date);
     }
 
     /**
@@ -439,11 +489,21 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Дата размещения акции.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp placement_date = 12;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getPlacementDate()
     {
         return $this->placement_date;
+    }
+
+    public function hasPlacementDate()
+    {
+        return isset($this->placement_date);
+    }
+
+    public function clearPlacementDate()
+    {
+        unset($this->placement_date);
     }
 
     /**
@@ -491,11 +551,21 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Объявленное количество шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 14;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getIssueSizePlan()
     {
         return $this->issue_size_plan;
+    }
+
+    public function hasIssueSizePlan()
+    {
+        return isset($this->issue_size_plan);
+    }
+
+    public function clearIssueSizePlan()
+    {
+        unset($this->issue_size_plan);
     }
 
     /**
@@ -517,11 +587,21 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Количество акций в свободном обращении.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation total_float = 15;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getTotalFloat()
     {
         return $this->total_float;
+    }
+
+    public function hasTotalFloat()
+    {
+        return isset($this->total_float);
+    }
+
+    public function clearTotalFloat()
+    {
+        unset($this->total_float);
     }
 
     /**

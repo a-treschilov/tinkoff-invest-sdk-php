@@ -41,11 +41,21 @@ class OptionResponse extends \Google\Protobuf\Internal\Message
      * Информация по опциону.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Option instrument = 1;</code>
-     * @return \Tinkoff\Invest\V1\Option
+     * @return \Tinkoff\Invest\V1\Option|null
      */
     public function getInstrument()
     {
         return $this->instrument;
+    }
+
+    public function hasInstrument()
+    {
+        return isset($this->instrument);
+    }
+
+    public function clearInstrument()
+    {
+        unset($this->instrument);
     }
 
     /**

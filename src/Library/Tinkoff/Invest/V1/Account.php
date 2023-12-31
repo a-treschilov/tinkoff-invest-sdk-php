@@ -193,11 +193,21 @@ class Account extends \Google\Protobuf\Internal\Message
      * Дата открытия счёта в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp opened_date = 5;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getOpenedDate()
     {
         return $this->opened_date;
+    }
+
+    public function hasOpenedDate()
+    {
+        return isset($this->opened_date);
+    }
+
+    public function clearOpenedDate()
+    {
+        unset($this->opened_date);
     }
 
     /**
@@ -219,11 +229,21 @@ class Account extends \Google\Protobuf\Internal\Message
      * Дата закрытия счёта в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp closed_date = 6;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getClosedDate()
     {
         return $this->closed_date;
+    }
+
+    public function hasClosedDate()
+    {
+        return isset($this->closed_date);
+    }
+
+    public function clearClosedDate()
+    {
+        unset($this->closed_date);
     }
 
     /**

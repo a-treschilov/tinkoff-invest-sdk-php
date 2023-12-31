@@ -163,11 +163,21 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Номинал.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation nominal = 2;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getNominal()
     {
         return $this->nominal;
+    }
+
+    public function hasNominal()
+    {
+        return isset($this->nominal);
+    }
+
+    public function clearNominal()
+    {
+        unset($this->nominal);
     }
 
     /**
@@ -319,11 +329,21 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Барьер сохранности (в процентах).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation safety_barrier = 8;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getSafetyBarrier()
     {
         return $this->safety_barrier;
+    }
+
+    public function hasSafetyBarrier()
+    {
+        return isset($this->safety_barrier);
+    }
+
+    public function clearSafetyBarrier()
+    {
+        unset($this->safety_barrier);
     }
 
     /**
@@ -345,11 +365,21 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Дата погашения.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp maturity_date = 9;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getMaturityDate()
     {
         return $this->maturity_date;
+    }
+
+    public function hasMaturityDate()
+    {
+        return isset($this->maturity_date);
+    }
+
+    public function clearMaturityDate()
+    {
+        unset($this->maturity_date);
     }
 
     /**
@@ -371,11 +401,21 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Объявленное количество шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 10;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getIssueSizePlan()
     {
         return $this->issue_size_plan;
+    }
+
+    public function hasIssueSizePlan()
+    {
+        return isset($this->issue_size_plan);
+    }
+
+    public function clearIssueSizePlan()
+    {
+        unset($this->issue_size_plan);
     }
 
     /**
@@ -397,11 +437,21 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Объем размещения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size = 11;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getIssueSize()
     {
         return $this->issue_size;
+    }
+
+    public function hasIssueSize()
+    {
+        return isset($this->issue_size);
+    }
+
+    public function clearIssueSize()
+    {
+        unset($this->issue_size);
     }
 
     /**
@@ -423,11 +473,21 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Дата размещения ноты.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp placement_date = 12;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getPlacementDate()
     {
         return $this->placement_date;
+    }
+
+    public function hasPlacementDate()
+    {
+        return isset($this->placement_date);
+    }
+
+    public function clearPlacementDate()
+    {
+        unset($this->placement_date);
     }
 
     /**

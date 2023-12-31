@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class SubscribeCandlesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://tinkoff.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      */
@@ -35,8 +35,8 @@ class SubscribeCandlesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $tracking_id
-     *          Уникальный идентификатор запроса, подробнее: [tracking_id](https://tinkoff.github.io/investAPI/grpc#tracking-id).
-     *     @type \Tinkoff\Invest\V1\CandleSubscription[]|\Google\Protobuf\Internal\RepeatedField $candles_subscriptions
+     *          Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *     @type array<\Tinkoff\Invest\V1\CandleSubscription>|\Google\Protobuf\Internal\RepeatedField $candles_subscriptions
      *          Массив статусов подписки на свечи.
      * }
      */
@@ -46,7 +46,7 @@ class SubscribeCandlesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://tinkoff.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      * @return string
@@ -57,7 +57,7 @@ class SubscribeCandlesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://tinkoff.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      * @param string $var
@@ -86,7 +86,7 @@ class SubscribeCandlesResponse extends \Google\Protobuf\Internal\Message
      *Массив статусов подписки на свечи.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.CandleSubscription candles_subscriptions = 2;</code>
-     * @param \Tinkoff\Invest\V1\CandleSubscription[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\CandleSubscription>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCandlesSubscriptions($var)

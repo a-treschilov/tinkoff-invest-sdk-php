@@ -36,11 +36,16 @@ class GetDividendsForeignIssuerResponse extends \Google\Protobuf\Internal\Messag
      *Объект результата задачи запуска формирования отчёта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GenerateDividendsForeignIssuerReportResponse generate_div_foreign_issuer_report_response = 1;</code>
-     * @return \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportResponse
+     * @return \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportResponse|null
      */
     public function getGenerateDivForeignIssuerReportResponse()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasGenerateDivForeignIssuerReportResponse()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -62,11 +67,16 @@ class GetDividendsForeignIssuerResponse extends \Google\Protobuf\Internal\Messag
      *Отчёт "Справка о доходах за пределами РФ".
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetDividendsForeignIssuerReportResponse div_foreign_issuer_report = 2;</code>
-     * @return \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportResponse
+     * @return \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportResponse|null
      */
     public function getDivForeignIssuerReport()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasDivForeignIssuerReport()
+    {
+        return $this->hasOneof(2);
     }
 
     /**

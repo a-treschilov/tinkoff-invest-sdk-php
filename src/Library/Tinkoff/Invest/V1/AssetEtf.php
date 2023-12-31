@@ -262,7 +262,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *          Плановая ребалансировка портфеля.
      *     @type string $tax_rate
      *          Ставки налогообложения дивидендов и купонов.
-     *     @type \Google\Protobuf\Timestamp[]|\Google\Protobuf\Internal\RepeatedField $rebalancing_dates
+     *     @type array<\Google\Protobuf\Timestamp>|\Google\Protobuf\Internal\RepeatedField $rebalancing_dates
      *          Даты ребалансировок.
      *     @type string $issue_kind
      *          Форма выпуска.
@@ -281,11 +281,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Суммарные расходы фонда (в %).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation total_expense = 1;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getTotalExpense()
     {
         return $this->total_expense;
+    }
+
+    public function hasTotalExpense()
+    {
+        return isset($this->total_expense);
+    }
+
+    public function clearTotalExpense()
+    {
+        unset($this->total_expense);
     }
 
     /**
@@ -307,11 +317,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Барьерная ставка доходности после которой фонд имеет право на perfomance fee (в процентах).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation hurdle_rate = 2;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getHurdleRate()
     {
         return $this->hurdle_rate;
+    }
+
+    public function hasHurdleRate()
+    {
+        return isset($this->hurdle_rate);
+    }
+
+    public function clearHurdleRate()
+    {
+        unset($this->hurdle_rate);
     }
 
     /**
@@ -333,11 +353,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Комиссия за успешные результаты фонда (в процентах).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation performance_fee = 3;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPerformanceFee()
     {
         return $this->performance_fee;
+    }
+
+    public function hasPerformanceFee()
+    {
+        return isset($this->performance_fee);
+    }
+
+    public function clearPerformanceFee()
+    {
+        unset($this->performance_fee);
     }
 
     /**
@@ -359,11 +389,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Фиксированная комиссия за управление (в процентах).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation fixed_commission = 4;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getFixedCommission()
     {
         return $this->fixed_commission;
+    }
+
+    public function hasFixedCommission()
+    {
+        return isset($this->fixed_commission);
+    }
+
+    public function clearFixedCommission()
+    {
+        unset($this->fixed_commission);
     }
 
     /**
@@ -437,11 +477,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Премия (надбавка к цене) при покупке доли в фонде (в процентах).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation buy_premium = 7;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getBuyPremium()
     {
         return $this->buy_premium;
+    }
+
+    public function hasBuyPremium()
+    {
+        return isset($this->buy_premium);
+    }
+
+    public function clearBuyPremium()
+    {
+        unset($this->buy_premium);
     }
 
     /**
@@ -463,11 +513,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Ставка дисконта (вычет из цены) при продаже доли в фонде (в процентах).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation sell_discount = 8;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getSellDiscount()
     {
         return $this->sell_discount;
+    }
+
+    public function hasSellDiscount()
+    {
+        return isset($this->sell_discount);
+    }
+
+    public function clearSellDiscount()
+    {
+        unset($this->sell_discount);
     }
 
     /**
@@ -645,11 +705,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Количество акций в обращении.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation num_share = 15;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getNumShare()
     {
         return $this->num_share;
+    }
+
+    public function hasNumShare()
+    {
+        return isset($this->num_share);
+    }
+
+    public function clearNumShare()
+    {
+        unset($this->num_share);
     }
 
     /**
@@ -697,11 +767,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Дата выпуска.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp released_date = 17;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getReleasedDate()
     {
         return $this->released_date;
+    }
+
+    public function hasReleasedDate()
+    {
+        return isset($this->released_date);
+    }
+
+    public function clearReleasedDate()
+    {
+        unset($this->released_date);
     }
 
     /**
@@ -801,11 +881,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Срок восстановления индекса (после просадки).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation index_recovery_period = 21;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getIndexRecoveryPeriod()
     {
         return $this->index_recovery_period;
+    }
+
+    public function hasIndexRecoveryPeriod()
+    {
+        return isset($this->index_recovery_period);
+    }
+
+    public function clearIndexRecoveryPeriod()
+    {
+        unset($this->index_recovery_period);
     }
 
     /**
@@ -879,11 +969,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Комиссия на покрытие расходов фонда (в процентах).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expense_commission = 24;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getExpenseCommission()
     {
         return $this->expense_commission;
+    }
+
+    public function hasExpenseCommission()
+    {
+        return isset($this->expense_commission);
+    }
+
+    public function clearExpenseCommission()
+    {
+        unset($this->expense_commission);
     }
 
     /**
@@ -905,11 +1005,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Ошибка следования за индексом (в процентах).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation primary_index_tracking_error = 25;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPrimaryIndexTrackingError()
     {
         return $this->primary_index_tracking_error;
+    }
+
+    public function hasPrimaryIndexTrackingError()
+    {
+        return isset($this->primary_index_tracking_error);
+    }
+
+    public function clearPrimaryIndexTrackingError()
+    {
+        unset($this->primary_index_tracking_error);
     }
 
     /**
@@ -994,7 +1104,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Даты ребалансировок.
      *
      * Generated from protobuf field <code>repeated .google.protobuf.Timestamp rebalancing_dates = 28;</code>
-     * @param \Google\Protobuf\Timestamp[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Google\Protobuf\Timestamp>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRebalancingDates($var)
@@ -1035,11 +1145,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Номинал.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation nominal = 30;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getNominal()
     {
         return $this->nominal;
+    }
+
+    public function hasNominal()
+    {
+        return isset($this->nominal);
+    }
+
+    public function clearNominal()
+    {
+        unset($this->nominal);
     }
 
     /**

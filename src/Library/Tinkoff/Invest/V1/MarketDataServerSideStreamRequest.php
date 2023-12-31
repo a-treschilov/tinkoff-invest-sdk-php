@@ -71,11 +71,21 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      *Запрос подписки на свечи.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeCandlesRequest subscribe_candles_request = 1;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeCandlesRequest
+     * @return \Tinkoff\Invest\V1\SubscribeCandlesRequest|null
      */
     public function getSubscribeCandlesRequest()
     {
         return $this->subscribe_candles_request;
+    }
+
+    public function hasSubscribeCandlesRequest()
+    {
+        return isset($this->subscribe_candles_request);
+    }
+
+    public function clearSubscribeCandlesRequest()
+    {
+        unset($this->subscribe_candles_request);
     }
 
     /**
@@ -97,11 +107,21 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      *Запрос подписки на стаканы.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeOrderBookRequest subscribe_order_book_request = 2;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeOrderBookRequest
+     * @return \Tinkoff\Invest\V1\SubscribeOrderBookRequest|null
      */
     public function getSubscribeOrderBookRequest()
     {
         return $this->subscribe_order_book_request;
+    }
+
+    public function hasSubscribeOrderBookRequest()
+    {
+        return isset($this->subscribe_order_book_request);
+    }
+
+    public function clearSubscribeOrderBookRequest()
+    {
+        unset($this->subscribe_order_book_request);
     }
 
     /**
@@ -123,11 +143,21 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      *Запрос подписки на ленту обезличенных сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeTradesRequest subscribe_trades_request = 3;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeTradesRequest
+     * @return \Tinkoff\Invest\V1\SubscribeTradesRequest|null
      */
     public function getSubscribeTradesRequest()
     {
         return $this->subscribe_trades_request;
+    }
+
+    public function hasSubscribeTradesRequest()
+    {
+        return isset($this->subscribe_trades_request);
+    }
+
+    public function clearSubscribeTradesRequest()
+    {
+        unset($this->subscribe_trades_request);
     }
 
     /**
@@ -149,11 +179,21 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      *Запрос подписки на торговые статусы инструментов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeInfoRequest subscribe_info_request = 4;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeInfoRequest
+     * @return \Tinkoff\Invest\V1\SubscribeInfoRequest|null
      */
     public function getSubscribeInfoRequest()
     {
         return $this->subscribe_info_request;
+    }
+
+    public function hasSubscribeInfoRequest()
+    {
+        return isset($this->subscribe_info_request);
+    }
+
+    public function clearSubscribeInfoRequest()
+    {
+        unset($this->subscribe_info_request);
     }
 
     /**
@@ -175,11 +215,21 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      *Запрос подписки на цены последних сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
-     * @return \Tinkoff\Invest\V1\SubscribeLastPriceRequest
+     * @return \Tinkoff\Invest\V1\SubscribeLastPriceRequest|null
      */
     public function getSubscribeLastPriceRequest()
     {
         return $this->subscribe_last_price_request;
+    }
+
+    public function hasSubscribeLastPriceRequest()
+    {
+        return isset($this->subscribe_last_price_request);
+    }
+
+    public function clearSubscribeLastPriceRequest()
+    {
+        unset($this->subscribe_last_price_request);
     }
 
     /**

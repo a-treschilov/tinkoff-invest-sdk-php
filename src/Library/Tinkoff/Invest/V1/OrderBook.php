@@ -52,13 +52,13 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     protected $time = null;
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      */
     protected $limit_up = null;
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      */
@@ -82,16 +82,16 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *          Глубина стакана.
      *     @type bool $is_consistent
      *          Флаг консистентности стакана. **false** значит не все заявки попали в стакан по причинам сетевых задержек или нарушения порядка доставки.
-     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $bids
+     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $bids
      *          Массив предложений.
-     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $asks
+     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $asks
      *          Массив спроса.
      *     @type \Google\Protobuf\Timestamp $time
      *          Время формирования стакана в часовом поясе UTC по времени биржи.
      *     @type \Tinkoff\Invest\V1\Quotation $limit_up
-     *          Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *          Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *     @type \Tinkoff\Invest\V1\Quotation $limit_down
-     *          Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *          Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *     @type string $instrument_uid
      *          Uid инструмента
      * }
@@ -194,7 +194,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Массив предложений.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order bids = 4;</code>
-     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBids($var)
@@ -220,7 +220,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Массив спроса.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order asks = 5;</code>
-     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAsks($var)
@@ -235,11 +235,21 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Время формирования стакана в часовом поясе UTC по времени биржи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 6;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getTime()
     {
         return $this->time;
+    }
+
+    public function hasTime()
+    {
+        return isset($this->time);
+    }
+
+    public function clearTime()
+    {
+        unset($this->time);
     }
 
     /**
@@ -258,18 +268,28 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getLimitUp()
     {
         return $this->limit_up;
     }
 
+    public function hasLimitUp()
+    {
+        return isset($this->limit_up);
+    }
+
+    public function clearLimitUp()
+    {
+        unset($this->limit_up);
+    }
+
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -284,18 +304,28 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getLimitDown()
     {
         return $this->limit_down;
     }
 
+    public function hasLimitDown()
+    {
+        return isset($this->limit_down);
+    }
+
+    public function clearLimitDown()
+    {
+        unset($this->limit_down);
+    }
+
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

@@ -40,25 +40,25 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     private $asks;
     /**
-     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation last_price = 5;</code>
      */
     protected $last_price = null;
     /**
-     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 6;</code>
      */
     protected $close_price = null;
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      */
     protected $limit_up = null;
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      */
@@ -98,18 +98,18 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *          Figi-идентификатор инструмента.
      *     @type int $depth
      *          Глубина стакана.
-     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $bids
+     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $bids
      *          Множество пар значений на покупку.
-     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $asks
+     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $asks
      *          Множество пар значений на продажу.
      *     @type \Tinkoff\Invest\V1\Quotation $last_price
-     *          Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *          Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *     @type \Tinkoff\Invest\V1\Quotation $close_price
-     *          Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *          Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *     @type \Tinkoff\Invest\V1\Quotation $limit_up
-     *          Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *          Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *     @type \Tinkoff\Invest\V1\Quotation $limit_down
-     *          Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *          Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *     @type \Google\Protobuf\Timestamp $last_price_ts
      *          Время получения цены последней сделки.
      *     @type \Google\Protobuf\Timestamp $close_price_ts
@@ -192,7 +192,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Множество пар значений на покупку.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order bids = 3;</code>
-     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBids($var)
@@ -218,7 +218,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Множество пар значений на продажу.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order asks = 4;</code>
-     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAsks($var)
@@ -230,18 +230,28 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation last_price = 5;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getLastPrice()
     {
         return $this->last_price;
     }
 
+    public function hasLastPrice()
+    {
+        return isset($this->last_price);
+    }
+
+    public function clearLastPrice()
+    {
+        unset($this->last_price);
+    }
+
     /**
-     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation last_price = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -256,18 +266,28 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 6;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getClosePrice()
     {
         return $this->close_price;
     }
 
+    public function hasClosePrice()
+    {
+        return isset($this->close_price);
+    }
+
+    public function clearClosePrice()
+    {
+        unset($this->close_price);
+    }
+
     /**
-     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -282,18 +302,28 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getLimitUp()
     {
         return $this->limit_up;
     }
 
+    public function hasLimitUp()
+    {
+        return isset($this->limit_up);
+    }
+
+    public function clearLimitUp()
+    {
+        unset($this->limit_up);
+    }
+
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -308,18 +338,28 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
-     * @return \Tinkoff\Invest\V1\Quotation
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getLimitDown()
     {
         return $this->limit_down;
     }
 
+    public function hasLimitDown()
+    {
+        return isset($this->limit_down);
+    }
+
+    public function clearLimitDown()
+    {
+        unset($this->limit_down);
+    }
+
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://tinkoff.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -337,11 +377,21 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Время получения цены последней сделки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_price_ts = 21;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastPriceTs()
     {
         return $this->last_price_ts;
+    }
+
+    public function hasLastPriceTs()
+    {
+        return isset($this->last_price_ts);
+    }
+
+    public function clearLastPriceTs()
+    {
+        unset($this->last_price_ts);
     }
 
     /**
@@ -363,11 +413,21 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Время получения цены закрытия.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp close_price_ts = 22;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getClosePriceTs()
     {
         return $this->close_price_ts;
+    }
+
+    public function hasClosePriceTs()
+    {
+        return isset($this->close_price_ts);
+    }
+
+    public function clearClosePriceTs()
+    {
+        unset($this->close_price_ts);
     }
 
     /**
@@ -389,11 +449,21 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Время формирования стакана на бирже.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp orderbook_ts = 23;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getOrderbookTs()
     {
         return $this->orderbook_ts;
+    }
+
+    public function hasOrderbookTs()
+    {
+        return isset($this->orderbook_ts);
+    }
+
+    public function clearOrderbookTs()
+    {
+        unset($this->orderbook_ts);
     }
 
     /**

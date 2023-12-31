@@ -41,11 +41,21 @@ class SandboxPayInResponse extends \Google\Protobuf\Internal\Message
      *Текущий баланс счёта
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue balance = 1;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getBalance()
     {
         return $this->balance;
+    }
+
+    public function hasBalance()
+    {
+        return isset($this->balance);
+    }
+
+    public function clearBalance()
+    {
+        unset($this->balance);
     }
 
     /**
