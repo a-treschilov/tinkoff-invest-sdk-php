@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.17 - 2024.01.05
+- [feature] Added method GetFuturesBy
+- [feature] Added method GetBondEvents
+
 ## v0.2.16 - 2023.12.31
 - [tech] Updated api contract to v1.8
 - [tech] Migrate to new git repo `russianInvestments`

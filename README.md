@@ -75,18 +75,20 @@ try {
   * &#10006; TradingSchedules
   * &#10004; BondBy
   * &#10004; Bonds
-  * &#10006; GetBondCoupons
+  * &#10004; GetBondCoupons
+  * &#10004; GetBondsEvents
   * &#10004; CurrencyBy
   * &#10004; Currencies
   * &#10006; EtfBy
   * &#10004; Etfs
-  * &#10006; FutureBy
+  * &#10004; FutureBy
   * &#10004; Futures
-  * &#10006; Option
   * &#10006; OptionBy
+  * &#10006; Options
   * &#10006; OptionsBy
   * &#10004; ShareBy
   * &#10004; Shares
+  * &#10006; Indicatives
   * &#10006; GetAccruedInterests
   * &#10006; GetFuturesMargin
   * &#10004; GetInstrumentBy
@@ -99,6 +101,10 @@ try {
   * &#10006; FindInstrument
   * &#10006; GetBrands
   * &#10006; GetBrandBy
+  * &#10006; GetAssetFundamentals
+  * &#10006; GetAssetReports
+  * &#10006; GetConsensusForecasts
+  * &#10006; GetForecastBy
 * [OrdersStream](https://tinkoff.github.io/investAPI/orders/)
   * &#10006; TradesStream
 * [Orders](https://tinkoff.github.io/investAPI/orders/)
@@ -107,6 +113,8 @@ try {
   * &#10006; GetOrderState
   * &#10006; GetOrders
   * &#10006; ReplaceOrder
+  * &#10006; GetMaxLots
+  * &#10006; GetOrderPrice
 * [Operations](https://tinkoff.github.io/investAPI/operations/)
   * &#10004; GetOperations
   * &#10004; GetPortfolio

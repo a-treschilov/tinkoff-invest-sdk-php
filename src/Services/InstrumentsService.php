@@ -15,8 +15,13 @@ use Tinkoff\Invest\V1\CurrenciesResponse;
 use Tinkoff\Invest\V1\Currency;
 use Tinkoff\Invest\V1\CurrencyResponse;
 use Tinkoff\Invest\V1\EtfsResponse;
+use Tinkoff\Invest\V1\Future;
+use Tinkoff\Invest\V1\FutureResponse;
 use Tinkoff\Invest\V1\GetBondCouponsRequest;
 use Tinkoff\Invest\V1\GetBondCouponsResponse;
+use Tinkoff\Invest\V1\GetBondEventsRequest;
+use Tinkoff\Invest\V1\GetBondEventsRequest\EventType;
+use Tinkoff\Invest\V1\GetBondEventsResponse;
 use Tinkoff\Invest\V1\GetDividendsRequest;
 use Tinkoff\Invest\V1\GetDividendsResponse;
 use Tinkoff\Invest\V1\Instrument;
@@ -182,6 +187,38 @@ class InstrumentsService
     }
 
     /**
+     * @param \DateTime $from Начало запрашиваемого периода
+     * @param \DateTime $to Окончание запрашиваемого периода
+     * @param string $instrumentId Идентификатор инструмента Figi или instrument_uid
+     * @param int $eventType Тип события EventType
+     * @return RepeatedField
+     * @throws TIException
+     */
+    public function getBondEvents(
+        \DateTime $from,
+        \DateTime $to,
+        string $instrumentId,
+        int $eventType
+    ): RepeatedField {
+        $request = new GetBondEventsRequest();
+        $request->setInstrumentId($instrumentId);
+        $request->setFrom(new Timestamp(['seconds' => $from->getTimestamp()]));
+        $request->setTo(new Timestamp(['seconds' => $to->getTimestamp()]));
+        $request->setType($eventType);
+
+        /** @var GetBondEventsResponse $response */
+        list($response, $status) = $this->client->GetBondEvents($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->details);
+        }
+
+        return $response->getEvents();
+    }
+
+    /**
      * @param string $instrumentId
      * @param \DateTime $from
      * @param \DateTime $to
@@ -227,6 +264,31 @@ class InstrumentsService
         }
 
         return $response->getInstruments();
+    }
+
+    /**
+     * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
+     * @param string|null $classCode Идентификатор class_code. Обязателен при id_type = ticker
+     * @param string $id
+     * @return Future|null
+     * @throws TIException
+     */
+    public function getFuturesBy(int $idType, ?string $classCode, string $id): Future|null
+    {
+        $request = new InstrumentRequest();
+        $request->setIdType($idType);
+        $request->setClassCode($classCode);
+        $request->setId($id);
+
+        /** @var FutureResponse $response */
+        list($response, $status) = $this->client->FutureBy($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        if ($status->code !== 0) {
+            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
+            throw new TIException($message, (int)$status->details);
+        }
+        return $response->getInstrument();
     }
 
     /**
