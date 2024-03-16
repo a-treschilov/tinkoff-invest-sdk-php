@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.2.18 - 2024.03.16
+- [feature] Updated api contract to v1.19
+
 ## v0.2.17 - 2024.01.05
 - [feature] Added method GetFuturesBy
 - [feature] Added method GetBondEvents

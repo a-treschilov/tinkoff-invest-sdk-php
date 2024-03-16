@@ -134,6 +134,7 @@ try {
   * &#10006; GetTradingStatuses
   * &#10006; GetLastTrades
   * &#10006; GetClosePrice
+  * &#10006; GetTechAnalysis
 * [MarketDataStream](https://tinkoff.github.io/investAPI/marketdata/#marketdatastreamservice)
   * &#10006; MarketDataStream
   * &#10006; MarketDataServerSideStream
