@@ -23,10 +23,10 @@ class OperationsService
 
     public function __construct(TIClient $client)
     {
-        $this->client = new OperationsServiceClient($client->getHostname(), $client->getOptions());
+        $this->client = new OperationsServiceClient($client->getHostname(), $client->getApiConfig());
     }
 
-    public function getPortfolio(string $accountId): PortfolioResponse
+    public function getPortfolio(string $accountId): array
     {
         $request = new PortfolioRequest();
         $request->setAccountId($accountId);
@@ -34,11 +34,7 @@ class OperationsService
         /** @var PortfolioResponse $response */
         list($response, $status) = $this->client->GetPortfolio($request, [], TIClient::SPECIAL_OPTIONS)->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-        return $response;
+        return [$response, $status];
     }
 
     /**
@@ -47,8 +43,7 @@ class OperationsService
      * @param \DateTime|null $to Окончание периода (по UTC)
      * @param int|null $state Статус запрашиваемых операций
      * @param string|null $figi Figi-идентификатор инструмента для фильтрации
-     * @return RepeatedField
-     * @throws TIException
+     * @return array
      */
     public function getOperations(
         string $accountId,
@@ -56,7 +51,7 @@ class OperationsService
         ?\DateTime $to = null,
         ?int $state = null,
         ?string $figi = null
-    ): RepeatedField {
+    ): array {
         $from = $from ?? new \DateTime('2010-01-01 00:00:00');
         $to = $to ?? new \DateTime();
 
@@ -74,15 +69,10 @@ class OperationsService
         /** @var OperationsResponse $response */
         list($response, $status) = $this->client->GetOperations($request, [], TIClient::SPECIAL_OPTIONS)->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getOperations();
+        return [$response->getOperations(), $status];
     }
 
-    public function getWithdrawLimits(string $accountId): WithdrawLimitsResponse
+    public function getWithdrawLimits(string $accountId): array
     {
         $request = new WithdrawLimitsRequest();
         $request->setAccountId($accountId);
@@ -90,11 +80,6 @@ class OperationsService
         /** @var WithdrawLimitsResponse $response */
         list($response, $status) = $this->client->GetWithdrawLimits($request, [], TIClient::SPECIAL_OPTIONS)->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response;
+        return [$response, $status];
     }
 }

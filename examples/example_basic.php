@@ -14,7 +14,11 @@ require __DIR__ . '/../vendor/autoload.php';
  */
 $token = '<Your Tinkoff Invest Account Token>';
 
-$tiClient = new TIClient($token);
+$options = [
+    'isRateLimitRetry' => false
+];
+
+$tiClient = new TIClient($token, $options);
 try {
     $tiAccounts = $tiClient->getUser()->getAccounts();
 
