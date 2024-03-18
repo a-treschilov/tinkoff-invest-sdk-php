@@ -18,7 +18,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $token = '<Your Tinkoff Invest Account Token>';
 
 $tiClient = new TIClient($token);
-$userServiceClient = new UsersServiceClient($tiClient->getHostname(), $tiClient->getOptions());
+$userServiceClient = new UsersServiceClient($tiClient->getHostname(), $tiClient->getApiConfig());
 $request = new GetAccountsRequest();
 /** @var GetAccountsResponse $response */
 list($response, $status) = $userServiceClient->GetAccounts($request)->wait();

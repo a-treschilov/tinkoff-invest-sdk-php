@@ -17,12 +17,11 @@ class UsersService
 
     public function __construct(TIClient $client)
     {
-        $this->usersServiceClient = new UsersServiceClient($client->getHostname(), $client->getOptions());
+        $this->usersServiceClient = new UsersServiceClient($client->getHostname(), $client->getApiConfig());
     }
 
     /**
-     * @return Account[]
-     * @throws TIException
+     * @return array
      */
     public function getAccounts(): array
     {
@@ -31,17 +30,12 @@ class UsersService
         list($response, $status) = $this->usersServiceClient->GetAccounts($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
         $accounts = [];
         /** @var Account $account */
-        foreach ($response->getAccounts()->getIterator() as $account) {
+        foreach ($response?->getAccounts()->getIterator() as $account) {
             $accounts[] = $account;
         }
 
-        return $accounts;
+        return [$accounts, $status];
     }
 }

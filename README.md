@@ -42,8 +42,11 @@ require __DIR__ . '/../vendor/autoload.php';
  * @see https://tinkoff.github.io/investAPI/token/
  */
 $token = '<Your Tinkoff Invest Account Token>';
+$options = [
+    'isRateLimitRetry' => false
+];
 
-$tiClient = new TIClient($token);
+$tiClient = new TIClient($token, $options);
 try {
     $tiAccounts = $tiClient->getUser()->getAccounts();
 
@@ -159,6 +162,7 @@ try {
   * &#10006; GetSandboxWithdrawLimits
 
 ### Advance usage (full methods support)
+
 ```php
 <?php
 
@@ -180,7 +184,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $token = '<Your Tinkoff Invest Account Token>';
 
 $tiClient = new TIClient($token);
-$userServiceClient = new UsersServiceClient($tiClient->getHostname(), $tiClient->getOptions());
+$userServiceClient = new UsersServiceClient($tiClient->getHostname(), $tiClient->getApiConfig());
 $request = new GetAccountsRequest();
 /** @var GetAccountsResponse $response */
 list($response, $status) = $userServiceClient->GetAccounts($request)->wait();

@@ -4,32 +4,24 @@ declare(strict_types=1);
 
 namespace ATreschilov\TinkoffInvestApiSdk\Services;
 
-use ATreschilov\TinkoffInvestApiSdk\Exceptions\TIException;
 use ATreschilov\TinkoffInvestApiSdk\TIClient;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Timestamp;
-use Tinkoff\Invest\V1\Bond;
 use Tinkoff\Invest\V1\BondResponse;
 use Tinkoff\Invest\V1\BondsResponse;
 use Tinkoff\Invest\V1\CurrenciesResponse;
-use Tinkoff\Invest\V1\Currency;
 use Tinkoff\Invest\V1\CurrencyResponse;
 use Tinkoff\Invest\V1\EtfsResponse;
-use Tinkoff\Invest\V1\Future;
 use Tinkoff\Invest\V1\FutureResponse;
 use Tinkoff\Invest\V1\GetBondCouponsRequest;
 use Tinkoff\Invest\V1\GetBondCouponsResponse;
 use Tinkoff\Invest\V1\GetBondEventsRequest;
-use Tinkoff\Invest\V1\GetBondEventsRequest\EventType;
 use Tinkoff\Invest\V1\GetBondEventsResponse;
 use Tinkoff\Invest\V1\GetDividendsRequest;
 use Tinkoff\Invest\V1\GetDividendsResponse;
-use Tinkoff\Invest\V1\Instrument;
 use Tinkoff\Invest\V1\InstrumentRequest;
 use Tinkoff\Invest\V1\InstrumentResponse;
 use Tinkoff\Invest\V1\InstrumentsRequest;
 use Tinkoff\Invest\V1\InstrumentsServiceClient;
-use Tinkoff\Invest\V1\Share;
 use Tinkoff\Invest\V1\ShareResponse;
 use Tinkoff\Invest\V1\SharesResponse;
 
@@ -39,16 +31,16 @@ class InstrumentsService
 
     public function __construct(TIClient $client)
     {
-        $this->client = new InstrumentsServiceClient($client->getHostname(), $client->getOptions());
+        $this->client = new InstrumentsServiceClient($client->getHostname(), $client->getApiConfig());
     }
 
     /**
-     * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
+     * @param int $idType (1 - figi, 2 - ticker, 3 - Уникальный идентификатор, 0 - значение не определено)
      * @param string|null $classCode
      * @param string $id
-     * @return Instrument
+     * @return array
      */
-    public function getInstrumentBy(int $idType, ?string $classCode, string $id): Instrument
+    public function getInstrumentBy(int $idType, ?string $classCode, string $id): array
     {
         $request = new InstrumentRequest();
         $request->setIdType($idType);
@@ -59,21 +51,16 @@ class InstrumentsService
         list($response, $status) = $this->client->GetInstrumentBy($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-        return $response->getInstrument();
+        return [$response?->getInstrument(), $status];
     }
 
     /**
      * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
      * @param string|null $classCode Идентификатор class_code. Обязателен при id_type = ticker
      * @param string $id Идентификатор запрашиваемого инструмента
-     * @return Currency|null
-     * @throws TIException
+     * @return array
      */
-    public function getCurrencyBy(int $idType, ?string $classCode, string $id): Currency|null
+    public function getCurrencyBy(int $idType, ?string $classCode, string $id): array
     {
         $request = new InstrumentRequest();
         $request->setIdType($idType);
@@ -84,19 +71,14 @@ class InstrumentsService
         list($response, $status) = $this->client->CurrencyBy($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-        return $response->getInstrument();
+        return [$response?->getInstrument(), $status];
     }
 
     /**
      * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
-     * @return RepeatedField Currency[]
-     * @throws TIException
+     * @return array
      */
-    public function getCurrencies(?int $instrumentStatus = 1): RepeatedField
+    public function getCurrencies(?int $instrumentStatus = 1): array
     {
         $request = new InstrumentsRequest();
         $request->setInstrumentStatus($instrumentStatus);
@@ -105,20 +87,14 @@ class InstrumentsService
         list($response, $status) = $this->client->Currencies($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getInstruments();
+        return [$response?->getInstruments(), $status];
     }
 
     /**
      * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
-     * @return RepeatedField Bond[]
-     * @throws TIException
+     * @return array
      */
-    public function getBonds(?int $instrumentStatus = 1): RepeatedField
+    public function getBonds(?int $instrumentStatus = 1): array
     {
         $request = new InstrumentsRequest();
         $request->setInstrumentStatus($instrumentStatus);
@@ -127,22 +103,16 @@ class InstrumentsService
         list($response, $status) = $this->client->Bonds($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getInstruments();
+        return [$response?->getInstruments(), $status];
     }
 
     /**
      * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
      * @param string|null $classCode Идентификатор class_code. Обязателен при id_type = ticker
      * @param string $id
-     * @return Bond|null
-     * @throws TIException
+     * @return array
      */
-    public function getBondBy(int $idType, ?string $classCode, string $id): Bond|null
+    public function getBondBy(int $idType, ?string $classCode, string $id): array
     {
         $request = new InstrumentRequest();
         $request->setIdType($idType);
@@ -153,21 +123,16 @@ class InstrumentsService
         list($response, $status) = $this->client->BondBy($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-        return $response->getInstrument();
+        return [$response?->getInstrument(), $status];
     }
 
     /**
      * @param string $instrumentId
      * @param \DateTime $from
      * @param \DateTime $to
-     * @return RepeatedField Coupon Collection
-     * @throws TIException
+     * @return array
      */
-    public function getBondCoupons(string $instrumentId, \DateTime $from, \DateTime $to): RepeatedField
+    public function getBondCoupons(string $instrumentId, \DateTime $from, \DateTime $to): array
     {
         $request = new GetBondCouponsRequest();
         $request->setInstrumentId($instrumentId);
@@ -178,12 +143,7 @@ class InstrumentsService
         list($response, $status) = $this->client->GetBondCoupons($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getEvents();
+        return [$response?->getEvents(), $status];
     }
 
     /**
@@ -191,15 +151,14 @@ class InstrumentsService
      * @param \DateTime $to Окончание запрашиваемого периода
      * @param string $instrumentId Идентификатор инструмента Figi или instrument_uid
      * @param int $eventType Тип события EventType
-     * @return RepeatedField
-     * @throws TIException
+     * @return array
      */
     public function getBondEvents(
         \DateTime $from,
         \DateTime $to,
         string $instrumentId,
         int $eventType
-    ): RepeatedField {
+    ): array {
         $request = new GetBondEventsRequest();
         $request->setInstrumentId($instrumentId);
         $request->setFrom(new Timestamp(['seconds' => $from->getTimestamp()]));
@@ -210,22 +169,16 @@ class InstrumentsService
         list($response, $status) = $this->client->GetBondEvents($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getEvents();
+        return [$response?->getEvents(), $status];
     }
 
     /**
      * @param string $instrumentId
      * @param \DateTime $from
      * @param \DateTime $to
-     * @return RepeatedField Dividend[]
-     * @throws TIException
+     * @return array
      */
-    public function getDividends(string $instrumentId, \DateTime $from, \DateTime $to): RepeatedField
+    public function getDividends(string $instrumentId, \DateTime $from, \DateTime $to): array
     {
         $request = new GetDividendsRequest();
         $request->setInstrumentId($instrumentId);
@@ -236,20 +189,14 @@ class InstrumentsService
         list($response, $status) = $this->client->GetDividends($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getDividends();
+        return [$response?->getDividends(), $status];
     }
 
     /**
      * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
-     * @return RepeatedField Bonds Collection
-     * @throws TIException
+     * @return list<mixed, mixed>
      */
-    public function getFutures(?int $instrumentStatus = 1): RepeatedField
+    public function getFutures(?int $instrumentStatus = 1): array
     {
         $request = new InstrumentsRequest();
         $request->setInstrumentStatus($instrumentStatus);
@@ -258,22 +205,16 @@ class InstrumentsService
         list($response, $status) = $this->client->Futures($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getInstruments();
+        return [$response?->getInstruments(), $status];
     }
 
     /**
      * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
      * @param string|null $classCode Идентификатор class_code. Обязателен при id_type = ticker
      * @param string $id
-     * @return Future|null
-     * @throws TIException
+     * @return array
      */
-    public function getFuturesBy(int $idType, ?string $classCode, string $id): Future|null
+    public function getFuturesBy(int $idType, ?string $classCode, string $id): array
     {
         $request = new InstrumentRequest();
         $request->setIdType($idType);
@@ -284,19 +225,14 @@ class InstrumentsService
         list($response, $status) = $this->client->FutureBy($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-        return $response->getInstrument();
+        return [$response?->getInstrument(), $status];
     }
 
     /**
      * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
-     * @return RepeatedField Shares Collection
-     * @throws TIException
+     * @return array
      */
-    public function getShares(?int $instrumentStatus = 1): RepeatedField
+    public function getShares(?int $instrumentStatus = 1): array
     {
         $request = new InstrumentsRequest();
         $request->setInstrumentStatus($instrumentStatus);
@@ -305,22 +241,16 @@ class InstrumentsService
         list($response, $status) = $this->client->Shares($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getInstruments();
+        return [$response?->getInstruments(), $status];
     }
 
     /**
      * @param int $idType (1 - figi, 2 - ticker, 0 - значение не определено)
      * @param string|null $classCode Идентификатор class_code. Обязателен при id_type = ticker
      * @param string $id Идентификатор запрашиваемого инструмента
-     * @return Share|null
-     * @throws TIException
+     * @return array
      */
-    public function getShareBy(int $idType, ?string $classCode, string $id): Share|null
+    public function getShareBy(int $idType, ?string $classCode, string $id): array
     {
         $request = new InstrumentRequest();
         $request->setIdType($idType);
@@ -331,19 +261,14 @@ class InstrumentsService
         list($response, $status) = $this->client->ShareBy($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-        return $response->getInstrument();
+        return [$response?->getInstrument(), $status];
     }
 
     /**
      * @param int|null $instrumentStatus (1-Инструменты доступные для торговли через TINKOFF API, 2 - Все инструменты)
-     * @return RepeatedField Etfs Collection
-     * @throws TIException
+     * @return array
      */
-    public function getEtfs(?int $instrumentStatus = 1): RepeatedField
+    public function getEtfs(?int $instrumentStatus = 1): array
     {
         $request = new InstrumentsRequest();
         $request->setInstrumentStatus($instrumentStatus);
@@ -352,11 +277,6 @@ class InstrumentsService
         list($response, $status) = $this->client->Etfs($request, [], TIClient::SPECIAL_OPTIONS)
             ->wait();
 
-        if ($status->code !== 0) {
-            $message = $status->metadata['message'][0] ?? "Unknown error from Tinkoff API";
-            throw new TIException($message, (int)$status->details);
-        }
-
-        return $response->getInstruments();
+        return [$response?->getInstruments(), $status];
     }
 }
