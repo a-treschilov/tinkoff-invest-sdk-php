@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.3.1 - 2024.04.13
+- [tech] Update dependencies
+
 ## v0.3.0 - 2024.03.18
 - [feature] Ability retry the request when request limit exceeded
 - [break] Breaking support 'figi' param

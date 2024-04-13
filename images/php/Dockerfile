@@ -1,4 +1,4 @@
-FROM atreschilov/php-grpc:v0.1.4
+FROM atreschilov/php-grpc:v0.1.5
 
 RUN apt-get update && apt-get install g++ -y \
         cmake \
