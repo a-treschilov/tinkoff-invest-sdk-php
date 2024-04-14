@@ -31,5 +31,5 @@ get-from-proto:
 submodule-init:
 	git submodule update --init
 
-submodule-update:
+te:
 	cd contracts && git fetch && git checkout $(VERSION)

@@ -18,6 +18,8 @@ use Tinkoff\Invest\V1\GetBondEventsRequest;
 use Tinkoff\Invest\V1\GetBondEventsResponse;
 use Tinkoff\Invest\V1\GetDividendsRequest;
 use Tinkoff\Invest\V1\GetDividendsResponse;
+use Tinkoff\Invest\V1\IndicativesRequest;
+use Tinkoff\Invest\V1\IndicativesResponse;
 use Tinkoff\Invest\V1\InstrumentRequest;
 use Tinkoff\Invest\V1\InstrumentResponse;
 use Tinkoff\Invest\V1\InstrumentsRequest;
@@ -275,6 +277,19 @@ class InstrumentsService
 
         /** @var EtfsResponse $response */
         list($response, $status) = $this->client->Etfs($request, [], TIClient::SPECIAL_OPTIONS)
+            ->wait();
+
+        return [$response?->getInstruments(), $status];
+    }
+
+    /**
+     * @return array
+     */
+    public function getIndicatives(): array
+    {
+        $request = new IndicativesRequest();
+        /** @var IndicativesResponse $response */
+        list($response, $status) = $this->client->Indicatives($request)
             ->wait();
 
         return [$response?->getInstruments(), $status];

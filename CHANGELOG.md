@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.3.2 - 2024.04.15
+- [tech] Added method GetIndicatives
+
 ## v0.3.1 - 2024.04.13
 - [tech] Update dependencies
 

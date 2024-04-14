@@ -27,6 +27,7 @@ use Tinkoff\Invest\V1\Share;
  * @method RepeatedField getShares(?int $instrumentStatus = 1)
  * @method Share|null getShareBy(int $idType, ?string $classCode, string $id)
  * @method RepeatedField getEtfs(?int $instrumentStatus = 1)
+ * @method RepeatedField getIndicatives()
  */
 class InstrumentsServiceDecorator extends BaseDecorator
 {
