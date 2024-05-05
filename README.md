@@ -91,7 +91,7 @@ try {
   * &#10006; OptionsBy
   * &#10004; ShareBy
   * &#10004; Shares
-  * &#10006; Indicatives
+  * &#10004; Indicatives
   * &#10006; GetAccruedInterests
   * &#10006; GetFuturesMargin
   * &#10004; GetInstrumentBy

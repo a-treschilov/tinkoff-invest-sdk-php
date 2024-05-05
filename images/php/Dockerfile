@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install g++ -y \
         cmake \
         protobuf-compiler
 
-RUN pecl install xdebug-3.3.1 \
+RUN pecl install xdebug-3.3.2 \
    && docker-php-ext-enable xdebug
 
 ADD ./php.ini /usr/local/etc/php
