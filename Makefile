@@ -1,4 +1,4 @@
-VERSION=V1.19
+VERSION=V1.21
 
 start: docker-compose-up
 
@@ -31,5 +31,5 @@ get-from-proto:
 submodule-init:
 	git submodule update --init
 
-te:
+submodule-update:
 	cd contracts && git fetch && git checkout $(VERSION)
