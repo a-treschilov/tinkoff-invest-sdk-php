@@ -124,7 +124,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     protected $released_date = null;
     /**
-     *Количество акций фонда в обращении.
+     *Количество паев фонда в обращении.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation num_shares = 20;</code>
      */
@@ -208,6 +208,18 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     protected $position_uid = '';
     /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 34;</code>
+     */
+    protected $asset_uid = '';
+    /**
+     *Тип площадки торговли.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 35;</code>
+     */
+    protected $instrument_exchange = 0;
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 41;</code>
@@ -249,6 +261,12 @@ class Etf extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 57;</code>
      */
     protected $first_1day_candle_date = null;
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     */
+    protected $brand = null;
 
     /**
      * Constructor.
@@ -293,7 +311,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $released_date
      *          Дата выпуска в часовом поясе UTC.
      *     @type \Tinkoff\Invest\V1\Quotation $num_shares
-     *          Количество акций фонда в обращении.
+     *          Количество паев фонда в обращении.
      *     @type string $country_of_risk
      *          Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type string $country_of_risk_name
@@ -320,6 +338,10 @@ class Etf extends \Google\Protobuf\Internal\Message
      *          Реальная площадка исполнения расчётов (биржа).
      *     @type string $position_uid
      *          Уникальный идентификатор позиции инструмента.
+     *     @type string $asset_uid
+     *          Уникальный идентификатор актива.
+     *     @type int $instrument_exchange
+     *          Тип площадки торговли.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
      *     @type bool $for_qual_investor_flag
@@ -334,6 +356,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
      *          Дата первой дневной свечи.
+     *     @type \Tinkoff\Invest\V1\BrandData $brand
+     *           Информация о бренде.
      * }
      */
     public function __construct($data = NULL) {
@@ -890,7 +914,7 @@ class Etf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество акций фонда в обращении.
+     *Количество паев фонда в обращении.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation num_shares = 20;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -911,7 +935,7 @@ class Etf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество акций фонда в обращении.
+     *Количество паев фонда в обращении.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation num_shares = 20;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -1274,6 +1298,58 @@ class Etf extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 34;</code>
+     * @return string
+     */
+    public function getAssetUid()
+    {
+        return $this->asset_uid;
+    }
+
+    /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 34;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAssetUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->asset_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип площадки торговли.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 35;</code>
+     * @return int
+     */
+    public function getInstrumentExchange()
+    {
+        return $this->instrument_exchange;
+    }
+
+    /**
+     *Тип площадки торговли.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 35;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentExchange($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentExchangeType::class);
+        $this->instrument_exchange = $var;
+
+        return $this;
+    }
+
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 41;</code>
@@ -1471,6 +1547,42 @@ class Etf extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1day_candle_date = $var;
+
+        return $this;
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     * @return \Tinkoff\Invest\V1\BrandData|null
+     */
+    public function getBrand()
+    {
+        return $this->brand;
+    }
+
+    public function hasBrand()
+    {
+        return isset($this->brand);
+    }
+
+    public function clearBrand()
+    {
+        unset($this->brand);
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     * @param \Tinkoff\Invest\V1\BrandData $var
+     * @return $this
+     */
+    public function setBrand($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
+        $this->brand = $var;
 
         return $this;
     }

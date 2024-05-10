@@ -226,4 +226,19 @@ class SandboxServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * расчет количества доступных для покупки/продажи лотов в песочнице.
+     * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetSandboxMaxLots(\Tinkoff\Invest\V1\GetMaxLotsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxMaxLots',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetMaxLotsResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
