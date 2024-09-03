@@ -22,7 +22,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $cursor = '';
     /**
-     *Номер счета клиента.
+     *Номер счёта клиента.
      *
      * Generated from protobuf field <code>string broker_account_id = 6;</code>
      */
@@ -34,7 +34,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $id = '';
     /**
-     *Идентификатор родительской операции, может измениться, если изменился id родительской операции.
+     *Идентификатор родительской операции. Может измениться, если изменился ID родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 17;</code>
      */
@@ -76,7 +76,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
-     *Figi.
+     *FIGI.
      *
      * Generated from protobuf field <code>string figi = 32;</code>
      */
@@ -94,7 +94,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_kind = 0;
     /**
-     *position_uid-идентификатора инструмента.
+     *Уникальный идентификатор позиции.
      *
      * Generated from protobuf field <code>string position_uid = 35;</code>
      */
@@ -172,7 +172,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $trades_info = null;
     /**
-     *Идентификатор актива
+     *Идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 64;</code>
      */
@@ -187,11 +187,11 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *     @type string $cursor
      *          Курсор.
      *     @type string $broker_account_id
-     *          Номер счета клиента.
+     *          Номер счёта клиента.
      *     @type string $id
      *          Идентификатор операции, может меняться с течением времени.
      *     @type string $parent_operation_id
-     *          Идентификатор родительской операции, может измениться, если изменился id родительской операции.
+     *          Идентификатор родительской операции. Может измениться, если изменился ID родительской операции.
      *     @type string $name
      *          Название операции.
      *     @type \Google\Protobuf\Timestamp $date
@@ -205,13 +205,13 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_uid
      *          Уникальный идентификатор инструмента.
      *     @type string $figi
-     *          Figi.
+     *          FIGI.
      *     @type string $instrument_type
      *          Тип инструмента.
      *     @type int $instrument_kind
      *          Тип инструмента.
      *     @type string $position_uid
-     *          position_uid-идентификатора инструмента.
+     *          Уникальный идентификатор позиции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $payment
      *          Сумма операции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
@@ -237,7 +237,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\OperationItemTrades $trades_info
      *          Массив сделок.
      *     @type string $asset_uid
-     *          Идентификатор актива
+     *          Идентификатор актива.
      * }
      */
     public function __construct($data = NULL) {
@@ -272,7 +272,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счета клиента.
+     *Номер счёта клиента.
      *
      * Generated from protobuf field <code>string broker_account_id = 6;</code>
      * @return string
@@ -283,7 +283,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счета клиента.
+     *Номер счёта клиента.
      *
      * Generated from protobuf field <code>string broker_account_id = 6;</code>
      * @param string $var
@@ -324,7 +324,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор родительской операции, может измениться, если изменился id родительской операции.
+     *Идентификатор родительской операции. Может измениться, если изменился ID родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 17;</code>
      * @return string
@@ -335,7 +335,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор родительской операции, может измениться, если изменился id родительской операции.
+     *Идентификатор родительской операции. Может измениться, если изменился ID родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 17;</code>
      * @param string $var
@@ -516,7 +516,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi.
+     *FIGI.
      *
      * Generated from protobuf field <code>string figi = 32;</code>
      * @return string
@@ -527,7 +527,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi.
+     *FIGI.
      *
      * Generated from protobuf field <code>string figi = 32;</code>
      * @param string $var
@@ -594,7 +594,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *position_uid-идентификатора инструмента.
+     *Уникальный идентификатор позиции.
      *
      * Generated from protobuf field <code>string position_uid = 35;</code>
      * @return string
@@ -605,7 +605,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *position_uid-идентификатора инструмента.
+     *Уникальный идентификатор позиции.
      *
      * Generated from protobuf field <code>string position_uid = 35;</code>
      * @param string $var
@@ -1012,7 +1012,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор актива
+     *Идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 64;</code>
      * @return string
@@ -1023,7 +1023,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор актива
+     *Идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 64;</code>
      * @param string $var

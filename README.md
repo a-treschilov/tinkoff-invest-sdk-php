@@ -10,7 +10,7 @@ $ composer require a.treschilov/tinkoff-invest-api-sdk
 ```
 
 ### SDK requires:
-- PHP 8.0 or newer
+- PHP 8.3 or newer
 - grpc extension
 
 ### Install grpc

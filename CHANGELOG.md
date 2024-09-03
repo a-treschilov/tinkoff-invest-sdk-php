@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.3.5 - 2024.09.03
+- [feat] Updated api contract to v1.24
+- [tech] Update dependencies
+
+## v0.3.4 - 2024.05.05
+- [feat] Update Tinkoff API to v1.21
+
 ## v0.3.2 - 2024.04.15
 - [tech] Added method GetIndicatives
 
