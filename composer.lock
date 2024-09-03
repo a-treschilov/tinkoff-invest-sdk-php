@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc93923acd8d763b5130ba286eab238d",
+    "content-hash": "3199b903ba706bdcb926c04df0011fba",
     "packages": [
         {
             "name": "google/common-protos",
-            "version": "v4.6.0",
+            "version": "v4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/common-protos-php.git",
-                "reference": "f8588298a0a204aef2db15ce501530e476ec883f"
+                "reference": "e58068776f57605c336e32c7db373f0a81da17b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/f8588298a0a204aef2db15ce501530e476ec883f",
-                "reference": "f8588298a0a204aef2db15ce501530e476ec883f",
+                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/e58068776f57605c336e32c7db373f0a81da17b8",
+                "reference": "e58068776f57605c336e32c7db373f0a81da17b8",
                 "shasum": ""
             },
             "require": {
@@ -54,22 +54,22 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/common-protos-php/issues",
-                "source": "https://github.com/googleapis/common-protos-php/tree/v4.6.0"
+                "source": "https://github.com/googleapis/common-protos-php/tree/v4.7.0"
             },
-            "time": "2024-04-03T19:11:54+00:00"
+            "time": "2024-07-25T20:20:43+00:00"
         },
         {
             "name": "google/protobuf",
-            "version": "v4.26.1",
+            "version": "v4.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae"
+                "reference": "17e3d804bf6631c2744c99575698f9cd4878b84f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae",
-                "reference": "5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/17e3d804bf6631c2744c99575698f9cd4878b84f",
+                "reference": "17e3d804bf6631c2744c99575698f9cd4878b84f",
                 "shasum": ""
             },
             "require": {
@@ -98,9 +98,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.26.1"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.28.0"
             },
-            "time": "2024-03-27T19:56:50+00:00"
+            "time": "2024-08-28T17:54:02+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -150,16 +150,16 @@
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.9.1",
+            "version": "3.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "267a4405fff1d9c847134db3a3c92f1ab7f77909"
+                "reference": "86e5f5dd9a840c46810ebe5ff1885581c42a3017"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/267a4405fff1d9c847134db3a3c92f1ab7f77909",
-                "reference": "267a4405fff1d9c847134db3a3c92f1ab7f77909",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/86e5f5dd9a840c46810ebe5ff1885581c42a3017",
+                "reference": "86e5f5dd9a840c46810ebe5ff1885581c42a3017",
                 "shasum": ""
             },
             "require": {
@@ -226,7 +226,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-03-31T21:03:09+00:00"
+            "time": "2024-07-21T23:26:44+00:00"
         }
     ],
     "aliases": [],
@@ -235,8 +235,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.1",
-        "ext-grpc": "^1.62"
+        "php": "^8.3",
+        "ext-grpc": "1.66"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
