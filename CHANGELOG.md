@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.3.6 - 2024.10.05
+- [tech] Update certificate
+- 
 ## v0.3.5 - 2024.09.03
 - [feat] Updated api contract to v1.24
 - [tech] Update dependencies
