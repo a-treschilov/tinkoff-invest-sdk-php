@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class StopOrder extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор-идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      */
@@ -111,6 +111,12 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 16;</code>
      */
     protected $exchange_order_type = 0;
+    /**
+     *Идентификатор биржевой заявки.
+     *
+     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
+     */
+    protected $exchange_order_id = null;
 
     /**
      * Constructor.
@@ -119,7 +125,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $stop_order_id
-     *          Идентификатор-идентификатор стоп-заявки.
+     *          Уникальный идентификатор стоп-заявки.
      *     @type int|string $lots_requested
      *          Запрошено лотов.
      *     @type string $figi
@@ -150,6 +156,8 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *          Статус заявки.
      *     @type int $exchange_order_type
      *          Тип дочерней биржевой заявки для тейкпрофита.
+     *     @type string $exchange_order_id
+     *          Идентификатор биржевой заявки.
      * }
      */
     public function __construct($data = NULL) {
@@ -158,7 +166,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор-идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @return string
@@ -169,7 +177,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор-идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @param string $var
@@ -629,6 +637,42 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\ExchangeOrderType::class);
         $this->exchange_order_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор биржевой заявки.
+     *
+     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
+     * @return string
+     */
+    public function getExchangeOrderId()
+    {
+        return isset($this->exchange_order_id) ? $this->exchange_order_id : '';
+    }
+
+    public function hasExchangeOrderId()
+    {
+        return isset($this->exchange_order_id);
+    }
+
+    public function clearExchangeOrderId()
+    {
+        unset($this->exchange_order_id);
+    }
+
+    /**
+     *Идентификатор биржевой заявки.
+     *
+     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setExchangeOrderId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->exchange_order_id = $var;
 
         return $this;
     }

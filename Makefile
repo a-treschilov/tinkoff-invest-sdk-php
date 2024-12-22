@@ -1,4 +1,4 @@
-VERSION=V1.24
+VERSION=V1.27
 
 start: docker-compose-up
 

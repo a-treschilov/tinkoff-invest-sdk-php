@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.3.8 - 2024.12.22
+- [feat] Update Tinkoff API to v1.27
+
 ## v0.3.6 - 2024.10.05
 - [tech] Update certificate
 - 

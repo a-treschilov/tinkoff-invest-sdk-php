@@ -9,6 +9,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *Результат выставления асинхронного торгового поручения.
+ *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.PostOrderAsyncResponse</code>
  */
 class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message

@@ -9,6 +9,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *Информация по подпискам
+ *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.SubscriptionResponse</code>
  */
 class SubscriptionResponse extends \Google\Protobuf\Internal\Message

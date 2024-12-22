@@ -117,6 +117,12 @@ class Operation extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 18;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Массив дочерних операций.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 19;</code>
+     */
+    private $child_operations;
 
     /**
      * Constructor.
@@ -158,6 +164,8 @@ class Operation extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции.
      *     @type string $instrument_uid
      *          Уникальный идентификатор инструмента.
+     *     @type array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $child_operations
+     *          Массив дочерних операций.
      * }
      */
     public function __construct($data = NULL) {
@@ -633,6 +641,32 @@ class Operation extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Массив дочерних операций.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 19;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getChildOperations()
+    {
+        return $this->child_operations;
+    }
+
+    /**
+     *Массив дочерних операций.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 19;</code>
+     * @param array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setChildOperations($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\ChildOperationItem::class);
+        $this->child_operations = $arr;
 
         return $this;
     }

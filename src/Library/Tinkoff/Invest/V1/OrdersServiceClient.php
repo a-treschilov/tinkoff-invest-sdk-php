@@ -32,6 +32,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Асинхронный метод выставления заявки.
      * @param \Tinkoff\Invest\V1\PostOrderAsyncRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

@@ -69,12 +69,12 @@ try {
 ```
 
 #### Basic usage methods support
-* [User](https://tinkoff.github.io/investAPI/users/)
+* [User](https://russianinvestments.github.io/investAPI/users/)
   * &#10004; getAccounts
   * &#10006; GetMarginAttributes
   * &#10006; GetUserTariff
   * &#10006; GetInfo
-* [Instruments](https://tinkoff.github.io/investAPI/instruments/)
+* [Instruments](https://russianinvestments.github.io/investAPI/instruments/)
   * &#10006; TradingSchedules
   * &#10004; BondBy
   * &#10004; Bonds
@@ -108,9 +108,9 @@ try {
   * &#10006; GetAssetReports
   * &#10006; GetConsensusForecasts
   * &#10006; GetForecastBy
-* [OrdersStream](https://tinkoff.github.io/investAPI/orders/)
+* [OrdersStream](https://russianinvestments.github.io/investAPI/orders/)
   * &#10006; TradesStream
-* [Orders](https://tinkoff.github.io/investAPI/orders/)
+* [Orders](https://russianinvestments.github.io/investAPI/orders/)
   * &#10006; PostOrder
   * &#10006; CancelOrder
   * &#10006; GetOrderState
@@ -118,7 +118,7 @@ try {
   * &#10006; ReplaceOrder
   * &#10006; GetMaxLots
   * &#10006; GetOrderPrice
-* [Operations](https://tinkoff.github.io/investAPI/operations/)
+* [Operations](https://russianinvestments.github.io/investAPI/operations/)
   * &#10004; GetOperations
   * &#10004; GetPortfolio
   * &#10006; GetPositions
@@ -126,10 +126,10 @@ try {
   * &#10006; GetBrokerReport
   * &#10006; GetDividendsForeignIssuer
   * &#10006; GetOperationsByCursor
-* [OperationsStream](https://tinkoff.github.io/investAPI/operations/)
+* [OperationsStream](https://russianinvestments.github.io/investAPI/operations/)
   * &#10006; PortfolioStream
   * &#10006; PositionsStream
-* [MarketData](https://tinkoff.github.io/investAPI/marketdata/)
+* [MarketData](hhttps://russianinvestments.github.io/investAPI/marketdata/)
   * &#10004; GetCandles
   * &#10004; GetLastPrices
   * &#10006; GetOrderBook
@@ -138,14 +138,17 @@ try {
   * &#10006; GetLastTrades
   * &#10006; GetClosePrice
   * &#10006; GetTechAnalysis
-* [MarketDataStream](https://tinkoff.github.io/investAPI/marketdata/#marketdatastreamservice)
+* [MarketDataStream](https://russianinvestments.github.io/investAPI/marketdata/#marketdatastreamservice)
   * &#10006; MarketDataStream
   * &#10006; MarketDataServerSideStream
-* [StopOrders](https://tinkoff.github.io/investAPI/stoporders/)
+* [StopOrders](https://russianinvestments.github.io/investAPI/stoporders/)
   * &#10006; PostStopOrder
   * &#10006; GetStopOrders
   * &#10006; CancelStopOrder
-* [Sandbox](https://tinkoff.github.io/investAPI/head-sandbox/)
+* [Signals](https://russianinvestments.github.io/investAPI/head-signals/)
+  * &#10006; OpenSandboxAccount
+  * &#10006; GetSandboxAccounts
+* [Sandbox](https://russianinvestments.github.io/investAPI/head-sandbox/)
   * &#10006; OpenSandboxAccount
   * &#10006; GetSandboxAccounts
   * &#10006; CloseSandboxAccount
