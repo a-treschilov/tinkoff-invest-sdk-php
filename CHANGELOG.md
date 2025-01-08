@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.3.9 - 2025.01.08
+- [tech] PHP 8.4 support
+
 ## v0.3.8 - 2024.12.22
 - [feat] Update Tinkoff API to v1.27
 
