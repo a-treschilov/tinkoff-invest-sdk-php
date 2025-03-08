@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class InfoSubscription extends \Google\Protobuf\Internal\Message
 {
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -28,23 +28,11 @@ class InfoSubscription extends \Google\Protobuf\Internal\Message
      */
     protected $subscription_status = 0;
     /**
-     *UID инструмента.
+     *Uid инструмента
      *
      * Generated from protobuf field <code>string instrument_uid = 3;</code>
      */
     protected $instrument_uid = '';
-    /**
-     *Идентификатор открытого соединения.
-     *
-     * Generated from protobuf field <code>string stream_id = 4;</code>
-     */
-    protected $stream_id = '';
-    /**
-     *Идентификатор подписки в формате UUID.
-     *
-     * Generated from protobuf field <code>string subscription_id = 5;</code>
-     */
-    protected $subscription_id = '';
 
     /**
      * Constructor.
@@ -53,15 +41,11 @@ class InfoSubscription extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          FIGI-идентификатор инструмента.
+     *          Figi-идентификатор инструмента.
      *     @type int $subscription_status
      *          Статус подписки.
      *     @type string $instrument_uid
-     *          UID инструмента.
-     *     @type string $stream_id
-     *          Идентификатор открытого соединения.
-     *     @type string $subscription_id
-     *          Идентификатор подписки в формате UUID.
+     *          Uid инструмента
      * }
      */
     public function __construct($data = NULL) {
@@ -70,7 +54,7 @@ class InfoSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -81,7 +65,7 @@ class InfoSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -122,7 +106,7 @@ class InfoSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID инструмента.
+     *Uid инструмента
      *
      * Generated from protobuf field <code>string instrument_uid = 3;</code>
      * @return string
@@ -133,7 +117,7 @@ class InfoSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID инструмента.
+     *Uid инструмента
      *
      * Generated from protobuf field <code>string instrument_uid = 3;</code>
      * @param string $var
@@ -143,58 +127,6 @@ class InfoSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
-
-        return $this;
-    }
-
-    /**
-     *Идентификатор открытого соединения.
-     *
-     * Generated from protobuf field <code>string stream_id = 4;</code>
-     * @return string
-     */
-    public function getStreamId()
-    {
-        return $this->stream_id;
-    }
-
-    /**
-     *Идентификатор открытого соединения.
-     *
-     * Generated from protobuf field <code>string stream_id = 4;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setStreamId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->stream_id = $var;
-
-        return $this;
-    }
-
-    /**
-     *Идентификатор подписки в формате UUID.
-     *
-     * Generated from protobuf field <code>string subscription_id = 5;</code>
-     * @return string
-     */
-    public function getSubscriptionId()
-    {
-        return $this->subscription_id;
-    }
-
-    /**
-     *Идентификатор подписки в формате UUID.
-     *
-     * Generated from protobuf field <code>string subscription_id = 5;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setSubscriptionId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->subscription_id = $var;
 
         return $this;
     }

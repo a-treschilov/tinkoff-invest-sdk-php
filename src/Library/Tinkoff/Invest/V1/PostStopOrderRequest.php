@@ -16,96 +16,90 @@ use Google\Protobuf\Internal\GPBUtil;
 class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
     /**
-     *Количество лотов.
+     *Количество лотов
      *
      * Generated from protobuf field <code>int64 quantity = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $quantity = 0;
     /**
-     *Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      */
     protected $price = null;
     /**
-     *Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Стоп-цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
      */
     protected $stop_price = null;
     /**
-     *Направление операции.
+     *Направление операции
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $direction = 0;
     /**
-     *Номер счёта.
+     *Номер счёта
      *
      * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
-     *Тип экспирации заявки.
+     *Тип экспирации заявки
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $expiration_type = 0;
     /**
-     *Тип заявки.
+     *Тип заявки
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $stop_order_type = 0;
     /**
-     *Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
+     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
      */
     protected $expire_date = null;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента, принимает значения Figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $instrument_id = '';
     /**
-     *Тип дочерней биржевой заявки для тейкпрофита.
+     *Тип дочерней биржевой заявки для тейкпрофита
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
      */
     protected $exchange_order_type = 0;
     /**
-     *Подтип стоп-заявки — `TakeProfit`.
+     *Подтип стоп-заявки TakeProfit
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TakeProfitType take_profit_type = 12;</code>
      */
     protected $take_profit_type = 0;
     /**
-     *Массив с параметрами трейлинг-стопа.
+     *Массив с параметрами трейлинг-стопа
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PostStopOrderRequest.TrailingData trailing_data = 13;</code>
      */
     protected $trailing_data = null;
     /**
-     *Тип цены.
+     *Тип цены
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 14;</code>
      */
     protected $price_type = 0;
-    /**
-     *Идентификатор запроса выставления поручения для целей идемпотентности в формате `UID`. Максимальная длина — 36 символов.
-     *
-     * Generated from protobuf field <code>string order_id = 15 [(.google.api.field_behavior) = REQUIRED];</code>
-     */
-    protected $order_id = '';
 
     /**
      * Constructor.
@@ -114,35 +108,33 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type int|string $quantity
-     *          Количество лотов.
+     *          Количество лотов
      *     @type \Tinkoff\Invest\V1\Quotation $price
-     *          Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *          Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $stop_price
-     *          Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *          Стоп-цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type int $direction
-     *          Направление операции.
+     *          Направление операции
      *     @type string $account_id
-     *          Номер счёта.
+     *          Номер счёта
      *     @type int $expiration_type
-     *          Тип экспирации заявки.
+     *          Тип экспирации заявки
      *     @type int $stop_order_type
-     *          Тип заявки.
+     *          Тип заявки
      *     @type \Google\Protobuf\Timestamp $expire_date
-     *          Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
+     *          Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента, принимает значения Figi или instrument_uid.
      *     @type int $exchange_order_type
-     *          Тип дочерней биржевой заявки для тейкпрофита.
+     *          Тип дочерней биржевой заявки для тейкпрофита
      *     @type int $take_profit_type
-     *          Подтип стоп-заявки — `TakeProfit`.
+     *          Подтип стоп-заявки TakeProfit
      *     @type \Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData $trailing_data
-     *          Массив с параметрами трейлинг-стопа.
+     *          Массив с параметрами трейлинг-стопа
      *     @type int $price_type
-     *          Тип цены.
-     *     @type string $order_id
-     *          Идентификатор запроса выставления поручения для целей идемпотентности в формате `UID`. Максимальная длина — 36 символов.
+     *          Тип цены
      * }
      */
     public function __construct($data = NULL) {
@@ -151,7 +143,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
@@ -176,7 +168,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
@@ -193,7 +185,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов.
+     *Количество лотов
      *
      * Generated from protobuf field <code>int64 quantity = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int|string
@@ -204,7 +196,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов.
+     *Количество лотов
      *
      * Generated from protobuf field <code>int64 quantity = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int|string $var
@@ -219,7 +211,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -240,7 +232,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -255,7 +247,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Стоп-цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -276,7 +268,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Стоп-цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -291,7 +283,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление операции.
+     *Направление операции
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
@@ -302,7 +294,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление операции.
+     *Направление операции
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
@@ -317,7 +309,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счёта
      *
      * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -328,7 +320,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счёта
      *
      * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -343,7 +335,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип экспирации заявки.
+     *Тип экспирации заявки
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
@@ -354,7 +346,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип экспирации заявки.
+     *Тип экспирации заявки
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderExpirationType expiration_type = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
@@ -369,7 +361,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип заявки.
+     *Тип заявки
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
@@ -380,7 +372,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип заявки.
+     *Тип заявки
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType stop_order_type = 8 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
@@ -395,7 +387,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
+     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -416,7 +408,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
+     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -431,7 +423,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента, принимает значения Figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -442,7 +434,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента, принимает значения Figi или instrument_uid.
      *
      * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -457,7 +449,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип дочерней биржевой заявки для тейкпрофита.
+     *Тип дочерней биржевой заявки для тейкпрофита
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
      * @return int
@@ -468,7 +460,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип дочерней биржевой заявки для тейкпрофита.
+     *Тип дочерней биржевой заявки для тейкпрофита
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
      * @param int $var
@@ -483,7 +475,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Подтип стоп-заявки — `TakeProfit`.
+     *Подтип стоп-заявки TakeProfit
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TakeProfitType take_profit_type = 12;</code>
      * @return int
@@ -494,7 +486,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Подтип стоп-заявки — `TakeProfit`.
+     *Подтип стоп-заявки TakeProfit
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TakeProfitType take_profit_type = 12;</code>
      * @param int $var
@@ -509,7 +501,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив с параметрами трейлинг-стопа.
+     *Массив с параметрами трейлинг-стопа
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PostStopOrderRequest.TrailingData trailing_data = 13;</code>
      * @return \Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData|null
@@ -530,7 +522,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив с параметрами трейлинг-стопа.
+     *Массив с параметрами трейлинг-стопа
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PostStopOrderRequest.TrailingData trailing_data = 13;</code>
      * @param \Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData $var
@@ -545,7 +537,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип цены.
+     *Тип цены
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 14;</code>
      * @return int
@@ -556,7 +548,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип цены.
+     *Тип цены
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 14;</code>
      * @param int $var
@@ -566,32 +558,6 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PriceType::class);
         $this->price_type = $var;
-
-        return $this;
-    }
-
-    /**
-     *Идентификатор запроса выставления поручения для целей идемпотентности в формате `UID`. Максимальная длина — 36 символов.
-     *
-     * Generated from protobuf field <code>string order_id = 15 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return string
-     */
-    public function getOrderId()
-    {
-        return $this->order_id;
-    }
-
-    /**
-     *Идентификатор запроса выставления поручения для целей идемпотентности в формате `UID`. Максимальная длина — 36 символов.
-     *
-     * Generated from protobuf field <code>string order_id = 15 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setOrderId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->order_id = $var;
 
         return $this;
     }

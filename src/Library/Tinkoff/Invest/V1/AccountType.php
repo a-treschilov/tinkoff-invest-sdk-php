@@ -20,13 +20,13 @@ class AccountType
      */
     const ACCOUNT_TYPE_UNSPECIFIED = 0;
     /**
-     *Брокерский счёт Т-Инвестиций.
+     *Брокерский счёт Тинькофф.
      *
      * Generated from protobuf enum <code>ACCOUNT_TYPE_TINKOFF = 1;</code>
      */
     const ACCOUNT_TYPE_TINKOFF = 1;
     /**
-     *ИИС.
+     *ИИС счёт.
      *
      * Generated from protobuf enum <code>ACCOUNT_TYPE_TINKOFF_IIS = 2;</code>
      */
@@ -37,19 +37,12 @@ class AccountType
      * Generated from protobuf enum <code>ACCOUNT_TYPE_INVEST_BOX = 3;</code>
      */
     const ACCOUNT_TYPE_INVEST_BOX = 3;
-    /**
-     *Фонд денежного рынка.
-     *
-     * Generated from protobuf enum <code>ACCOUNT_TYPE_INVEST_FUND = 4;</code>
-     */
-    const ACCOUNT_TYPE_INVEST_FUND = 4;
 
     private static $valueToName = [
         self::ACCOUNT_TYPE_UNSPECIFIED => 'ACCOUNT_TYPE_UNSPECIFIED',
         self::ACCOUNT_TYPE_TINKOFF => 'ACCOUNT_TYPE_TINKOFF',
         self::ACCOUNT_TYPE_TINKOFF_IIS => 'ACCOUNT_TYPE_TINKOFF_IIS',
         self::ACCOUNT_TYPE_INVEST_BOX => 'ACCOUNT_TYPE_INVEST_BOX',
-        self::ACCOUNT_TYPE_INVEST_FUND => 'ACCOUNT_TYPE_INVEST_FUND',
     ];
 
     public static function name($value)

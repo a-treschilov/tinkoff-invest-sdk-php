@@ -16,36 +16,30 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
     /**
-     *Начало запрашиваемого периода по UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $from = null;
     /**
-     *Окончание запрашиваемого периода по UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $to = null;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      */
     protected $instrument_id = null;
-    /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
-     */
-    protected $trade_source = 0;
 
     /**
      * Constructor.
@@ -54,15 +48,13 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало запрашиваемого периода по UTC.
+     *          Начало запрашиваемого периода в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание запрашиваемого периода по UTC.
+     *          Окончание запрашиваемого периода в часовом поясе UTC.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-     *     @type int $trade_source
-     *          Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *          Идентификатор инструмента, принимает значение figi или instrument_uid.
      * }
      */
     public function __construct($data = NULL) {
@@ -71,7 +63,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
@@ -96,7 +88,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
@@ -113,7 +105,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода по UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -134,7 +126,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода по UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -149,7 +141,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода по UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -170,7 +162,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода по UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -185,7 +177,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      * @return string
@@ -206,7 +198,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента, принимает значение figi или instrument_uid.
      *
      * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      * @param string $var
@@ -216,32 +208,6 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_id = $var;
-
-        return $this;
-    }
-
-    /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
-     * @return int
-     */
-    public function getTradeSource()
-    {
-        return $this->trade_source;
-    }
-
-    /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setTradeSource($var)
-    {
-        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
-        $this->trade_source = $var;
 
         return $this;
     }

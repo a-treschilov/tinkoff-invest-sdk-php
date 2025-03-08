@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Доступный остаток для вывода.
+ *Доступный для вывода остаток.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.WithdrawLimitsResponse</code>
  */

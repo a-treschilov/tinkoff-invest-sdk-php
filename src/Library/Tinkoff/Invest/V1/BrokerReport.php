@@ -26,7 +26,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $order_id = '';
     /**
-     *FIGI-идентификаторинструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      */
@@ -38,7 +38,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $execute_sign = '';
     /**
-     *Дата и время заключения по UTC.
+     *Дата и время заключения в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp trade_datetime = 5;</code>
      */
@@ -86,7 +86,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = 0;
     /**
-     *Сумма без НКД.
+     *Сумма (без НКД).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_amount = 13;</code>
      */
@@ -116,31 +116,31 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $exchange_commission = null;
     /**
-     *Комиссия клирингового центра.
+     *Комиссия клир. центра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_clearing_commission = 18;</code>
      */
     protected $exchange_clearing_commission = null;
     /**
-     *Ставка РЕПО, %.
+     *Ставка РЕПО (%).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation repo_rate = 19;</code>
      */
     protected $repo_rate = null;
     /**
-     *Контрагент или брокерарокер.
+     *Контрагент/Брокер.
      *
      * Generated from protobuf field <code>string party = 20;</code>
      */
     protected $party = '';
     /**
-     *Дата расчётов по UTC.
+     *Дата расчётов в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp clear_value_date = 21;</code>
      */
     protected $clear_value_date = null;
     /**
-     *Дата поставки по UTC.
+     *Дата поставки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp sec_value_date = 22;</code>
      */
@@ -152,19 +152,19 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $broker_status = '';
     /**
-     *Тип договора.
+     *Тип дог.
      *
      * Generated from protobuf field <code>string separate_agreement_type = 24;</code>
      */
     protected $separate_agreement_type = '';
     /**
-     *Номер договора.
+     *Номер дог.
      *
      * Generated from protobuf field <code>string separate_agreement_number = 25;</code>
      */
     protected $separate_agreement_number = '';
     /**
-     *Дата договора.
+     *Дата дог.
      *
      * Generated from protobuf field <code>string separate_agreement_date = 26;</code>
      */
@@ -187,11 +187,11 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *     @type string $order_id
      *          Номер поручения.
      *     @type string $figi
-     *          FIGI-идентификаторинструмента.
+     *          Figi-идентификатор инструмента.
      *     @type string $execute_sign
      *          Признак исполнения.
      *     @type \Google\Protobuf\Timestamp $trade_datetime
-     *          Дата и время заключения по UTC.
+     *          Дата и время заключения в часовом поясе UTC.
      *     @type string $exchange
      *          Торговая площадка.
      *     @type string $class_code
@@ -207,7 +207,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *     @type int|string $quantity
      *          Количество.
      *     @type \Tinkoff\Invest\V1\MoneyValue $order_amount
-     *          Сумма без НКД.
+     *          Сумма (без НКД).
      *     @type \Tinkoff\Invest\V1\Quotation $aci_value
      *          НКД.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_order_amount
@@ -217,23 +217,23 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $exchange_commission
      *          Комиссия биржи.
      *     @type \Tinkoff\Invest\V1\MoneyValue $exchange_clearing_commission
-     *          Комиссия клирингового центра.
+     *          Комиссия клир. центра.
      *     @type \Tinkoff\Invest\V1\Quotation $repo_rate
-     *          Ставка РЕПО, %.
+     *          Ставка РЕПО (%).
      *     @type string $party
-     *          Контрагент или брокерарокер.
+     *          Контрагент/Брокер.
      *     @type \Google\Protobuf\Timestamp $clear_value_date
-     *          Дата расчётов по UTC.
+     *          Дата расчётов в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $sec_value_date
-     *          Дата поставки по UTC.
+     *          Дата поставки в часовом поясе UTC.
      *     @type string $broker_status
      *          Статус брокера.
      *     @type string $separate_agreement_type
-     *          Тип договора.
+     *          Тип дог.
      *     @type string $separate_agreement_number
-     *          Номер договора.
+     *          Номер дог.
      *     @type string $separate_agreement_date
-     *          Дата договора.
+     *          Дата дог.
      *     @type string $delivery_type
      *          Тип расчёта по сделке.
      * }
@@ -296,7 +296,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификаторинструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      * @return string
@@ -307,7 +307,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификаторинструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      * @param string $var
@@ -348,7 +348,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время заключения по UTC.
+     *Дата и время заключения в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp trade_datetime = 5;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -369,7 +369,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время заключения по UTC.
+     *Дата и время заключения в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp trade_datetime = 5;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -576,7 +576,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма без НКД.
+     *Сумма (без НКД).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_amount = 13;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -597,7 +597,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма без НКД.
+     *Сумма (без НКД).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_amount = 13;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -756,7 +756,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия клирингового центра.
+     *Комиссия клир. центра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_clearing_commission = 18;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -777,7 +777,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия клирингового центра.
+     *Комиссия клир. центра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_clearing_commission = 18;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -792,7 +792,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка РЕПО, %.
+     *Ставка РЕПО (%).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation repo_rate = 19;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -813,7 +813,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка РЕПО, %.
+     *Ставка РЕПО (%).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation repo_rate = 19;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -828,7 +828,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Контрагент или брокерарокер.
+     *Контрагент/Брокер.
      *
      * Generated from protobuf field <code>string party = 20;</code>
      * @return string
@@ -839,7 +839,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Контрагент или брокерарокер.
+     *Контрагент/Брокер.
      *
      * Generated from protobuf field <code>string party = 20;</code>
      * @param string $var
@@ -854,7 +854,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата расчётов по UTC.
+     *Дата расчётов в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp clear_value_date = 21;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -875,7 +875,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата расчётов по UTC.
+     *Дата расчётов в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp clear_value_date = 21;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -890,7 +890,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата поставки по UTC.
+     *Дата поставки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp sec_value_date = 22;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -911,7 +911,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата поставки по UTC.
+     *Дата поставки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp sec_value_date = 22;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -952,7 +952,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип договора.
+     *Тип дог.
      *
      * Generated from protobuf field <code>string separate_agreement_type = 24;</code>
      * @return string
@@ -963,7 +963,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип договора.
+     *Тип дог.
      *
      * Generated from protobuf field <code>string separate_agreement_type = 24;</code>
      * @param string $var
@@ -978,7 +978,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер договора.
+     *Номер дог.
      *
      * Generated from protobuf field <code>string separate_agreement_number = 25;</code>
      * @return string
@@ -989,7 +989,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер договора.
+     *Номер дог.
      *
      * Generated from protobuf field <code>string separate_agreement_number = 25;</code>
      * @param string $var
@@ -1004,7 +1004,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата договора.
+     *Дата дог.
      *
      * Generated from protobuf field <code>string separate_agreement_date = 26;</code>
      * @return string
@@ -1015,7 +1015,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата договора.
+     *Дата дог.
      *
      * Generated from protobuf field <code>string separate_agreement_date = 26;</code>
      * @param string $var

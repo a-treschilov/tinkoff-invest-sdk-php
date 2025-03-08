@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class AssetInstrument extends \Google\Protobuf\Internal\Message
 {
     /**
-     *UID-идентификатор инструмента.
+     *uid идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      */
     protected $uid = '';
     /**
-     *FIGI-идентификатор инструмента.
+     *figi идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 2;</code>
      */
@@ -58,7 +58,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_kind = 0;
     /**
-     *ID позиции.
+     *id позиции.
      *
      * Generated from protobuf field <code>string position_uid = 11;</code>
      */
@@ -71,9 +71,9 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $uid
-     *          UID-идентификатор инструмента.
+     *          uid идентификатор инструмента.
      *     @type string $figi
-     *          FIGI-идентификатор инструмента.
+     *          figi идентификатор инструмента.
      *     @type string $instrument_type
      *          Тип инструмента.
      *     @type string $ticker
@@ -85,7 +85,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      *     @type int $instrument_kind
      *          Тип инструмента.
      *     @type string $position_uid
-     *          ID позиции.
+     *          id позиции.
      * }
      */
     public function __construct($data = NULL) {
@@ -94,7 +94,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID-идентификатор инструмента.
+     *uid идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @return string
@@ -105,7 +105,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID-идентификатор инструмента.
+     *uid идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @param string $var
@@ -120,7 +120,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента.
+     *figi идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 2;</code>
      * @return string
@@ -131,7 +131,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента.
+     *figi идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 2;</code>
      * @param string $var
@@ -276,7 +276,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *ID позиции.
+     *id позиции.
      *
      * Generated from protobuf field <code>string position_uid = 11;</code>
      * @return string
@@ -287,7 +287,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *ID позиции.
+     *id позиции.
      *
      * Generated from protobuf field <code>string position_uid = 11;</code>
      * @param string $var

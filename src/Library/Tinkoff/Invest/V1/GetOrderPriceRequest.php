@@ -9,8 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос получения предварительной стоимости заявки
- *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetOrderPriceRequest</code>
  */
 class GetOrderPriceRequest extends \Google\Protobuf\Internal\Message
