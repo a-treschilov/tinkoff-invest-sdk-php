@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Brand extends \Google\Protobuf\Internal\Message
 {
     /**
-     *UID-идентификатор бренда.
+     *uid идентификатор бренда.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      */
@@ -71,7 +71,7 @@ class Brand extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $uid
-     *          UID-идентификатор бренда.
+     *          uid идентификатор бренда.
      *     @type string $name
      *          Наименование бренда.
      *     @type string $description
@@ -94,7 +94,7 @@ class Brand extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID-идентификатор бренда.
+     *uid идентификатор бренда.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @return string
@@ -105,7 +105,7 @@ class Brand extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID-идентификатор бренда.
+     *uid идентификатор бренда.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @param string $var

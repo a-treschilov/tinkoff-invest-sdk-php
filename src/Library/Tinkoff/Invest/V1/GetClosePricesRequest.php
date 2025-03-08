@@ -21,12 +21,6 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceRequest instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private $instruments;
-    /**
-     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
-     *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
-     */
-    protected $instrument_status = null;
 
     /**
      * Constructor.
@@ -36,8 +30,6 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type array<\Tinkoff\Invest\V1\InstrumentClosePriceRequest>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив по инструментам.
-     *     @type int $instrument_status
-     *          Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      * }
      */
     public function __construct($data = NULL) {
@@ -67,42 +59,6 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\InstrumentClosePriceRequest::class);
         $this->instruments = $arr;
-
-        return $this;
-    }
-
-    /**
-     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
-     *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
-     * @return int
-     */
-    public function getInstrumentStatus()
-    {
-        return isset($this->instrument_status) ? $this->instrument_status : 0;
-    }
-
-    public function hasInstrumentStatus()
-    {
-        return isset($this->instrument_status);
-    }
-
-    public function clearInstrumentStatus()
-    {
-        unset($this->instrument_status);
-    }
-
-    /**
-     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
-     *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setInstrumentStatus($var)
-    {
-        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentStatus::class);
-        $this->instrument_status = $var;
 
         return $this;
     }

@@ -14,19 +14,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Уникальный идентификатор позиции.
+     *position_uid-идентификатора инструмента
      *
      * Generated from protobuf field <code>string position_uid = 1;</code>
      */
     protected $position_uid = '';
     /**
-     *Уникальный идентификатор инструмента.
+     *instrument_uid-идентификатора инструмента
      *
      * Generated from protobuf field <code>string instrument_uid = 2;</code>
      */
     protected $instrument_uid = '';
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      */
@@ -44,7 +44,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = null;
     /**
-     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
+     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 6;</code>
      */
@@ -62,29 +62,23 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $expected_yield_fifo = null;
     /**
-     *Дата, до которой нужно продать виртуальные бумаги. После этой даты виртуальная позиция «сгораетт».
+     *Дата до которой нужно продать виртуальные бумаги, после этой даты виртуальная позиция "сгорит"
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      */
     protected $expire_date = null;
     /**
-     *Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 10;</code>
      */
     protected $current_price = null;
     /**
-     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
+     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 11;</code>
      */
     protected $average_position_price_fifo = null;
-    /**
-     * Рассчитанная доходность портфеля за день
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
-     */
-    protected $daily_yield = null;
 
     /**
      * Constructor.
@@ -93,29 +87,27 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $position_uid
-     *          Уникальный идентификатор позиции.
+     *          position_uid-идентификатора инструмента
      *     @type string $instrument_uid
-     *          Уникальный идентификатор инструмента.
+     *          instrument_uid-идентификатора инструмента
      *     @type string $figi
-     *          FIGI-идентификатор инструмента.
+     *          Figi-идентификатора инструмента.
      *     @type string $instrument_type
      *          Тип инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $quantity
      *          Количество инструмента в портфеле в штуках.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price
-     *          Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
+     *          Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая рассчитанная доходность позиции.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield_fifo
      *          Текущая рассчитанная доходность позиции.
      *     @type \Google\Protobuf\Timestamp $expire_date
-     *          Дата, до которой нужно продать виртуальные бумаги. После этой даты виртуальная позиция «сгораетт».
+     *          Дата до которой нужно продать виртуальные бумаги, после этой даты виртуальная позиция "сгорит"
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
-     *          Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *          Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
-     *          Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
-     *     @type \Tinkoff\Invest\V1\MoneyValue $daily_yield
-     *           Рассчитанная доходность портфеля за день
+     *          Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      * }
      */
     public function __construct($data = NULL) {
@@ -124,7 +116,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор позиции.
+     *position_uid-идентификатора инструмента
      *
      * Generated from protobuf field <code>string position_uid = 1;</code>
      * @return string
@@ -135,7 +127,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор позиции.
+     *position_uid-идентификатора инструмента
      *
      * Generated from protobuf field <code>string position_uid = 1;</code>
      * @param string $var
@@ -150,7 +142,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор инструмента.
+     *instrument_uid-идентификатора инструмента
      *
      * Generated from protobuf field <code>string instrument_uid = 2;</code>
      * @return string
@@ -161,7 +153,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор инструмента.
+     *instrument_uid-идентификатора инструмента
      *
      * Generated from protobuf field <code>string instrument_uid = 2;</code>
      * @param string $var
@@ -176,7 +168,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      * @return string
@@ -187,7 +179,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      * @param string $var
@@ -264,7 +256,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
+     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 6;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -285,7 +277,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
+     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 6;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -372,7 +364,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата, до которой нужно продать виртуальные бумаги. После этой даты виртуальная позиция «сгораетт».
+     *Дата до которой нужно продать виртуальные бумаги, после этой даты виртуальная позиция "сгорит"
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -393,7 +385,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата, до которой нужно продать виртуальные бумаги. После этой даты виртуальная позиция «сгораетт».
+     *Дата до которой нужно продать виртуальные бумаги, после этой даты виртуальная позиция "сгорит"
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -408,7 +400,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 10;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -429,7 +421,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 10;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -444,7 +436,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
+     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 11;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -465,7 +457,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
+     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 11;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -475,42 +467,6 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->average_position_price_fifo = $var;
-
-        return $this;
-    }
-
-    /**
-     * Рассчитанная доходность портфеля за день
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
-     * @return \Tinkoff\Invest\V1\MoneyValue|null
-     */
-    public function getDailyYield()
-    {
-        return $this->daily_yield;
-    }
-
-    public function hasDailyYield()
-    {
-        return isset($this->daily_yield);
-    }
-
-    public function clearDailyYield()
-    {
-        unset($this->daily_yield);
-    }
-
-    /**
-     * Рассчитанная доходность портфеля за день
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
-     * @param \Tinkoff\Invest\V1\MoneyValue $var
-     * @return $this
-     */
-    public function setDailyYield($var)
-    {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
-        $this->daily_yield = $var;
 
         return $this;
     }

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class FavoriteInstrument extends \Google\Protobuf\Internal\Message
 {
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -34,7 +34,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $class_code = '';
     /**
-     *ISIN-идентификатор инструмента.
+     *Isin-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string isin = 4;</code>
      */
@@ -58,13 +58,13 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $uid = '';
     /**
-     *Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
+     *Признак внебиржевой ценной бумаги.
      *
      * Generated from protobuf field <code>bool otc_flag = 16;</code>
      */
     protected $otc_flag = false;
     /**
-     *Возможность торговать инструментом через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 17;</code>
      */
@@ -83,13 +83,13 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          FIGI-идентификатор инструмента.
+     *          Figi-идентификатор инструмента.
      *     @type string $ticker
      *          Тикер инструмента.
      *     @type string $class_code
      *          Класс-код инструмента.
      *     @type string $isin
-     *          ISIN-идентификатор инструмента.
+     *          Isin-идентификатор инструмента.
      *     @type string $instrument_type
      *          Тип инструмента.
      *     @type string $name
@@ -97,9 +97,9 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      *     @type string $uid
      *          Уникальный идентификатор инструмента.
      *     @type bool $otc_flag
-     *          Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
+     *          Признак внебиржевой ценной бумаги.
      *     @type bool $api_trade_available_flag
-     *          Возможность торговать инструментом через API.
+     *          Параметр указывает на возможность торговать инструментом через API.
      *     @type int $instrument_kind
      *          Тип инструмента.
      * }
@@ -110,7 +110,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -121,7 +121,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента.
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -188,7 +188,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *ISIN-идентификатор инструмента.
+     *Isin-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string isin = 4;</code>
      * @return string
@@ -199,7 +199,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *ISIN-идентификатор инструмента.
+     *Isin-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string isin = 4;</code>
      * @param string $var
@@ -292,7 +292,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
+     *Признак внебиржевой ценной бумаги.
      *
      * Generated from protobuf field <code>bool otc_flag = 16;</code>
      * @return bool
@@ -303,7 +303,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
+     *Признак внебиржевой ценной бумаги.
      *
      * Generated from protobuf field <code>bool otc_flag = 16;</code>
      * @param bool $var
@@ -318,7 +318,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Возможность торговать инструментом через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 17;</code>
      * @return bool
@@ -329,7 +329,7 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Возможность торговать инструментом через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 17;</code>
      * @param bool $var

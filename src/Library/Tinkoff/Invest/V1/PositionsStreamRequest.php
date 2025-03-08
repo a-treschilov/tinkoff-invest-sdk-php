@@ -16,23 +16,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив идентификаторов счётов пользователя.
+     *Массив идентификаторов счётов пользователя
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      */
     private $accounts;
-    /**
-     *Получение состояния позиций на момент подключения.
-     *
-     * Generated from protobuf field <code>bool with_initial_positions = 3;</code>
-     */
-    protected $with_initial_positions = false;
-    /**
-     *Запрос настройки пинга.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
-     */
-    protected $ping_settings = null;
 
     /**
      * Constructor.
@@ -41,11 +29,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $accounts
-     *          Массив идентификаторов счётов пользователя.
-     *     @type bool $with_initial_positions
-     *          Получение состояния позиций на момент подключения.
-     *     @type \Tinkoff\Invest\V1\PingDelaySettings $ping_settings
-     *          Запрос настройки пинга.
+     *          Массив идентификаторов счётов пользователя
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +38,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов счётов пользователя.
+     *Массив идентификаторов счётов пользователя
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -65,7 +49,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов счётов пользователя.
+     *Массив идентификаторов счётов пользователя
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
@@ -75,68 +59,6 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
-
-        return $this;
-    }
-
-    /**
-     *Получение состояния позиций на момент подключения.
-     *
-     * Generated from protobuf field <code>bool with_initial_positions = 3;</code>
-     * @return bool
-     */
-    public function getWithInitialPositions()
-    {
-        return $this->with_initial_positions;
-    }
-
-    /**
-     *Получение состояния позиций на момент подключения.
-     *
-     * Generated from protobuf field <code>bool with_initial_positions = 3;</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setWithInitialPositions($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->with_initial_positions = $var;
-
-        return $this;
-    }
-
-    /**
-     *Запрос настройки пинга.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
-     * @return \Tinkoff\Invest\V1\PingDelaySettings|null
-     */
-    public function getPingSettings()
-    {
-        return $this->ping_settings;
-    }
-
-    public function hasPingSettings()
-    {
-        return isset($this->ping_settings);
-    }
-
-    public function clearPingSettings()
-    {
-        unset($this->ping_settings);
-    }
-
-    /**
-     *Запрос настройки пинга.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
-     * @param \Tinkoff\Invest\V1\PingDelaySettings $var
-     * @return $this
-     */
-    public function setPingSettings($var)
-    {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingDelaySettings::class);
-        $this->ping_settings = $var;
 
         return $this;
     }

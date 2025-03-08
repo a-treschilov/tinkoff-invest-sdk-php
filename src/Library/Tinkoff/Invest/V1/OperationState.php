@@ -14,13 +14,13 @@ use UnexpectedValueException;
 class OperationState
 {
     /**
-     *Статус операции не определён.
+     *Статус операции не определён
      *
      * Generated from protobuf enum <code>OPERATION_STATE_UNSPECIFIED = 0;</code>
      */
     const OPERATION_STATE_UNSPECIFIED = 0;
     /**
-     *Исполнена частично или полностью.
+     *Исполнена.
      *
      * Generated from protobuf enum <code>OPERATION_STATE_EXECUTED = 1;</code>
      */

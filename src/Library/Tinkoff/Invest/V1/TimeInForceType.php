@@ -7,8 +7,6 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Алгоритм исполнения заявки
- *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.TimeInForceType</code>
  */
 class TimeInForceType
@@ -20,19 +18,19 @@ class TimeInForceType
      */
     const TIME_IN_FORCE_UNSPECIFIED = 0;
     /**
-     *Заявка действует до конца торгового дня. Значение по умолчанию
+     *Заявка действует до конца торгового дня. значение по умолчанию
      *
      * Generated from protobuf enum <code>TIME_IN_FORCE_DAY = 1;</code>
      */
     const TIME_IN_FORCE_DAY = 1;
     /**
-     *Если в момент выставления возможно исполнение заявки(в т.ч. частичное), заявка будет исполнена или отменена сразу после выставления
+     *Заявка исполнена(возможно частично) и уничтожена
      *
      * Generated from protobuf enum <code>TIME_IN_FORCE_FILL_AND_KILL = 2;</code>
      */
     const TIME_IN_FORCE_FILL_AND_KILL = 2;
     /**
-     *Если в момент выставления возможно полное исполнение заявки, заявка будет исполнена или отменена сразу после выставления, недоступно для срочного рынка и торговли по выходным
+     *Заявка исполнена полностью или уничтожена, недоступно для срочного рынка
      *
      * Generated from protobuf enum <code>TIME_IN_FORCE_FILL_OR_KILL = 3;</code>
      */

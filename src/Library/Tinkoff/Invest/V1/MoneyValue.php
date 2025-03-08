@@ -9,26 +9,26 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Денежная сумма в определённой валюте.
+ *Денежная сумма в определенной валюте
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.MoneyValue</code>
  */
 class MoneyValue extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Строковый ISO-код валюты.
+     * строковый ISO-код валюты
      *
      * Generated from protobuf field <code>string currency = 1;</code>
      */
     protected $currency = '';
     /**
-     * Целая часть суммы, может быть отрицательным числом.
+     * целая часть суммы, может быть отрицательным числом
      *
      * Generated from protobuf field <code>int64 units = 2;</code>
      */
     protected $units = 0;
     /**
-     * Дробная часть суммы, может быть отрицательным числом.
+     * дробная часть суммы, может быть отрицательным числом
      *
      * Generated from protobuf field <code>int32 nano = 3;</code>
      */
@@ -41,11 +41,11 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $currency
-     *           Строковый ISO-код валюты.
+     *           строковый ISO-код валюты
      *     @type int|string $units
-     *           Целая часть суммы, может быть отрицательным числом.
+     *           целая часть суммы, может быть отрицательным числом
      *     @type int $nano
-     *           Дробная часть суммы, может быть отрицательным числом.
+     *           дробная часть суммы, может быть отрицательным числом
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +54,7 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Строковый ISO-код валюты.
+     * строковый ISO-код валюты
      *
      * Generated from protobuf field <code>string currency = 1;</code>
      * @return string
@@ -65,7 +65,7 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Строковый ISO-код валюты.
+     * строковый ISO-код валюты
      *
      * Generated from protobuf field <code>string currency = 1;</code>
      * @param string $var
@@ -80,7 +80,7 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Целая часть суммы, может быть отрицательным числом.
+     * целая часть суммы, может быть отрицательным числом
      *
      * Generated from protobuf field <code>int64 units = 2;</code>
      * @return int|string
@@ -91,7 +91,7 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Целая часть суммы, может быть отрицательным числом.
+     * целая часть суммы, может быть отрицательным числом
      *
      * Generated from protobuf field <code>int64 units = 2;</code>
      * @param int|string $var
@@ -106,7 +106,7 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дробная часть суммы, может быть отрицательным числом.
+     * дробная часть суммы, может быть отрицательным числом
      *
      * Generated from protobuf field <code>int32 nano = 3;</code>
      * @return int
@@ -117,7 +117,7 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дробная часть суммы, может быть отрицательным числом.
+     * дробная часть суммы, может быть отрицательным числом
      *
      * Generated from protobuf field <code>int32 nano = 3;</code>
      * @param int $var

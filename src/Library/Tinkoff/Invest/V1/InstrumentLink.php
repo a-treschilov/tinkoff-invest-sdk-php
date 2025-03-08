@@ -22,7 +22,7 @@ class InstrumentLink extends \Google\Protobuf\Internal\Message
      */
     protected $type = '';
     /**
-     *UID-идентификатор связанного инструмента.
+     *uid идентификатор связанного инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 2;</code>
      */
@@ -37,7 +37,7 @@ class InstrumentLink extends \Google\Protobuf\Internal\Message
      *     @type string $type
      *          Тип связи.
      *     @type string $instrument_uid
-     *          UID-идентификатор связанного инструмента.
+     *          uid идентификатор связанного инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class InstrumentLink extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID-идентификатор связанного инструмента.
+     *uid идентификатор связанного инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 2;</code>
      * @return string
@@ -83,7 +83,7 @@ class InstrumentLink extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID-идентификатор связанного инструмента.
+     *uid идентификатор связанного инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 2;</code>
      * @param string $var

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.10 - 2025.03.08
+- [feat] switch T-Invest Api contracts to main branch
+- [feat] Update T-Invest API to v1.30
+
 ## v0.3.9 - 2025.01.08
 - [tech] PHP 8.4 support
 

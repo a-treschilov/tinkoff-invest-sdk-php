@@ -27,12 +27,6 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $order_id = '';
-    /**
-     *Тип идентификатора заявки.
-     *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
-     */
-    protected $order_id_type = null;
 
     /**
      * Constructor.
@@ -44,8 +38,6 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
      *          Номер счёта.
      *     @type string $order_id
      *          Идентификатор заявки.
-     *     @type int $order_id_type
-     *          Тип идентификатора заявки.
      * }
      */
     public function __construct($data = NULL) {
@@ -101,42 +93,6 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->order_id = $var;
-
-        return $this;
-    }
-
-    /**
-     *Тип идентификатора заявки.
-     *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
-     * @return int
-     */
-    public function getOrderIdType()
-    {
-        return isset($this->order_id_type) ? $this->order_id_type : 0;
-    }
-
-    public function hasOrderIdType()
-    {
-        return isset($this->order_id_type);
-    }
-
-    public function clearOrderIdType()
-    {
-        unset($this->order_id_type);
-    }
-
-    /**
-     *Тип идентификатора заявки.
-     *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setOrderIdType($var)
-    {
-        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderIdType::class);
-        $this->order_id_type = $var;
 
         return $this;
     }

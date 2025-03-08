@@ -40,7 +40,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     protected $payment = null;
     /**
-     *Цена операции за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 5;</code>
      */
@@ -64,13 +64,13 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     protected $quantity_rest = 0;
     /**
-     *FIGI-идентификатор инструмента, связанного с операцией.
+     *Figi-идентификатор инструмента, связанного с операцией.
      *
      * Generated from protobuf field <code>string figi = 9;</code>
      */
     protected $figi = '';
     /**
-     *Тип инструмента. Возможные значения: </br></br>`bond` — облигация; </br>`share` — акция; </br>`currency` — валюта; </br>`etf` — фонд; </br>`futures` — фьючерс.
+     *Тип инструмента. Возможные значения: </br>**bond** — облигация; </br>**share** — акция; </br>**currency** — валюта; </br>**etf** — фонд; </br>**futures** — фьючерс.
      *
      * Generated from protobuf field <code>string instrument_type = 10;</code>
      */
@@ -106,7 +106,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     protected $asset_uid = '';
     /**
-     *Уникальный идентификатор позиции.
+     *position_uid-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string position_uid = 17;</code>
      */
@@ -117,12 +117,6 @@ class Operation extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 18;</code>
      */
     protected $instrument_uid = '';
-    /**
-     *Массив дочерних операций.
-     *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 19;</code>
-     */
-    private $child_operations;
 
     /**
      * Constructor.
@@ -139,7 +133,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $payment
      *          Сумма операции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
-     *          Цена операции за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *          Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type int $state
      *          Статус операции.
      *     @type int|string $quantity
@@ -147,9 +141,9 @@ class Operation extends \Google\Protobuf\Internal\Message
      *     @type int|string $quantity_rest
      *          Неисполненный остаток по сделке.
      *     @type string $figi
-     *          FIGI-идентификатор инструмента, связанного с операцией.
+     *          Figi-идентификатор инструмента, связанного с операцией.
      *     @type string $instrument_type
-     *          Тип инструмента. Возможные значения: </br></br>`bond` — облигация; </br>`share` — акция; </br>`currency` — валюта; </br>`etf` — фонд; </br>`futures` — фьючерс.
+     *          Тип инструмента. Возможные значения: </br>**bond** — облигация; </br>**share** — акция; </br>**currency** — валюта; </br>**etf** — фонд; </br>**futures** — фьючерс.
      *     @type \Google\Protobuf\Timestamp $date
      *          Дата и время операции в формате часовом поясе UTC.
      *     @type string $type
@@ -161,11 +155,9 @@ class Operation extends \Google\Protobuf\Internal\Message
      *     @type string $asset_uid
      *          Идентификатор актива
      *     @type string $position_uid
-     *          Уникальный идентификатор позиции.
+     *          position_uid-идентификатора инструмента.
      *     @type string $instrument_uid
      *          Уникальный идентификатор инструмента.
-     *     @type array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $child_operations
-     *          Массив дочерних операций.
      * }
      */
     public function __construct($data = NULL) {
@@ -288,7 +280,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена операции за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 5;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -309,7 +301,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена операции за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+     *Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 5;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -402,7 +394,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента, связанного с операцией.
+     *Figi-идентификатор инструмента, связанного с операцией.
      *
      * Generated from protobuf field <code>string figi = 9;</code>
      * @return string
@@ -413,7 +405,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *FIGI-идентификатор инструмента, связанного с операцией.
+     *Figi-идентификатор инструмента, связанного с операцией.
      *
      * Generated from protobuf field <code>string figi = 9;</code>
      * @param string $var
@@ -428,7 +420,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип инструмента. Возможные значения: </br></br>`bond` — облигация; </br>`share` — акция; </br>`currency` — валюта; </br>`etf` — фонд; </br>`futures` — фьючерс.
+     *Тип инструмента. Возможные значения: </br>**bond** — облигация; </br>**share** — акция; </br>**currency** — валюта; </br>**etf** — фонд; </br>**futures** — фьючерс.
      *
      * Generated from protobuf field <code>string instrument_type = 10;</code>
      * @return string
@@ -439,7 +431,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип инструмента. Возможные значения: </br></br>`bond` — облигация; </br>`share` — акция; </br>`currency` — валюта; </br>`etf` — фонд; </br>`futures` — фьючерс.
+     *Тип инструмента. Возможные значения: </br>**bond** — облигация; </br>**share** — акция; </br>**currency** — валюта; </br>**etf** — фонд; </br>**futures** — фьючерс.
      *
      * Generated from protobuf field <code>string instrument_type = 10;</code>
      * @param string $var
@@ -594,7 +586,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор позиции.
+     *position_uid-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string position_uid = 17;</code>
      * @return string
@@ -605,7 +597,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор позиции.
+     *position_uid-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string position_uid = 17;</code>
      * @param string $var
@@ -641,32 +633,6 @@ class Operation extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
-
-        return $this;
-    }
-
-    /**
-     *Массив дочерних операций.
-     *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 19;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
-     */
-    public function getChildOperations()
-    {
-        return $this->child_operations;
-    }
-
-    /**
-     *Массив дочерних операций.
-     *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 19;</code>
-     * @param array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $var
-     * @return $this
-     */
-    public function setChildOperations($var)
-    {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\ChildOperationItem::class);
-        $this->child_operations = $arr;
 
         return $this;
     }

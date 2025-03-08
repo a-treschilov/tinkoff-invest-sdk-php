@@ -16,19 +16,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Начало запрашиваемого периода по UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
      */
     protected $from = null;
     /**
-     *Окончание запрашиваемого периода по UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
      */
     protected $to = null;
     /**
-     *Идентификатор инструмента — `figi` или `instrument_uid`.
+     *Идентификатор инструмента Figi или instrument_uid
      *
      * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -47,11 +47,11 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало запрашиваемого периода по UTC.
+     *          Начало запрашиваемого периода в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание запрашиваемого периода по UTC.
+     *          Окончание запрашиваемого периода в часовом поясе UTC.
      *     @type string $instrument_id
-     *          Идентификатор инструмента — `figi` или `instrument_uid`.
+     *          Идентификатор инструмента Figi или instrument_uid
      *     @type int $type
      *          Тип события
      * }
@@ -62,7 +62,7 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода по UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -83,7 +83,7 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода по UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -98,7 +98,7 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода по UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -119,7 +119,7 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода по UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC.
      *
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -134,7 +134,7 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента — `figi` или `instrument_uid`.
+     *Идентификатор инструмента Figi или instrument_uid
      *
      * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -145,7 +145,7 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента — `figi` или `instrument_uid`.
+     *Идентификатор инструмента Figi или instrument_uid
      *
      * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

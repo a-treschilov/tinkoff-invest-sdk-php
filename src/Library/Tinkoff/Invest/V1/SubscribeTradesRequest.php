@@ -27,12 +27,6 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradeInstrument instruments = 2;</code>
      */
     private $instruments;
-    /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
-     */
-    protected $trade_source = 0;
 
     /**
      * Constructor.
@@ -44,8 +38,6 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *          Изменение статуса подписки.
      *     @type array<\Tinkoff\Invest\V1\TradeInstrument>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов для подписки на поток обезличенных сделок.
-     *     @type int $trade_source
-     *          Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -101,32 +93,6 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\TradeInstrument::class);
         $this->instruments = $arr;
-
-        return $this;
-    }
-
-    /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
-     * @return int
-     */
-    public function getTradeSource()
-    {
-        return $this->trade_source;
-    }
-
-    /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
-     *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setTradeSource($var)
-    {
-        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
-        $this->trade_source = $var;
 
         return $this;
     }
