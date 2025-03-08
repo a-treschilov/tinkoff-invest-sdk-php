@@ -177,6 +177,12 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string asset_uid = 64;</code>
      */
     protected $asset_uid = '';
+    /**
+     *Массив дочерних операций.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 65;</code>
+     */
+    private $child_operations;
 
     /**
      * Constructor.
@@ -238,6 +244,8 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *          Массив сделок.
      *     @type string $asset_uid
      *          Идентификатор актива.
+     *     @type array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $child_operations
+     *          Массив дочерних операций.
      * }
      */
     public function __construct($data = NULL) {
@@ -1033,6 +1041,32 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->asset_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Массив дочерних операций.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 65;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getChildOperations()
+    {
+        return $this->child_operations;
+    }
+
+    /**
+     *Массив дочерних операций.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 65;</code>
+     * @param array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setChildOperations($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\ChildOperationItem::class);
+        $this->child_operations = $arr;
 
         return $this;
     }

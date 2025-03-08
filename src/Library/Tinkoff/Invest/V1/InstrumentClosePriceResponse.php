@@ -34,7 +34,7 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      */
     protected $price = null;
     /**
-     *Цена последней сделки с вечерней сессии.
+     *Цена последней сделки с вечерней сессии. Цена публикуется биржей по торговым дням и в нерабочие дни не обновляется.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation evening_session_price = 12;</code>
      */
@@ -59,7 +59,7 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $price
      *          Цена закрытия торговой сессии.
      *     @type \Tinkoff\Invest\V1\Quotation $evening_session_price
-     *          Цена последней сделки с вечерней сессии.
+     *          Цена последней сделки с вечерней сессии. Цена публикуется биржей по торговым дням и в нерабочие дни не обновляется.
      *     @type \Google\Protobuf\Timestamp $time
      *          Дата совершения торгов.
      * }
@@ -158,7 +158,7 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена последней сделки с вечерней сессии.
+     *Цена последней сделки с вечерней сессии. Цена публикуется биржей по торговым дням и в нерабочие дни не обновляется.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation evening_session_price = 12;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -179,7 +179,7 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена последней сделки с вечерней сессии.
+     *Цена последней сделки с вечерней сессии. Цена публикуется биржей по торговым дням и в нерабочие дни не обновляется.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation evening_session_price = 12;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

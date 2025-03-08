@@ -5,12 +5,9 @@ declare(strict_types=1);
 namespace ATreschilov\TinkoffInvestApiSdk;
 
 use ATreschilov\TinkoffInvestApiSdk\Services\InstrumentsServiceDecorator;
-use ATreschilov\TinkoffInvestApiSdk\Services\MarketDataService;
 use ATreschilov\TinkoffInvestApiSdk\Services\MarketDataServiceDecorator;
-use ATreschilov\TinkoffInvestApiSdk\Services\OperationsService;
 use ATreschilov\TinkoffInvestApiSdk\Services\OperationsServiceDecorator;
 use ATreschilov\TinkoffInvestApiSdk\Services\UsersServiceDecorator;
-use ATreschilov\TinkoffInvestApiSdk\Services\UsersService;
 use Grpc\ChannelCredentials;
 use JetBrains\PhpStorm\ArrayShape;
 

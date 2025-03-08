@@ -348,7 +348,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список активов. Метод работает для всех инструментов, кроме срочных — опционов и фьючерсов.
+     * Получить список активов. Метод работает для всех инструментов, кроме срочных — фьючерсов и опционов.
      * @param \Tinkoff\Invest\V1\AssetsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

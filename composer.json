@@ -2,9 +2,9 @@
   "name": "a.treschilov/tinkoff-invest-api-sdk",
   "description": "PHP SDK for Tinkoff invest API V2",
   "type": "library",
-  "version": "v0.3.7",
+  "version": "v0.3.9",
   "license": "Apache-2.0",
-  "keywords": ["php", "sdk", "tinkoff", "invest", "v2"],
+  "keywords": ["php", "sdk", "tinkoff", "invest", "v2", "invest api", "t invest", "t bank"],
   "support": {
     "email": "a.treschilov@yandex.ru"
   },
@@ -23,12 +23,12 @@
   },
   "require": {
     "php": "^8.3",
-    "ext-grpc": "1.66",
-    "grpc/grpc": "1.57.0",
-    "google/protobuf": "4.28.0",
-    "google/common-protos": "v4.7.0"
+    "ext-grpc": "^1.66",
+    "grpc/grpc": "^1.57.0",
+    "google/protobuf": "^4.29.2",
+    "google/common-protos": "^v4.8.3"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "3.10.2"
+    "squizlabs/php_codesniffer": "^3.11.2"
   }
 }
