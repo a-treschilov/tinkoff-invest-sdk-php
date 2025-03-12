@@ -9,26 +9,26 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Объект запроса формирования отчёта "Справка о доходах за пределами РФ".
+ *Объект запроса формирования отчета «Справка о доходах за пределами РФ».
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GenerateDividendsForeignIssuerReportRequest</code>
  */
 class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
-     *Начало периода (по UTC).
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $from = null;
     /**
-     *Окончание периода (по UTC), как правило, возможно сформировать отчет по дату, на несколько дней меньше текущей. Начало и окончание периода должны быть в рамках одного календарного года.
+     *Окончание периода по UTC. Как правило, можно сформировать отчет по дату на несколько дней меньше текущей. Начало и окончание периода должны быть в рамках одного календарного года.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -41,11 +41,11 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента.
+     *          Идентификатор счета клиента.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало периода (по UTC).
+     *          Начало периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание периода (по UTC), как правило, возможно сформировать отчет по дату, на несколько дней меньше текущей. Начало и окончание периода должны быть в рамках одного календарного года.
+     *          Окончание периода по UTC. Как правило, можно сформировать отчет по дату на несколько дней меньше текущей. Начало и окончание периода должны быть в рамках одного календарного года.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +54,7 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -65,7 +65,7 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -80,7 +80,7 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
     }
 
     /**
-     *Начало периода (по UTC).
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -101,7 +101,7 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
     }
 
     /**
-     *Начало периода (по UTC).
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -116,7 +116,7 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
     }
 
     /**
-     *Окончание периода (по UTC), как правило, возможно сформировать отчет по дату, на несколько дней меньше текущей. Начало и окончание периода должны быть в рамках одного календарного года.
+     *Окончание периода по UTC. Как правило, можно сформировать отчет по дату на несколько дней меньше текущей. Начало и окончание периода должны быть в рамках одного календарного года.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -137,7 +137,7 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
     }
 
     /**
-     *Окончание периода (по UTC), как правило, возможно сформировать отчет по дату, на несколько дней меньше текущей. Начало и окончание периода должны быть в рамках одного календарного года.
+     *Окончание периода по UTC. Как правило, можно сформировать отчет по дату на несколько дней меньше текущей. Начало и окончание периода должны быть в рамках одного календарного года.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var

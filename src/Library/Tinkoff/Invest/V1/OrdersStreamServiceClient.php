@@ -17,7 +17,7 @@ class OrdersStreamServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Stream сделок пользователя
+     * Stream сделок пользователя.
      * @param \Tinkoff\Invest\V1\TradesStreamRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -28,6 +28,22 @@ class OrdersStreamServiceClient extends \Grpc\BaseStub {
         return $this->_serverStreamRequest('/tinkoff.public.invest.api.contract.v1.OrdersStreamService/TradesStream',
         $argument,
         ['\Tinkoff\Invest\V1\TradesStreamResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Stream поручений пользователя.
+     * Перед работой прочитайте [статью](/invest/services/orders/orders_state_stream).
+     * @param \Tinkoff\Invest\V1\OrderStateStreamRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function OrderStateStream(\Tinkoff\Invest\V1\OrderStateStreamRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/tinkoff.public.invest.api.contract.v1.OrdersStreamService/OrderStateStream',
+        $argument,
+        ['\Tinkoff\Invest\V1\OrderStateStreamResponse', 'decode'],
         $metadata, $options);
     }
 

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OrderBook extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -28,7 +28,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     protected $depth = 0;
     /**
-     *Флаг консистентности стакана. **false** значит не все заявки попали в стакан по причинам сетевых задержек или нарушения порядка доставки.
+     *Флаг консистентности стакана. **false** — не все заявки попали в стакан из-за сетевых задержек или нарушения порядка доставки.
      *
      * Generated from protobuf field <code>bool is_consistent = 3;</code>
      */
@@ -52,23 +52,29 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     protected $time = null;
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      */
     protected $limit_up = null;
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      */
     protected $limit_down = null;
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 9;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Тип стакана.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
+     */
+    protected $order_book_type = 0;
 
     /**
      * Constructor.
@@ -77,11 +83,11 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type int $depth
      *          Глубина стакана.
      *     @type bool $is_consistent
-     *          Флаг консистентности стакана. **false** значит не все заявки попали в стакан по причинам сетевых задержек или нарушения порядка доставки.
+     *          Флаг консистентности стакана. **false** — не все заявки попали в стакан из-за сетевых задержек или нарушения порядка доставки.
      *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $bids
      *          Массив предложений.
      *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $asks
@@ -89,11 +95,13 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $time
      *          Время формирования стакана в часовом поясе UTC по времени биржи.
      *     @type \Tinkoff\Invest\V1\Quotation $limit_up
-     *          Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *          Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *     @type \Tinkoff\Invest\V1\Quotation $limit_down
-     *          Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *          Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *     @type string $instrument_uid
-     *          Uid инструмента
+     *          UID инструмента.
+     *     @type int $order_book_type
+     *          Тип стакана.
      * }
      */
     public function __construct($data = NULL) {
@@ -102,7 +110,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -113,7 +121,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -154,7 +162,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг консистентности стакана. **false** значит не все заявки попали в стакан по причинам сетевых задержек или нарушения порядка доставки.
+     *Флаг консистентности стакана. **false** — не все заявки попали в стакан из-за сетевых задержек или нарушения порядка доставки.
      *
      * Generated from protobuf field <code>bool is_consistent = 3;</code>
      * @return bool
@@ -165,7 +173,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг консистентности стакана. **false** значит не все заявки попали в стакан по причинам сетевых задержек или нарушения порядка доставки.
+     *Флаг консистентности стакана. **false** — не все заявки попали в стакан из-за сетевых задержек или нарушения порядка доставки.
      *
      * Generated from protobuf field <code>bool is_consistent = 3;</code>
      * @param bool $var
@@ -268,7 +276,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -289,7 +297,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -304,7 +312,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -325,7 +333,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -340,7 +348,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 9;</code>
      * @return string
@@ -351,7 +359,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 9;</code>
      * @param string $var
@@ -361,6 +369,32 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип стакана.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
+     * @return int
+     */
+    public function getOrderBookType()
+    {
+        return $this->order_book_type;
+    }
+
+    /**
+     *Тип стакана.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOrderBookType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
+        $this->order_book_type = $var;
 
         return $this;
     }

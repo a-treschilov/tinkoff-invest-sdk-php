@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос получения текущего портфеля по счёту.
+ *Запрос получения текущего портфеля по счету.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.PortfolioRequest</code>
  */
 class PortfolioRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
-     *Валюта, в которой требуется рассчитать портфель
+     *Валюта, в которой нужно рассчитать портфель.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      */
@@ -35,9 +35,9 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта пользователя.
+     *          Идентификатор счета пользователя.
      *     @type int $currency
-     *          Валюта, в которой требуется рассчитать портфель
+     *          Валюта, в которой нужно рассчитать портфель.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -57,7 +57,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -72,7 +72,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта, в которой требуется рассчитать портфель
+     *Валюта, в которой нужно рассчитать портфель.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      * @return int
@@ -93,7 +93,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта, в которой требуется рассчитать портфель
+     *Валюта, в которой нужно рассчитать портфель.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      * @param int $var

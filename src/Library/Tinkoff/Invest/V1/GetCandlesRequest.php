@@ -16,20 +16,20 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetCandlesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $from = null;
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -41,11 +41,23 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      */
     protected $instrument_id = null;
+    /**
+     *Тип источника свечи.
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     */
+    protected $candle_source_type = null;
+    /**
+     *Максимальное количество свечей в ответе.
+     *
+     * Generated from protobuf field <code>optional int32 limit = 10;</code>
+     */
+    protected $limit = null;
 
     /**
      * Constructor.
@@ -54,15 +66,19 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало запрашиваемого периода в часовом поясе UTC.
+     *          Начало запрашиваемого периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание запрашиваемого периода в часовом поясе UTC.
+     *          Окончание запрашиваемого периода по UTC.
      *     @type int $interval
      *          Интервал запрошенных свечей.
      *     @type string $instrument_id
-     *          Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *     @type int $candle_source_type
+     *          Тип источника свечи.
+     *     @type int $limit
+     *          Максимальное количество свечей в ответе.
      * }
      */
     public function __construct($data = NULL) {
@@ -71,7 +87,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
@@ -96,7 +112,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
@@ -113,7 +129,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -134,7 +150,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -149,7 +165,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -170,7 +186,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -211,7 +227,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      * @return string
@@ -232,7 +248,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      * @param string $var
@@ -242,6 +258,78 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип источника свечи.
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     * @return int
+     */
+    public function getCandleSourceType()
+    {
+        return isset($this->candle_source_type) ? $this->candle_source_type : 0;
+    }
+
+    public function hasCandleSourceType()
+    {
+        return isset($this->candle_source_type);
+    }
+
+    public function clearCandleSourceType()
+    {
+        unset($this->candle_source_type);
+    }
+
+    /**
+     *Тип источника свечи.
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCandleSourceType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource::class);
+        $this->candle_source_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Максимальное количество свечей в ответе.
+     *
+     * Generated from protobuf field <code>optional int32 limit = 10;</code>
+     * @return int
+     */
+    public function getLimit()
+    {
+        return isset($this->limit) ? $this->limit : 0;
+    }
+
+    public function hasLimit()
+    {
+        return isset($this->limit);
+    }
+
+    public function clearLimit()
+    {
+        unset($this->limit);
+    }
+
+    /**
+     *Максимальное количество свечей в ответе.
+     *
+     * Generated from protobuf field <code>optional int32 limit = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLimit($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->limit = $var;
 
         return $this;
     }

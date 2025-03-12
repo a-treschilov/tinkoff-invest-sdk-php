@@ -16,18 +16,30 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>repeated string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     private $figi;
     /**
-     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid.
+     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      */
     private $instrument_id;
+    /**
+     *Тип запрашиваемой последней цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPriceType last_price_type = 3;</code>
+     */
+    protected $last_price_type = 0;
+    /**
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     */
+    protected $instrument_status = null;
 
     /**
      * Constructor.
@@ -36,9 +48,13 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $figi
-     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $instrument_id
-     *          Массив идентификаторов инструмента, принимает значения figi или instrument_uid.
+     *          Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *     @type int $last_price_type
+     *          Тип запрашиваемой последней цены.
+     *     @type int $instrument_status
+     *          Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      * }
      */
     public function __construct($data = NULL) {
@@ -47,7 +63,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>repeated string figi = 1 [deprecated = true];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -60,7 +76,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>repeated string figi = 1 [deprecated = true];</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
@@ -77,7 +93,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid.
+     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -88,7 +104,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов инструмента, принимает значения figi или instrument_uid.
+     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
@@ -98,6 +114,68 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->instrument_id = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Тип запрашиваемой последней цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPriceType last_price_type = 3;</code>
+     * @return int
+     */
+    public function getLastPriceType()
+    {
+        return $this->last_price_type;
+    }
+
+    /**
+     *Тип запрашиваемой последней цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPriceType last_price_type = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLastPriceType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\LastPriceType::class);
+        $this->last_price_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * @return int
+     */
+    public function getInstrumentStatus()
+    {
+        return isset($this->instrument_status) ? $this->instrument_status : 0;
+    }
+
+    public function hasInstrumentStatus()
+    {
+        return isset($this->instrument_status);
+    }
+
+    public function clearInstrumentStatus()
+    {
+        unset($this->instrument_status);
+    }
+
+    /**
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentStatus($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentStatus::class);
+        $this->instrument_status = $var;
 
         return $this;
     }

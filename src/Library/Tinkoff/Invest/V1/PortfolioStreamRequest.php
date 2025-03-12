@@ -16,11 +16,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив идентификаторов счётов пользователя
+     *Массив идентификаторов счетов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      */
     private $accounts;
+    /**
+     *Запрос настройки пинга.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
+     */
+    protected $ping_settings = null;
 
     /**
      * Constructor.
@@ -29,7 +35,9 @@ class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $accounts
-     *          Массив идентификаторов счётов пользователя
+     *          Массив идентификаторов счетов пользователя.
+     *     @type \Tinkoff\Invest\V1\PingDelaySettings $ping_settings
+     *          Запрос настройки пинга.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +46,7 @@ class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов счётов пользователя
+     *Массив идентификаторов счетов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +57,7 @@ class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов счётов пользователя
+     *Массив идентификаторов счетов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
@@ -59,6 +67,42 @@ class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Запрос настройки пинга.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
+     * @return \Tinkoff\Invest\V1\PingDelaySettings|null
+     */
+    public function getPingSettings()
+    {
+        return $this->ping_settings;
+    }
+
+    public function hasPingSettings()
+    {
+        return isset($this->ping_settings);
+    }
+
+    public function clearPingSettings()
+    {
+        unset($this->ping_settings);
+    }
+
+    /**
+     *Запрос настройки пинга.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
+     * @param \Tinkoff\Invest\V1\PingDelaySettings $var
+     * @return $this
+     */
+    public function setPingSettings($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingDelaySettings::class);
+        $this->ping_settings = $var;
 
         return $this;
     }

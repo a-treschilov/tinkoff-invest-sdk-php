@@ -52,7 +52,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     protected $trading_status = 0;
     /**
-     *Реальная площадка исполнения расчётов (биржа). Допустимые значения: [REAL_EXCHANGE_MOEX, REAL_EXCHANGE_RTS]
+     *Реальная площадка исполнения расчетов (биржа).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 31;</code>
      */
@@ -136,6 +136,12 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     protected $sector = '';
     /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 162;</code>
+     */
+    protected $brand = null;
+    /**
      *Количество бумаг в лоте.
      *
      * Generated from protobuf field <code>int32 lot = 201;</code>
@@ -148,37 +154,39 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     protected $basic_asset_size = null;
     /**
-     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 221;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 221 [deprecated = true];</code>
+     * @deprecated
      */
     protected $klong = null;
     /**
-     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 222;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 222 [deprecated = true];</code>
+     * @deprecated
      */
     protected $kshort = null;
     /**
-     *Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 223;</code>
      */
     protected $dlong = null;
     /**
-     *Ставка риска начальной маржи для КСУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 224;</code>
      */
     protected $dshort = null;
     /**
-     *Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 225;</code>
      */
     protected $dlong_min = null;
     /**
-     *Ставка риска начальной маржи для КПУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 226;</code>
      */
@@ -195,6 +203,18 @@ class Option extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue strike_price = 241;</code>
      */
     protected $strike_price = null;
+    /**
+     *Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 290;</code>
+     */
+    protected $dlong_client = null;
+    /**
+     *Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 291;</code>
+     */
+    protected $dshort_client = null;
     /**
      *Дата истечения срока в формате UTC.
      *
@@ -232,13 +252,13 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     protected $short_enabled_flag = false;
     /**
-     *Возможность покупки/продажи на ИИС.
+     *Возможность покупки или продажи на ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 402;</code>
      */
     protected $for_iis_flag = false;
     /**
-     *Признак внебиржевой ценной бумаги.
+     *Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
      *
      * Generated from protobuf field <code>bool otc_flag = 403;</code>
      */
@@ -256,13 +276,13 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     protected $sell_available_flag = false;
     /**
-     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *
      * Generated from protobuf field <code>bool for_qual_investor_flag = 406;</code>
      */
     protected $for_qual_investor_flag = false;
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным.
+     *Флаг, отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 407;</code>
      */
@@ -274,7 +294,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     protected $blocked_tca_flag = false;
     /**
-     *Параметр указывает на возможность торговать инструментом через API.
+     *Возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 409;</code>
      */
@@ -299,7 +319,7 @@ class Option extends \Google\Protobuf\Internal\Message
      *     @type int $trading_status
      *          Текущий режим торгов инструмента.
      *     @type int $real_exchange
-     *          Реальная площадка исполнения расчётов (биржа). Допустимые значения: [REAL_EXCHANGE_MOEX, REAL_EXCHANGE_RTS]
+     *          Реальная площадка исполнения расчетов (биржа).
      *     @type int $direction
      *          Направление опциона.
      *     @type int $payment_type
@@ -326,26 +346,32 @@ class Option extends \Google\Protobuf\Internal\Message
      *          Наименование страны рисков.
      *     @type string $sector
      *          Сектор экономики.
+     *     @type \Tinkoff\Invest\V1\BrandData $brand
+     *           Информация о бренде.
      *     @type int $lot
      *          Количество бумаг в лоте.
      *     @type \Tinkoff\Invest\V1\Quotation $basic_asset_size
      *          Размер основного актива.
      *     @type \Tinkoff\Invest\V1\Quotation $klong
-     *          Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+     *          Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *     @type \Tinkoff\Invest\V1\Quotation $kshort
-     *          Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+     *          Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *     @type \Tinkoff\Invest\V1\Quotation $dlong
-     *          Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *          Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *     @type \Tinkoff\Invest\V1\Quotation $dshort
-     *          Ставка риска начальной маржи для КСУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *          Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *     @type \Tinkoff\Invest\V1\Quotation $dlong_min
-     *          Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *          Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *     @type \Tinkoff\Invest\V1\Quotation $dshort_min
-     *          Ставка риска начальной маржи для КПУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *          Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *     @type \Tinkoff\Invest\V1\Quotation $min_price_increment
      *          Минимальный шаг цены.
      *     @type \Tinkoff\Invest\V1\MoneyValue $strike_price
      *          Цена страйка.
+     *     @type \Tinkoff\Invest\V1\Quotation $dlong_client
+     *          Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *     @type \Tinkoff\Invest\V1\Quotation $dshort_client
+     *          Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *     @type \Google\Protobuf\Timestamp $expiration_date
      *          Дата истечения срока в формате UTC.
      *     @type \Google\Protobuf\Timestamp $first_trade_date
@@ -359,21 +385,21 @@ class Option extends \Google\Protobuf\Internal\Message
      *     @type bool $short_enabled_flag
      *          Признак доступности для операций шорт.
      *     @type bool $for_iis_flag
-     *          Возможность покупки/продажи на ИИС.
+     *          Возможность покупки или продажи на ИИС.
      *     @type bool $otc_flag
-     *          Признак внебиржевой ценной бумаги.
+     *          Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
      *     @type bool $buy_available_flag
      *          Признак доступности для покупки.
      *     @type bool $sell_available_flag
      *          Признак доступности для продажи.
      *     @type bool $for_qual_investor_flag
-     *          Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *          Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *     @type bool $weekend_flag
-     *          Флаг отображающий доступность торговли инструментом по выходным.
+     *          Флаг, отображающий доступность торговли инструментом по выходным.
      *     @type bool $blocked_tca_flag
      *          Флаг заблокированного ТКС.
      *     @type bool $api_trade_available_flag
-     *          Параметр указывает на возможность торговать инструментом через API.
+     *          Возможность торговать инструментом через API.
      * }
      */
     public function __construct($data = NULL) {
@@ -538,7 +564,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Реальная площадка исполнения расчётов (биржа). Допустимые значения: [REAL_EXCHANGE_MOEX, REAL_EXCHANGE_RTS]
+     *Реальная площадка исполнения расчетов (биржа).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 31;</code>
      * @return int
@@ -549,7 +575,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Реальная площадка исполнения расчётов (биржа). Допустимые значения: [REAL_EXCHANGE_MOEX, REAL_EXCHANGE_RTS]
+     *Реальная площадка исполнения расчетов (биржа).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 31;</code>
      * @param int $var
@@ -902,6 +928,42 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 162;</code>
+     * @return \Tinkoff\Invest\V1\BrandData|null
+     */
+    public function getBrand()
+    {
+        return $this->brand;
+    }
+
+    public function hasBrand()
+    {
+        return isset($this->brand);
+    }
+
+    public function clearBrand()
+    {
+        unset($this->brand);
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 162;</code>
+     * @param \Tinkoff\Invest\V1\BrandData $var
+     * @return $this
+     */
+    public function setBrand($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
+        $this->brand = $var;
+
+        return $this;
+    }
+
+    /**
      *Количество бумаг в лоте.
      *
      * Generated from protobuf field <code>int32 lot = 201;</code>
@@ -964,35 +1026,41 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 221;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 221 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getKlong()
     {
+        @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
         return $this->klong;
     }
 
     public function hasKlong()
     {
+        @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
         return isset($this->klong);
     }
 
     public function clearKlong()
     {
+        @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
         unset($this->klong);
     }
 
     /**
-     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+     *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 221;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 221 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setKlong($var)
     {
+        @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->klong = $var;
 
@@ -1000,35 +1068,41 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 222;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 222 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getKshort()
     {
+        @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
         return $this->kshort;
     }
 
     public function hasKshort()
     {
+        @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
         return isset($this->kshort);
     }
 
     public function clearKshort()
     {
+        @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
         unset($this->kshort);
     }
 
     /**
-     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+     *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 222;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 222 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setKshort($var)
     {
+        @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->kshort = $var;
 
@@ -1036,7 +1110,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 223;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -1057,7 +1131,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 223;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -1072,7 +1146,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи для КСУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 224;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -1093,7 +1167,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи для КСУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 224;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -1108,7 +1182,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 225;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -1129,7 +1203,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+     *Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 225;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -1144,7 +1218,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи для КПУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 226;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -1165,7 +1239,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска начальной маржи для КПУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+     *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 226;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -1247,6 +1321,78 @@ class Option extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->strike_price = $var;
+
+        return $this;
+    }
+
+    /**
+     *Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 290;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getDlongClient()
+    {
+        return $this->dlong_client;
+    }
+
+    public function hasDlongClient()
+    {
+        return isset($this->dlong_client);
+    }
+
+    public function clearDlongClient()
+    {
+        unset($this->dlong_client);
+    }
+
+    /**
+     *Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 290;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setDlongClient($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->dlong_client = $var;
+
+        return $this;
+    }
+
+    /**
+     *Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 291;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getDshortClient()
+    {
+        return $this->dshort_client;
+    }
+
+    public function hasDshortClient()
+    {
+        return isset($this->dshort_client);
+    }
+
+    public function clearDshortClient()
+    {
+        unset($this->dshort_client);
+    }
+
+    /**
+     *Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 291;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setDshortClient($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->dshort_client = $var;
 
         return $this;
     }
@@ -1458,7 +1604,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Возможность покупки/продажи на ИИС.
+     *Возможность покупки или продажи на ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 402;</code>
      * @return bool
@@ -1469,7 +1615,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Возможность покупки/продажи на ИИС.
+     *Возможность покупки или продажи на ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 402;</code>
      * @param bool $var
@@ -1484,7 +1630,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак внебиржевой ценной бумаги.
+     *Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
      *
      * Generated from protobuf field <code>bool otc_flag = 403;</code>
      * @return bool
@@ -1495,7 +1641,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак внебиржевой ценной бумаги.
+     *Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
      *
      * Generated from protobuf field <code>bool otc_flag = 403;</code>
      * @param bool $var
@@ -1562,7 +1708,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *
      * Generated from protobuf field <code>bool for_qual_investor_flag = 406;</code>
      * @return bool
@@ -1573,7 +1719,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *
      * Generated from protobuf field <code>bool for_qual_investor_flag = 406;</code>
      * @param bool $var
@@ -1588,7 +1734,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным.
+     *Флаг, отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 407;</code>
      * @return bool
@@ -1599,7 +1745,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным.
+     *Флаг, отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 407;</code>
      * @param bool $var
@@ -1640,7 +1786,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Параметр указывает на возможность торговать инструментом через API.
+     *Возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 409;</code>
      * @return bool
@@ -1651,7 +1797,7 @@ class Option extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Параметр указывает на возможность торговать инструментом через API.
+     *Возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 409;</code>
      * @param bool $var

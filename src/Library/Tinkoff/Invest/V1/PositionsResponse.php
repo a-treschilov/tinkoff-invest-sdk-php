@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Список позиций по счёту.
+ *Список позиций по счету.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.PositionsResponse</code>
  */
@@ -34,7 +34,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      */
     private $securities;
     /**
-     *Признак идущей в данный момент выгрузки лимитов.
+     *Признак идущей выгрузки лимитов в данный момент.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      */
@@ -51,6 +51,12 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsOptions options = 6;</code>
      */
     private $options;
+    /**
+     *Идентификатор счёта пользователя.
+     *
+     * Generated from protobuf field <code>string account_id = 15;</code>
+     */
+    protected $account_id = '';
 
     /**
      * Constructor.
@@ -65,11 +71,13 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *     @type array<\Tinkoff\Invest\V1\PositionsSecurities>|\Google\Protobuf\Internal\RepeatedField $securities
      *          Список ценно-бумажных позиций портфеля.
      *     @type bool $limits_loading_in_progress
-     *          Признак идущей в данный момент выгрузки лимитов.
+     *          Признак идущей выгрузки лимитов в данный момент.
      *     @type array<\Tinkoff\Invest\V1\PositionsFutures>|\Google\Protobuf\Internal\RepeatedField $futures
      *          Список фьючерсов портфеля.
      *     @type array<\Tinkoff\Invest\V1\PositionsOptions>|\Google\Protobuf\Internal\RepeatedField $options
      *          Список опционов портфеля.
+     *     @type string $account_id
+     *          Идентификатор счёта пользователя.
      * }
      */
     public function __construct($data = NULL) {
@@ -156,7 +164,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак идущей в данный момент выгрузки лимитов.
+     *Признак идущей выгрузки лимитов в данный момент.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      * @return bool
@@ -167,7 +175,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак идущей в данный момент выгрузки лимитов.
+     *Признак идущей выгрузки лимитов в данный момент.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      * @param bool $var
@@ -229,6 +237,32 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsOptions::class);
         $this->options = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор счёта пользователя.
+     *
+     * Generated from protobuf field <code>string account_id = 15;</code>
+     * @return string
+     */
+    public function getAccountId()
+    {
+        return $this->account_id;
+    }
+
+    /**
+     *Идентификатор счёта пользователя.
+     *
+     * Generated from protobuf field <code>string account_id = 15;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccountId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account_id = $var;
 
         return $this;
     }

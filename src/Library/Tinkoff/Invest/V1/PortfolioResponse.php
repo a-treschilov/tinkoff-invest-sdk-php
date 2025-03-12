@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Текущий портфель по счёту.
+ *Текущий портфель по счету.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.PortfolioResponse</code>
  */
@@ -46,7 +46,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     protected $total_amount_futures = null;
     /**
-     *Текущая относительная доходность портфеля, в %.
+     *Текущая относительная доходность портфеля в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
      */
@@ -58,7 +58,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     private $positions;
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 8;</code>
      */
@@ -87,6 +87,18 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.VirtualPortfolioPosition virtual_positions = 12;</code>
      */
     private $virtual_positions;
+    /**
+     * Рассчитанная доходность портфеля за день в рублях.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 15;</code>
+     */
+    protected $daily_yield = null;
+    /**
+     *Относительная доходность в день в %.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation daily_yield_relative = 16;</code>
+     */
+    protected $daily_yield_relative = null;
 
     /**
      * Constructor.
@@ -105,11 +117,11 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_futures
      *          Общая стоимость фьючерсов в портфеле.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
-     *          Текущая относительная доходность портфеля, в %.
+     *          Текущая относительная доходность портфеля в %.
      *     @type array<\Tinkoff\Invest\V1\PortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $positions
      *          Список позиций портфеля.
      *     @type string $account_id
-     *          Идентификатор счёта пользователя.
+     *          Идентификатор счета пользователя.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_options
      *          Общая стоимость опционов в портфеле.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_sp
@@ -118,6 +130,10 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *          Общая стоимость портфеля.
      *     @type array<\Tinkoff\Invest\V1\VirtualPortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $virtual_positions
      *          Массив виртуальных позиций портфеля.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $daily_yield
+     *           Рассчитанная доходность портфеля за день в рублях.
+     *     @type \Tinkoff\Invest\V1\Quotation $daily_yield_relative
+     *          Относительная доходность в день в %.
      * }
      */
     public function __construct($data = NULL) {
@@ -306,7 +322,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая относительная доходность портфеля, в %.
+     *Текущая относительная доходность портфеля в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -327,7 +343,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая относительная доходность портфеля, в %.
+     *Текущая относительная доходность портфеля в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -368,7 +384,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 8;</code>
      * @return string
@@ -379,7 +395,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 8;</code>
      * @param string $var
@@ -523,6 +539,78 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\VirtualPortfolioPosition::class);
         $this->virtual_positions = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Рассчитанная доходность портфеля за день в рублях.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 15;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getDailyYield()
+    {
+        return $this->daily_yield;
+    }
+
+    public function hasDailyYield()
+    {
+        return isset($this->daily_yield);
+    }
+
+    public function clearDailyYield()
+    {
+        unset($this->daily_yield);
+    }
+
+    /**
+     * Рассчитанная доходность портфеля за день в рублях.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 15;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setDailyYield($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->daily_yield = $var;
+
+        return $this;
+    }
+
+    /**
+     *Относительная доходность в день в %.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation daily_yield_relative = 16;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getDailyYieldRelative()
+    {
+        return $this->daily_yield_relative;
+    }
+
+    public function hasDailyYieldRelative()
+    {
+        return isset($this->daily_yield_relative);
+    }
+
+    public function clearDailyYieldRelative()
+    {
+        unset($this->daily_yield_relative);
+    }
+
+    /**
+     *Относительная доходность в день в %.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation daily_yield_relative = 16;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setDailyYieldRelative($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->daily_yield_relative = $var;
 
         return $this;
     }
