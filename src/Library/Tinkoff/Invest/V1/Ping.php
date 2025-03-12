@@ -22,11 +22,17 @@ class Ping extends \Google\Protobuf\Internal\Message
      */
     protected $time = null;
     /**
-     *Идентификатор соединения
+     *Идентификатор соединения.
      *
      * Generated from protobuf field <code>string stream_id = 2;</code>
      */
     protected $stream_id = '';
+    /**
+     *Время формирования запроса.
+     *
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp ping_request_time = 4;</code>
+     */
+    protected $ping_request_time = null;
 
     /**
      * Constructor.
@@ -37,7 +43,9 @@ class Ping extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $time
      *          Время проверки.
      *     @type string $stream_id
-     *          Идентификатор соединения
+     *          Идентификатор соединения.
+     *     @type \Google\Protobuf\Timestamp $ping_request_time
+     *          Время формирования запроса.
      * }
      */
     public function __construct($data = NULL) {
@@ -82,7 +90,7 @@ class Ping extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор соединения
+     *Идентификатор соединения.
      *
      * Generated from protobuf field <code>string stream_id = 2;</code>
      * @return string
@@ -93,7 +101,7 @@ class Ping extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор соединения
+     *Идентификатор соединения.
      *
      * Generated from protobuf field <code>string stream_id = 2;</code>
      * @param string $var
@@ -103,6 +111,42 @@ class Ping extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->stream_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Время формирования запроса.
+     *
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp ping_request_time = 4;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getPingRequestTime()
+    {
+        return $this->ping_request_time;
+    }
+
+    public function hasPingRequestTime()
+    {
+        return isset($this->ping_request_time);
+    }
+
+    public function clearPingRequestTime()
+    {
+        unset($this->ping_request_time);
+    }
+
+    /**
+     *Время формирования запроса.
+     *
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp ping_request_time = 4;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setPingRequestTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->ping_request_time = $var;
 
         return $this;
     }

@@ -58,7 +58,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     protected $basic_asset = '';
     /**
-     *Барьер сохранности (в процентах).
+     *Барьер сохранности в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation safety_barrier = 8;</code>
      */
@@ -70,7 +70,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     protected $maturity_date = null;
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 10;</code>
      */
@@ -115,11 +115,11 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *     @type string $basic_asset
      *          Вид базового актива в зависимости от типа базового актива.
      *     @type \Tinkoff\Invest\V1\Quotation $safety_barrier
-     *          Барьер сохранности (в процентах).
+     *          Барьер сохранности в процентах.
      *     @type \Google\Protobuf\Timestamp $maturity_date
      *          Дата погашения.
      *     @type \Tinkoff\Invest\V1\Quotation $issue_size_plan
-     *          Объявленное количество шт.
+     *          Объявленное количество, шт.
      *     @type \Tinkoff\Invest\V1\Quotation $issue_size
      *          Объем размещения.
      *     @type \Google\Protobuf\Timestamp $placement_date
@@ -326,7 +326,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Барьер сохранности (в процентах).
+     *Барьер сохранности в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation safety_barrier = 8;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -347,7 +347,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Барьер сохранности (в процентах).
+     *Барьер сохранности в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation safety_barrier = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -398,7 +398,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 10;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -419,7 +419,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 10;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

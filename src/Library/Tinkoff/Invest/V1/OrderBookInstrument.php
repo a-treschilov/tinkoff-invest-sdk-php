@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OrderBookInstrument extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @deprecated
@@ -29,11 +29,17 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $depth = 0;
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 3;</code>
      */
     protected $instrument_id = '';
+    /**
+     *Тип стакана. Значение по умолчанию — `ORDERBOOK_TYPE_ALL`, стакан биржевой и дилера.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
+     */
+    protected $order_book_type = 0;
 
     /**
      * Constructor.
@@ -42,11 +48,13 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *     @type int $depth
      *          Глубина стакана.
      *     @type string $instrument_id
-     *          Идентификатор инструмента, принимает значение figi или instrument_uid
+     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *     @type int $order_book_type
+     *          Тип стакана. Значение по умолчанию — `ORDERBOOK_TYPE_ALL`, стакан биржевой и дилера.
      * }
      */
     public function __construct($data = NULL) {
@@ -55,7 +63,7 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
@@ -68,7 +76,7 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
@@ -111,7 +119,7 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 3;</code>
      * @return string
@@ -122,7 +130,7 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 3;</code>
      * @param string $var
@@ -132,6 +140,32 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип стакана. Значение по умолчанию — `ORDERBOOK_TYPE_ALL`, стакан биржевой и дилера.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
+     * @return int
+     */
+    public function getOrderBookType()
+    {
+        return $this->order_book_type;
+    }
+
+    /**
+     *Тип стакана. Значение по умолчанию — `ORDERBOOK_TYPE_ALL`, стакан биржевой и дилера.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOrderBookType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
+        $this->order_book_type = $var;
 
         return $this;
     }

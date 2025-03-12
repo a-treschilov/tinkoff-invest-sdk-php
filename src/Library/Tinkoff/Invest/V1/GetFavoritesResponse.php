@@ -9,18 +9,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *В ответ передаётся список избранных инструментов в качестве массива.
+ *В ответ передается список избранных инструментов в качестве массива.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetFavoritesResponse</code>
  */
 class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив инструментов
+     *Массив инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
      */
     private $favorite_instruments;
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>optional string group_id = 2;</code>
+     */
+    protected $group_id = null;
 
     /**
      * Constructor.
@@ -29,7 +35,9 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<\Tinkoff\Invest\V1\FavoriteInstrument>|\Google\Protobuf\Internal\RepeatedField $favorite_instruments
-     *          Массив инструментов
+     *          Массив инструментов.
+     *     @type string $group_id
+     *          Уникальный идентификатор группы.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +46,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив инструментов
+     *Массив инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +57,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив инструментов
+     *Массив инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
      * @param array<\Tinkoff\Invest\V1\FavoriteInstrument>|\Google\Protobuf\Internal\RepeatedField $var
@@ -59,6 +67,42 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\FavoriteInstrument::class);
         $this->favorite_instruments = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>optional string group_id = 2;</code>
+     * @return string
+     */
+    public function getGroupId()
+    {
+        return isset($this->group_id) ? $this->group_id : '';
+    }
+
+    public function hasGroupId()
+    {
+        return isset($this->group_id);
+    }
+
+    public function clearGroupId()
+    {
+        unset($this->group_id);
+    }
+
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>optional string group_id = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setGroupId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->group_id = $var;
 
         return $this;
     }

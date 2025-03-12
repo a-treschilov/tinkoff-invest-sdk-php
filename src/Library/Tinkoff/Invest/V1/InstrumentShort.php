@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class InstrumentShort extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Isin инструмента.
+     *ISIN инструмента.
      *
      * Generated from protobuf field <code>string isin = 1;</code>
      */
     protected $isin = '';
     /**
-     *Figi инструмента.
+     *FIGI инструмента.
      *
      * Generated from protobuf field <code>string figi = 2;</code>
      */
@@ -70,7 +70,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_kind = 0;
     /**
-     *Параметр указывает на возможность торговать инструментом через API.
+     *Возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 11;</code>
      */
@@ -94,23 +94,29 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      */
     protected $first_1day_candle_date = null;
     /**
-     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *
      * Generated from protobuf field <code>bool for_qual_investor_flag = 28;</code>
      */
     protected $for_qual_investor_flag = false;
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг, отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 29;</code>
      */
     protected $weekend_flag = false;
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 30;</code>
      */
     protected $blocked_tca_flag = false;
+    /**
+     *Количество бумаг в лоте.
+     *
+     * Generated from protobuf field <code>int32 lot = 31;</code>
+     */
+    protected $lot = 0;
 
     /**
      * Constructor.
@@ -119,9 +125,9 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $isin
-     *          Isin инструмента.
+     *          ISIN инструмента.
      *     @type string $figi
-     *          Figi инструмента.
+     *          FIGI инструмента.
      *     @type string $ticker
      *          Ticker инструмента.
      *     @type string $class_code
@@ -137,7 +143,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      *     @type int $instrument_kind
      *          Тип инструмента.
      *     @type bool $api_trade_available_flag
-     *          Параметр указывает на возможность торговать инструментом через API.
+     *          Возможность торговать инструментом через API.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
      *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
@@ -145,11 +151,13 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
      *          Дата первой дневной свечи.
      *     @type bool $for_qual_investor_flag
-     *          Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *          Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *     @type bool $weekend_flag
-     *          Флаг отображающий доступность торговли инструментом по выходным
+     *          Флаг, отображающий доступность торговли инструментом по выходным.
      *     @type bool $blocked_tca_flag
-     *          Флаг заблокированного ТКС
+     *          Флаг заблокированного ТКС.
+     *     @type int $lot
+     *          Количество бумаг в лоте.
      * }
      */
     public function __construct($data = NULL) {
@@ -158,7 +166,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Isin инструмента.
+     *ISIN инструмента.
      *
      * Generated from protobuf field <code>string isin = 1;</code>
      * @return string
@@ -169,7 +177,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Isin инструмента.
+     *ISIN инструмента.
      *
      * Generated from protobuf field <code>string isin = 1;</code>
      * @param string $var
@@ -184,7 +192,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi инструмента.
+     *FIGI инструмента.
      *
      * Generated from protobuf field <code>string figi = 2;</code>
      * @return string
@@ -195,7 +203,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi инструмента.
+     *FIGI инструмента.
      *
      * Generated from protobuf field <code>string figi = 2;</code>
      * @param string $var
@@ -392,7 +400,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Параметр указывает на возможность торговать инструментом через API.
+     *Возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 11;</code>
      * @return bool
@@ -403,7 +411,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Параметр указывает на возможность торговать инструментом через API.
+     *Возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 11;</code>
      * @param bool $var
@@ -516,7 +524,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *
      * Generated from protobuf field <code>bool for_qual_investor_flag = 28;</code>
      * @return bool
@@ -527,7 +535,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *
      * Generated from protobuf field <code>bool for_qual_investor_flag = 28;</code>
      * @param bool $var
@@ -542,7 +550,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг, отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 29;</code>
      * @return bool
@@ -553,7 +561,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным
+     *Флаг, отображающий доступность торговли инструментом по выходным.
      *
      * Generated from protobuf field <code>bool weekend_flag = 29;</code>
      * @param bool $var
@@ -568,7 +576,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 30;</code>
      * @return bool
@@ -579,7 +587,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг заблокированного ТКС
+     *Флаг заблокированного ТКС.
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 30;</code>
      * @param bool $var
@@ -589,6 +597,32 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->blocked_tca_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Количество бумаг в лоте.
+     *
+     * Generated from protobuf field <code>int32 lot = 31;</code>
+     * @return int
+     */
+    public function getLot()
+    {
+        return $this->lot;
+    }
+
+    /**
+     *Количество бумаг в лоте.
+     *
+     * Generated from protobuf field <code>int32 lot = 31;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLot($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->lot = $var;
 
         return $this;
     }

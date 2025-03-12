@@ -32,4 +32,4 @@ submodule-init:
 	git submodule update --init
 
 submodule-update:
-	cd contracts && git fetch && git checkout $(VERSION)
+	cd contracts && git fetch && git checkout $(VERSION) && git pull

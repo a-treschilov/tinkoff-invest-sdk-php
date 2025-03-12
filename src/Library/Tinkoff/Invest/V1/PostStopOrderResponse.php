@@ -16,13 +16,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Уникальный идентификатор стоп-заявки
+     *Уникальный идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      */
     protected $stop_order_id = '';
     /**
-     *Метадата
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате `UID`. Максимальная длина 36 — символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
+     */
+    protected $order_request_id = '';
+    /**
+     *Метадата.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
      */
@@ -35,9 +41,11 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $stop_order_id
-     *          Уникальный идентификатор стоп-заявки
+     *          Уникальный идентификатор стоп-заявки.
+     *     @type string $order_request_id
+     *          Идентификатор ключа идемпотентности, переданный клиентом, в формате `UID`. Максимальная длина 36 — символов.
      *     @type \Tinkoff\Invest\V1\ResponseMetadata $response_metadata
-     *          Метадата
+     *          Метадата.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +54,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор стоп-заявки
+     *Уникальный идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @return string
@@ -57,7 +65,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор стоп-заявки
+     *Уникальный идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @param string $var
@@ -72,7 +80,33 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Метадата
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате `UID`. Максимальная длина 36 — символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
+     * @return string
+     */
+    public function getOrderRequestId()
+    {
+        return $this->order_request_id;
+    }
+
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате `UID`. Максимальная длина 36 — символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setOrderRequestId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->order_request_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Метадата.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
      * @return \Tinkoff\Invest\V1\ResponseMetadata|null
@@ -93,7 +127,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Метадата
+     *Метадата.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
      * @param \Tinkoff\Invest\V1\ResponseMetadata $var

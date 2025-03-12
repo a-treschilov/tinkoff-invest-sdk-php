@@ -32,6 +32,21 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Асинхронный метод выставления заявки.
+     * @param \Tinkoff\Invest\V1\PostOrderAsyncRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function PostOrderAsync(\Tinkoff\Invest\V1\PostOrderAsyncRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OrdersService/PostOrderAsync',
+        $argument,
+        ['\Tinkoff\Invest\V1\PostOrderAsyncResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод отмены биржевой заявки.
      * @param \Tinkoff\Invest\V1\CancelOrderRequest $argument input argument
      * @param array $metadata metadata
@@ -62,7 +77,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка активных заявок по счёту.
+     * Метод получения списка активных заявок по счету.
      * @param \Tinkoff\Invest\V1\GetOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -92,7 +107,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * расчет количества доступных для покупки/продажи лотов
+     * Расчет количества доступных для покупки/продажи лотов.
      * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -107,7 +122,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения предварительной стоимости для лимитной заявки
+     * Метод получения предварительной стоимости для лимитной заявки.
      * @param \Tinkoff\Invest\V1\GetOrderPriceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос доступного для вывода остатка.
+ *Запрос доступного остатка для вывода.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.WithdrawLimitsRequest</code>
  */
 class WithdrawLimitsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -29,7 +29,7 @@ class WithdrawLimitsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта пользователя.
+     *          Идентификатор счета пользователя.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class WithdrawLimitsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -49,7 +49,7 @@ class WithdrawLimitsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта пользователя.
+     *Идентификатор счета пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
