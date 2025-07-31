@@ -2,9 +2,9 @@ VERSION=main
 
 start: docker-compose-up
 
-api-update: submodule-init get-from-proto
+api-init: submodule-init get-from-proto
 
-api-init: submodule-update get-from-proto
+api-update: submodule-update get-from-proto
 
 docker-compose-up:
 	docker-compose up -d --build
@@ -33,3 +33,9 @@ submodule-init:
 
 submodule-update:
 	cd contracts && git fetch && git checkout $(VERSION) && git pull
+
+update-ssl-certificate:
+	openssl s_client -connect invest-public-api.tinkoff.ru:443 -servername invest-public-api.tinkoff.ru -showcerts </dev/null | openssl x509 -outform PEM > etc/tinkoff-ru.pem
+
+check-ssl-certificate:
+	openssl x509 -in /Users/a.treschilov/Projects/tinkoff-invest-sdk-php/etc/tinkoff-ru.pem -text -noout | grep -E "(Subject|Issuer|Not Before|Not After)"
