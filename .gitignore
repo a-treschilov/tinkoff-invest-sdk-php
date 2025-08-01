@@ -2,3 +2,5 @@
 /vendor/
 /logs/*.log
 .vscode/
+/docs/
+.github/
