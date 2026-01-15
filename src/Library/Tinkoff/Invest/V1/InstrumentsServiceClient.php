@@ -21,7 +21,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\TradingSchedulesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\TradingSchedulesResponse>
      */
     public function TradingSchedules(\Tinkoff\Invest\V1\TradingSchedulesRequest $argument,
       $metadata = [], $options = []) {
@@ -36,7 +36,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\BondResponse>
      */
     public function BondBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
       $metadata = [], $options = []) {
@@ -51,7 +51,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\BondsResponse>
      */
     public function Bonds(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
       $metadata = [], $options = []) {
@@ -66,7 +66,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetBondCouponsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetBondCouponsResponse>
      */
     public function GetBondCoupons(\Tinkoff\Invest\V1\GetBondCouponsRequest $argument,
       $metadata = [], $options = []) {
@@ -81,7 +81,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetBondEventsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetBondEventsResponse>
      */
     public function GetBondEvents(\Tinkoff\Invest\V1\GetBondEventsRequest $argument,
       $metadata = [], $options = []) {
@@ -96,7 +96,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CurrencyResponse>
      */
     public function CurrencyBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
       $metadata = [], $options = []) {
@@ -111,7 +111,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CurrenciesResponse>
      */
     public function Currencies(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
       $metadata = [], $options = []) {
@@ -126,7 +126,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\EtfResponse>
      */
     public function EtfBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
       $metadata = [], $options = []) {
@@ -141,7 +141,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\EtfsResponse>
      */
     public function Etfs(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
       $metadata = [], $options = []) {
@@ -156,7 +156,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\FutureResponse>
      */
     public function FutureBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
       $metadata = [], $options = []) {
@@ -171,7 +171,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\FuturesResponse>
      */
     public function Futures(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
       $metadata = [], $options = []) {
@@ -186,7 +186,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\OptionResponse>
      */
     public function OptionBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
       $metadata = [], $options = []) {
@@ -202,7 +202,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\OptionsResponse>
      */
     public function Options(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
       $metadata = [], $options = []) {
@@ -217,7 +217,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\FilterOptionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\OptionsResponse>
      */
     public function OptionsBy(\Tinkoff\Invest\V1\FilterOptionsRequest $argument,
       $metadata = [], $options = []) {
@@ -232,7 +232,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\ShareResponse>
      */
     public function ShareBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
       $metadata = [], $options = []) {
@@ -247,7 +247,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\SharesResponse>
      */
     public function Shares(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
       $metadata = [], $options = []) {
@@ -262,7 +262,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\IndicativesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\IndicativesResponse>
      */
     public function Indicatives(\Tinkoff\Invest\V1\IndicativesRequest $argument,
       $metadata = [], $options = []) {
@@ -277,7 +277,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetAccruedInterestsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetAccruedInterestsResponse>
      */
     public function GetAccruedInterests(\Tinkoff\Invest\V1\GetAccruedInterestsRequest $argument,
       $metadata = [], $options = []) {
@@ -292,7 +292,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetFuturesMarginRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetFuturesMarginResponse>
      */
     public function GetFuturesMargin(\Tinkoff\Invest\V1\GetFuturesMarginRequest $argument,
       $metadata = [], $options = []) {
@@ -307,7 +307,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\InstrumentResponse>
      */
     public function GetInstrumentBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
       $metadata = [], $options = []) {
@@ -322,7 +322,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetDividendsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetDividendsResponse>
      */
     public function GetDividends(\Tinkoff\Invest\V1\GetDividendsRequest $argument,
       $metadata = [], $options = []) {
@@ -337,7 +337,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\AssetRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\AssetResponse>
      */
     public function GetAssetBy(\Tinkoff\Invest\V1\AssetRequest $argument,
       $metadata = [], $options = []) {
@@ -353,7 +353,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\AssetsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\AssetsResponse>
      */
     public function GetAssets(\Tinkoff\Invest\V1\AssetsRequest $argument,
       $metadata = [], $options = []) {
@@ -368,7 +368,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetFavoritesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetFavoritesResponse>
      */
     public function GetFavorites(\Tinkoff\Invest\V1\GetFavoritesRequest $argument,
       $metadata = [], $options = []) {
@@ -383,7 +383,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\EditFavoritesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\EditFavoritesResponse>
      */
     public function EditFavorites(\Tinkoff\Invest\V1\EditFavoritesRequest $argument,
       $metadata = [], $options = []) {
@@ -398,7 +398,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\CreateFavoriteGroupRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CreateFavoriteGroupResponse>
      */
     public function CreateFavoriteGroup(\Tinkoff\Invest\V1\CreateFavoriteGroupRequest $argument,
       $metadata = [], $options = []) {
@@ -413,7 +413,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\DeleteFavoriteGroupRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\DeleteFavoriteGroupResponse>
      */
     public function DeleteFavoriteGroup(\Tinkoff\Invest\V1\DeleteFavoriteGroupRequest $argument,
       $metadata = [], $options = []) {
@@ -428,7 +428,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetFavoriteGroupsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetFavoriteGroupsResponse>
      */
     public function GetFavoriteGroups(\Tinkoff\Invest\V1\GetFavoriteGroupsRequest $argument,
       $metadata = [], $options = []) {
@@ -443,7 +443,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetCountriesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetCountriesResponse>
      */
     public function GetCountries(\Tinkoff\Invest\V1\GetCountriesRequest $argument,
       $metadata = [], $options = []) {
@@ -458,7 +458,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\FindInstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\FindInstrumentResponse>
      */
     public function FindInstrument(\Tinkoff\Invest\V1\FindInstrumentRequest $argument,
       $metadata = [], $options = []) {
@@ -473,7 +473,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetBrandsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetBrandsResponse>
      */
     public function GetBrands(\Tinkoff\Invest\V1\GetBrandsRequest $argument,
       $metadata = [], $options = []) {
@@ -488,7 +488,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetBrandRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\Brand>
      */
     public function GetBrandBy(\Tinkoff\Invest\V1\GetBrandRequest $argument,
       $metadata = [], $options = []) {
@@ -503,7 +503,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetAssetFundamentalsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetAssetFundamentalsResponse>
      */
     public function GetAssetFundamentals(\Tinkoff\Invest\V1\GetAssetFundamentalsRequest $argument,
       $metadata = [], $options = []) {
@@ -518,7 +518,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetAssetReportsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetAssetReportsResponse>
      */
     public function GetAssetReports(\Tinkoff\Invest\V1\GetAssetReportsRequest $argument,
       $metadata = [], $options = []) {
@@ -533,7 +533,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetConsensusForecastsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetConsensusForecastsResponse>
      */
     public function GetConsensusForecasts(\Tinkoff\Invest\V1\GetConsensusForecastsRequest $argument,
       $metadata = [], $options = []) {
@@ -548,7 +548,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetForecastRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetForecastResponse>
      */
     public function GetForecastBy(\Tinkoff\Invest\V1\GetForecastRequest $argument,
       $metadata = [], $options = []) {
@@ -563,13 +563,28 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\RiskRatesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\RiskRatesResponse>
      */
     public function GetRiskRates(\Tinkoff\Invest\V1\RiskRatesRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetRiskRates',
         $argument,
         ['\Tinkoff\Invest\V1\RiskRatesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * GetInsiderDeals —  сделки инсайдеров по инструментам
+     * @param \Tinkoff\Invest\V1\GetInsiderDealsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetInsiderDealsResponse>
+     */
+    public function GetInsiderDeals(\Tinkoff\Invest\V1\GetInsiderDealsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetInsiderDeals',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetInsiderDealsResponse', 'decode'],
         $metadata, $options);
     }
 
