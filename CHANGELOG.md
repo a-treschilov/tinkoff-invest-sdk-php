@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.13 - 2025.09.25
+
+- [feat] Update T-Invest API contracts to v1.40
+- [tech] Point API requests to `invest-public-api.tbank.ru` to follow the T-Bank migration
+- [tech] Use distro gRPC/protobuf tooling in the PHP image and update the protoc plugin path
+
 ## v0.3.12 - 2025.08.31
 
 - [feat] Update T-Invest API to v1.36
