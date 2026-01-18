@@ -6,6 +6,7 @@
 - [tech] Switch contracts repository to new T-Bank Invest API repo at `https://opensource.tbank.ru/invest/invest-contracts`
 - [tech] Update submodule tracking branch from `main` to `master`
 - [feat] Add method GetOperationsByCursor for paginated operations retrieval
+- [tech] Add Agent.md
 
 ## v0.3.13 - 2025.09.25
 
