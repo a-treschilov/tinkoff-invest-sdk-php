@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.3.14 - 2026.01.15
+
+- [feat] Update T-Invest API contracts to v1.44
+- [tech] Switch contracts repository to new T-Bank Invest API repo at `https://opensource.tbank.ru/invest/invest-contracts`
+- [tech] Update submodule tracking branch from `main` to `master`
+- [feat] Add method GetOperationsByCursor for paginated operations retrieval
+
 ## v0.3.13 - 2025.09.25
 
 - [feat] Update T-Invest API contracts to v1.40

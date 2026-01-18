@@ -23,7 +23,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      */
     private $figi;
     /**
-     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *Массив идентификаторов инструмента. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      */
@@ -50,7 +50,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $figi
      *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $instrument_id
-     *          Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *          Массив идентификаторов инструмента. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type int $last_price_type
      *          Тип запрашиваемой последней цены.
      *     @type int $instrument_status
@@ -93,7 +93,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *Массив идентификаторов инструмента. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -104,7 +104,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *Массив идентификаторов инструмента. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var

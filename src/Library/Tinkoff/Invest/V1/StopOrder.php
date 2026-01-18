@@ -117,6 +117,18 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
      */
     protected $exchange_order_id = null;
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -158,6 +170,10 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *          Тип дочерней биржевой заявки для тейкпрофита.
      *     @type string $exchange_order_id
      *          Идентификатор биржевой заявки.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -673,6 +689,58 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->exchange_order_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

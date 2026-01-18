@@ -1,4 +1,4 @@
-VERSION=main
+VERSION=master
 
 start: docker-compose-up
 

@@ -35,7 +35,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $to = null;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
      * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      */
@@ -60,7 +60,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $to
      *          Окончание запрашиваемого периода по UTC.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *     @type int $trade_source
      *          Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      * }
@@ -185,7 +185,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
      * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      * @return string
@@ -206,7 +206,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
      * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      * @param string $var
