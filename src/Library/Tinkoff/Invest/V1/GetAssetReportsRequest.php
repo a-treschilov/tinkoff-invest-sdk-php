@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор инструмента в формате UID.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -41,7 +41,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $instrument_id
-     *          Идентификатор инструмента в формате UID.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type \Google\Protobuf\Timestamp $from
      *          Начало запрашиваемого периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
@@ -54,7 +54,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента в формате UID.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -65,7 +65,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента в формате UID.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

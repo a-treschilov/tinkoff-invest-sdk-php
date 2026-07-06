@@ -8,7 +8,7 @@ This document provides context for AI assistants working with this codebase.
 
 - **Language:** PHP 8.3+
 - **Protocol:** gRPC with SSL/TLS
-- **API Version:** Tinkoff Invest API v1.44
+- **API Version:** Tinkoff Invest API v1.49
 - **Package:** `a.treschilov/tinkoff-invest-api-sdk`
 
 ## Directory Structure
@@ -33,7 +33,7 @@ src/
 
 contracts/                    # Git submodule with .proto files
 examples/                     # Usage examples
-etc/tinkoff-ru.pem           # SSL certificate for API
+etc/tbank.pem                # CA trust bundle for API TLS (Минцифры + public roots)
 ```
 
 ## Architecture Patterns
@@ -113,7 +113,8 @@ make api-init           # Initialize contracts submodule
 make api-update VERSION=v1.44  # Update API contracts
 make get-from-proto     # Regenerate PHP from .proto files
 make code-sniffer       # Run PSR-12 validation
-make update-ssl-certificate  # Update API certificate
+make inspect-ssl-certificate # Inspect the current leaf cert served by the API (does NOT touch etc/tbank.pem)
+make check-ssl-certificate   # Print subject/issuer/validity of every cert in etc/tbank.pem
 ```
 
 ## Adding New Service Methods
@@ -165,7 +166,7 @@ Tests directory exists but needs implementation. When adding tests:
 
 ### Update to new API version
 ```bash
-make api-update VERSION=v1.45
+make api-update VERSION=1.49
 make get-from-proto
 # Then update service wrappers for new methods
 ```
@@ -175,6 +176,13 @@ make get-from-proto
 2. Create `src/Services/NewServiceDecorator.php` extending `BaseDecorator`
 3. Add getter in `TIClient.php` with lazy loading pattern
 4. Add property and initialization in constructor
+
+## Changelog
+
+- **Every SDK change (feature, fix, or tech change) must add an entry to `CHANGELOG.md`.**
+- Add a new `## vX.Y.Z - YYYY.MM.DD` section at the top, above the previous latest version.
+- Bump `"version"` in `composer.json` to match.
+- Use the existing tag style: `[feat]`, `[fix]`, `[tech]`, `[break]`.
 
 ## Notes
 

@@ -415,6 +415,12 @@ class OperationType
      * Generated from protobuf enum <code>OPERATION_TYPE_PRIMARY_ORDER = 69;</code>
      */
     const OPERATION_TYPE_PRIMARY_ORDER = 69;
+    /**
+     *Списание фандинга.
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_FUNDING = 70;</code>
+     */
+    const OPERATION_TYPE_FUNDING = 70;
 
     private static $valueToName = [
         self::OPERATION_TYPE_UNSPECIFIED => 'OPERATION_TYPE_UNSPECIFIED',
@@ -484,6 +490,7 @@ class OperationType
         self::OPERATION_TYPE_OTHER => 'OPERATION_TYPE_OTHER',
         self::OPERATION_TYPE_DFA_REDEMPTION => 'OPERATION_TYPE_DFA_REDEMPTION',
         self::OPERATION_TYPE_PRIMARY_ORDER => 'OPERATION_TYPE_PRIMARY_ORDER',
+        self::OPERATION_TYPE_FUNDING => 'OPERATION_TYPE_FUNDING',
     ];
 
     public static function name($value)

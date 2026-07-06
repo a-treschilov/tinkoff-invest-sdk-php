@@ -7,7 +7,7 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Тип идентификатора инструмента. [Подробнее об идентификации инструментов](./faq_identification/).
+ *Тип идентификатора инструмента. [Подробнее об идентификации инструментов](/invest/intro/intro/faq_identification).
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.InstrumentIdType</code>
  */
@@ -43,6 +43,12 @@ class InstrumentIdType
      * Generated from protobuf enum <code>INSTRUMENT_ID_TYPE_POSITION_UID = 4;</code>
      */
     const INSTRUMENT_ID_TYPE_POSITION_UID = 4;
+    /**
+     *Универсальный тип идентификатора инструмента.
+     *
+     * Generated from protobuf enum <code>INSTRUMENT_ID_TYPE_ID = 5;</code>
+     */
+    const INSTRUMENT_ID_TYPE_ID = 5;
 
     private static $valueToName = [
         self::INSTRUMENT_ID_UNSPECIFIED => 'INSTRUMENT_ID_UNSPECIFIED',
@@ -50,6 +56,7 @@ class InstrumentIdType
         self::INSTRUMENT_ID_TYPE_TICKER => 'INSTRUMENT_ID_TYPE_TICKER',
         self::INSTRUMENT_ID_TYPE_UID => 'INSTRUMENT_ID_TYPE_UID',
         self::INSTRUMENT_ID_TYPE_POSITION_UID => 'INSTRUMENT_ID_TYPE_POSITION_UID',
+        self::INSTRUMENT_ID_TYPE_ID => 'INSTRUMENT_ID_TYPE_ID',
     ];
 
     public static function name($value)

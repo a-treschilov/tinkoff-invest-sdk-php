@@ -29,6 +29,8 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
      *          Проверка активности стрима.
      *     @type \Tinkoff\Invest\V1\SubscriptionResponse $subscription
      *          Ответ на запрос на подписку.
+     *     @type \Tinkoff\Invest\V1\OrderStateStreamResponse\StopOrderState $stop_order_state
+     *          Стоп-ордер.
      * }
      */
     public function __construct($data = NULL) {
@@ -125,6 +127,37 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscriptionResponse::class);
         $this->writeOneof(3, $var);
+
+        return $this;
+    }
+
+    /**
+     *Стоп-ордер.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StopOrderState stop_order_state = 4;</code>
+     * @return \Tinkoff\Invest\V1\OrderStateStreamResponse\StopOrderState|null
+     */
+    public function getStopOrderState()
+    {
+        return $this->readOneof(4);
+    }
+
+    public function hasStopOrderState()
+    {
+        return $this->hasOneof(4);
+    }
+
+    /**
+     *Стоп-ордер.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StopOrderState stop_order_state = 4;</code>
+     * @param \Tinkoff\Invest\V1\OrderStateStreamResponse\StopOrderState $var
+     * @return $this
+     */
+    public function setStopOrderState($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OrderStateStreamResponse\StopOrderState::class);
+        $this->writeOneof(4, $var);
 
         return $this;
     }

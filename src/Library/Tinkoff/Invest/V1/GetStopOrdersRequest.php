@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос получения списка активных стоп-заявок.
+ *Запрос получения списка стоп-заявок.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetStopOrdersRequest</code>
  */

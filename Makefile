@@ -34,8 +34,14 @@ submodule-init:
 submodule-update:
 	cd contracts && git fetch && git checkout $(VERSION) && git pull
 
-update-ssl-certificate:
-	openssl s_client -connect invest-public-api.tinkoff.ru:443 -servername invest-public-api.tinkoff.ru -showcerts </dev/null | openssl x509 -outform PEM > etc/tinkoff-ru.pem
+# etc/tbank.pem is now a CA trust bundle (Минцифры + public roots), not a single pinned
+# leaf — do NOT overwrite it with a single server cert. This target only fetches the current
+# leaf for inspection; review manually before touching etc/tbank.pem.
+inspect-ssl-certificate:
+	openssl s_client -connect invest-public-api.tbank.ru:443 -servername invest-public-api.tbank.ru -showcerts </dev/null | openssl x509 -outform PEM -text -noout | grep -E "(Subject|Issuer|Not Before|Not After)"
 
 check-ssl-certificate:
-	openssl x509 -in /Users/a.treschilov/Projects/tinkoff-invest-sdk-php/etc/tinkoff-ru.pem -text -noout | grep -E "(Subject|Issuer|Not Before|Not After)"
+	awk 'BEGIN{RS="-----END CERTIFICATE-----\n"} /BEGIN CERTIFICATE/{print $$0 "-----END CERTIFICATE-----"}' \
+		/Users/a.treschilov/Projects/tinkoff-invest-sdk-php/etc/tbank.pem \
+		| openssl storeutl -noout -text -certs /dev/stdin \
+		| grep -E "(Subject:|Issuer:|Not Before|Not After)"

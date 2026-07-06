@@ -75,6 +75,12 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool sell_available_flag = 405;</code>
      */
     protected $sell_available_flag = false;
+    /**
+     * Состав индекса.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.IndexInstrument index_composition = 406;</code>
+     */
+    private $index_composition;
 
     /**
      * Constructor.
@@ -102,6 +108,8 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      *           Признак доступности для покупки.
      *     @type bool $sell_available_flag
      *           Признак доступности для продажи.
+     *     @type array<\Tinkoff\Invest\V1\IndexInstrument>|\Google\Protobuf\Internal\RepeatedField $index_composition
+     *           Состав индекса.
      * }
      */
     public function __construct($data = NULL) {
@@ -365,6 +373,32 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->sell_available_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     * Состав индекса.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.IndexInstrument index_composition = 406;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getIndexComposition()
+    {
+        return $this->index_composition;
+    }
+
+    /**
+     * Состав индекса.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.IndexInstrument index_composition = 406;</code>
+     * @param array<\Tinkoff\Invest\V1\IndexInstrument>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setIndexComposition($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\IndexInstrument::class);
+        $this->index_composition = $arr;
 
         return $this;
     }

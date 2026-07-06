@@ -35,6 +35,12 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 page = 4;</code>
      */
     protected $page = 0;
+    /**
+     *Идентификатор задачи формирования брокерского отчета.
+     *
+     * Generated from protobuf field <code>string task_id = 5;</code>
+     */
+    protected $task_id = '';
 
     /**
      * Constructor.
@@ -49,6 +55,8 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      *          Количество страниц с данными отчета, начинается с 0.
      *     @type int $page
      *          Текущая страница, начинается с 0.
+     *     @type string $task_id
+     *          Идентификатор задачи формирования брокерского отчета.
      * }
      */
     public function __construct($data = NULL) {
@@ -152,6 +160,32 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->page = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор задачи формирования брокерского отчета.
+     *
+     * Generated from protobuf field <code>string task_id = 5;</code>
+     * @return string
+     */
+    public function getTaskId()
+    {
+        return $this->task_id;
+    }
+
+    /**
+     *Идентификатор задачи формирования брокерского отчета.
+     *
+     * Generated from protobuf field <code>string task_id = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTaskId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->task_id = $var;
 
         return $this;
     }

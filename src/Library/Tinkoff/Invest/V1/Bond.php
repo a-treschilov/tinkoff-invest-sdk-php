@@ -342,7 +342,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $bond_type = 0;
     /**
-     * Дата погашения облигации.
+     * Дата оферты.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp call_date = 69;</code>
      */
@@ -475,7 +475,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      *     @type int $bond_type
      *           Тип облигации.
      *     @type \Google\Protobuf\Timestamp $call_date
-     *           Дата погашения облигации.
+     *           Дата оферты.
      *     @type \Tinkoff\Invest\V1\Quotation $dlong_client
      *          Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *     @type \Tinkoff\Invest\V1\Quotation $dshort_client
@@ -2074,7 +2074,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата погашения облигации.
+     * Дата оферты.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp call_date = 69;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -2095,7 +2095,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата погашения облигации.
+     * Дата оферты.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp call_date = 69;</code>
      * @param \Google\Protobuf\Timestamp $var

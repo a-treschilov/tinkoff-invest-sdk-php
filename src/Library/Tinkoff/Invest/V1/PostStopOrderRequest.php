@@ -71,7 +71,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $expire_date = null;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -112,6 +112,12 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool confirm_margin_trade = 16;</code>
      */
     protected $confirm_margin_trade = false;
+    /**
+     *Признак необходимости моментальной активации, используется только для трейлинг-стопа.
+     *
+     * Generated from protobuf field <code>optional bool instant_execution = 17;</code>
+     */
+    protected $instant_execution = null;
 
     /**
      * Constructor.
@@ -138,7 +144,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $expire_date
      *          Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type int $exchange_order_type
      *          Тип дочерней биржевой заявки.
      *     @type int $take_profit_type
@@ -151,6 +157,8 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *          Идентификатор запроса выставления поручения для целей идемпотентности в формате `UID`. Максимальная длина — 36 символов.
      *     @type bool $confirm_margin_trade
      *          Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
+     *     @type bool $instant_execution
+     *          Признак необходимости моментальной активации, используется только для трейлинг-стопа.
      * }
      */
     public function __construct($data = NULL) {
@@ -439,7 +447,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -450,7 +458,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 10 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -626,6 +634,42 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->confirm_margin_trade = $var;
+
+        return $this;
+    }
+
+    /**
+     *Признак необходимости моментальной активации, используется только для трейлинг-стопа.
+     *
+     * Generated from protobuf field <code>optional bool instant_execution = 17;</code>
+     * @return bool
+     */
+    public function getInstantExecution()
+    {
+        return isset($this->instant_execution) ? $this->instant_execution : false;
+    }
+
+    public function hasInstantExecution()
+    {
+        return isset($this->instant_execution);
+    }
+
+    public function clearInstantExecution()
+    {
+        unset($this->instant_execution);
+    }
+
+    /**
+     *Признак необходимости моментальной активации, используется только для трейлинг-стопа.
+     *
+     * Generated from protobuf field <code>optional bool instant_execution = 17;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setInstantExecution($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->instant_execution = $var;
 
         return $this;
     }

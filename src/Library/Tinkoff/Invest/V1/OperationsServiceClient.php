@@ -17,7 +17,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * GetOperations — список операций по счету
+     * Deprecated GetOperations — список операций по счету
      * При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata

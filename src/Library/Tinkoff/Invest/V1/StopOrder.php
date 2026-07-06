@@ -129,6 +129,12 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string class_code = 19;</code>
      */
     protected $class_code = '';
+    /**
+     *Признак необходимости моментальной активации, используется только для трейлинг-стопа.
+     *
+     * Generated from protobuf field <code>bool instant_execution = 20;</code>
+     */
+    protected $instant_execution = false;
 
     /**
      * Constructor.
@@ -174,6 +180,8 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *          Тикер инструмента.
      *     @type string $class_code
      *          Класс-код (секция торгов).
+     *     @type bool $instant_execution
+     *          Признак необходимости моментальной активации, используется только для трейлинг-стопа.
      * }
      */
     public function __construct($data = NULL) {
@@ -741,6 +749,32 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->class_code = $var;
+
+        return $this;
+    }
+
+    /**
+     *Признак необходимости моментальной активации, используется только для трейлинг-стопа.
+     *
+     * Generated from protobuf field <code>bool instant_execution = 20;</code>
+     * @return bool
+     */
+    public function getInstantExecution()
+    {
+        return $this->instant_execution;
+    }
+
+    /**
+     *Признак необходимости моментальной активации, используется только для трейлинг-стопа.
+     *
+     * Generated from protobuf field <code>bool instant_execution = 20;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setInstantExecution($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->instant_execution = $var;
 
         return $this;
     }

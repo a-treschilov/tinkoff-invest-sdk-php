@@ -128,4 +128,20 @@ class UsersServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * GetAccountValues — дополнительные показатели счетов
+     * Метод предназначен для получения дополнительных показателей счетов
+     * @param \Tinkoff\Invest\V1\GetAccountValuesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetAccountValuesResponse>
+     */
+    public function GetAccountValues(\Tinkoff\Invest\V1\GetAccountValuesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.UsersService/GetAccountValues',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetAccountValuesResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

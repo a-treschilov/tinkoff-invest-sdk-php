@@ -35,7 +35,7 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $to = null;
     /**
-     *Идентификатор инструмента — `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -54,7 +54,7 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $to
      *          Окончание запрашиваемого периода по UTC.
      *     @type string $instrument_id
-     *          Идентификатор инструмента — `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      * }
      */
     public function __construct($data = NULL) {
@@ -165,7 +165,7 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента — `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -176,7 +176,7 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента — `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
