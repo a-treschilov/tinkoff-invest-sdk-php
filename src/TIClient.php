@@ -14,7 +14,7 @@ use JetBrains\PhpStorm\ArrayShape;
 class TIClient
 {
     private const INKOFF_INVEST_API2_HOST = 'invest-public-api.tbank.ru';
-    private const CERT_FILE = __DIR__ . '/../etc/tinkoff-ru.pem';
+    private const CERT_FILE = __DIR__ . '/../etc/tbank.pem';
 
     public const SPECIAL_OPTIONS = ['x-app-name' => 'a-treschilov.tinkoff-invest-sdk-php'];
 
@@ -52,7 +52,7 @@ class TIClient
         return [
             'credentials' => ChannelCredentials::createSsl($this->cert),
             'grpc.enable_http_proxy' => 0,
-            'grpc.ssl_target_name_override' => 'invest-public-api.tinkoff.ru',
+            'grpc.ssl_target_name_override' => 'invest-public-api.tbank.ru',
             'update_metadata' => function ($metaData) {
                 $metaData['authorization'] = ['Bearer ' . $this->token];
                 return $metaData;

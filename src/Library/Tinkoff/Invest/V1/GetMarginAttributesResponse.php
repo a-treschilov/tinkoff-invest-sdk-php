@@ -51,6 +51,12 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue corrected_margin = 6;</code>
      */
     protected $corrected_margin = null;
+    /**
+     * Размер гарантийного обеспечения, заблокированного под фьючерсы.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue guarantee_for_futures = 7;</code>
+     */
+    protected $guarantee_for_futures = null;
 
     /**
      * Constructor.
@@ -70,6 +76,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      *           Объем недостающих средств. Разница между стартовой маржой и ликвидной стоимости портфеля.
      *     @type \Tinkoff\Invest\V1\MoneyValue $corrected_margin
      *           Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учeтом активных заявок на покупку позиций лонг или продажу позиций шорт.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $guarantee_for_futures
+     *           Размер гарантийного обеспечения, заблокированного под фьючерсы.
      * }
      */
     public function __construct($data = NULL) {
@@ -289,6 +297,42 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->corrected_margin = $var;
+
+        return $this;
+    }
+
+    /**
+     * Размер гарантийного обеспечения, заблокированного под фьючерсы.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue guarantee_for_futures = 7;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getGuaranteeForFutures()
+    {
+        return $this->guarantee_for_futures;
+    }
+
+    public function hasGuaranteeForFutures()
+    {
+        return isset($this->guarantee_for_futures);
+    }
+
+    public function clearGuaranteeForFutures()
+    {
+        unset($this->guarantee_for_futures);
+    }
+
+    /**
+     * Размер гарантийного обеспечения, заблокированного под фьючерсы.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue guarantee_for_futures = 7;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setGuaranteeForFutures($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->guarantee_for_futures = $var;
 
         return $this;
     }

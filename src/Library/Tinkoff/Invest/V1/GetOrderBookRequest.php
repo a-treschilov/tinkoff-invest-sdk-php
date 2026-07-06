@@ -29,7 +29,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
      */
     protected $depth = 0;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 3;</code>
      */
@@ -46,7 +46,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
      *     @type int $depth
      *          Глубина стакана.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      * }
      */
     public function __construct($data = NULL) {
@@ -123,7 +123,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 3;</code>
      * @return string
@@ -144,7 +144,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 3;</code>
      * @param string $var

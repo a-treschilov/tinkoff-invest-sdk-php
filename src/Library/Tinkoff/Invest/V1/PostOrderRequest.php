@@ -59,7 +59,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $order_id = '';
     /**
-     *Идентификатор инструмента, принимает значения Figi или Instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 8;</code>
      */
@@ -104,7 +104,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
      *     @type string $order_id
      *          Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
      *     @type string $instrument_id
-     *          Идентификатор инструмента, принимает значения Figi или Instrument_uid.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type int $time_in_force
      *          Алгоритм исполнения поручения, применяется только к лимитной заявке.
      *     @type int $price_type
@@ -327,7 +327,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значения Figi или Instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 8;</code>
      * @return string
@@ -338,7 +338,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значения Figi или Instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 8;</code>
      * @param string $var

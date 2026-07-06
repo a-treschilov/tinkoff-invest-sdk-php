@@ -22,6 +22,12 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $account_id = '';
     /**
+     *Тип идентификатора заявки.
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 5;</code>
+     */
+    protected $order_id_type = null;
+    /**
      *Идентификатор заявки на бирже.
      *
      * Generated from protobuf field <code>string order_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -66,6 +72,8 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $account_id
      *          Номер счета.
+     *     @type int $order_id_type
+     *          Тип идентификатора заявки.
      *     @type string $order_id
      *          Идентификатор заявки на бирже.
      *     @type string $idempotency_key
@@ -107,6 +115,42 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->account_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип идентификатора заявки.
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 5;</code>
+     * @return int
+     */
+    public function getOrderIdType()
+    {
+        return isset($this->order_id_type) ? $this->order_id_type : 0;
+    }
+
+    public function hasOrderIdType()
+    {
+        return isset($this->order_id_type);
+    }
+
+    public function clearOrderIdType()
+    {
+        unset($this->order_id_type);
+    }
+
+    /**
+     *Тип идентификатора заявки.
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOrderIdType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderIdType::class);
+        $this->order_id_type = $var;
 
         return $this;
     }

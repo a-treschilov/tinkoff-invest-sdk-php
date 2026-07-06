@@ -258,6 +258,36 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * DfaBy — получить цифровой актив по его идентификатору
+     * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\DfaResponse>
+     */
+    public function DfaBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/DfaBy',
+        $argument,
+        ['\Tinkoff\Invest\V1\DfaResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Dfas — список цифровых активов
+     * @param \Tinkoff\Invest\V1\DfasRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\DfasResponse>
+     */
+    public function Dfas(\Tinkoff\Invest\V1\DfasRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/Dfas',
+        $argument,
+        ['\Tinkoff\Invest\V1\DfasResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Indicatives — индикативные инструменты — индексы, товары и другие
      * @param \Tinkoff\Invest\V1\IndicativesRequest $argument input argument
      * @param array $metadata metadata
@@ -585,6 +615,51 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetInsiderDeals',
         $argument,
         ['\Tinkoff\Invest\V1\GetInsiderDealsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * StructuredNoteBy — получить структурную ноту по ее идентификатору
+     * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\StructuredNoteResponse>
+     */
+    public function StructuredNoteBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/StructuredNoteBy',
+        $argument,
+        ['\Tinkoff\Invest\V1\StructuredNoteResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * StructuredNotes — список структурных нот
+     * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\StructuredNotesResponse>
+     */
+    public function StructuredNotes(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/StructuredNotes',
+        $argument,
+        ['\Tinkoff\Invest\V1\StructuredNotesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * News — получение актуальных новостей
+     * @param \Tinkoff\Invest\V1\NewsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\NewsResponse>
+     */
+    public function News(\Tinkoff\Invest\V1\NewsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/News',
+        $argument,
+        ['\Tinkoff\Invest\V1\NewsResponse', 'decode'],
         $metadata, $options);
     }
 

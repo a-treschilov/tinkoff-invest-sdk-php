@@ -41,7 +41,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      */
@@ -74,7 +74,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *     @type int $interval
      *          Интервал запрошенных свечей.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type int $candle_source_type
      *          Тип источника свечи.
      *     @type int $limit
@@ -227,7 +227,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      * @return string
@@ -248,7 +248,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      * @param string $var

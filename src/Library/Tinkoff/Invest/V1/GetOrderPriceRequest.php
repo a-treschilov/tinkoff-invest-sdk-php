@@ -22,7 +22,7 @@ class GetOrderPriceRequest extends \Google\Protobuf\Internal\Message
      */
     protected $account_id = '';
     /**
-     *Идентификатор инструмента, принимает значения Figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      */
@@ -55,7 +55,7 @@ class GetOrderPriceRequest extends \Google\Protobuf\Internal\Message
      *     @type string $account_id
      *          Номер счета
      *     @type string $instrument_id
-     *          Идентификатор инструмента, принимает значения Figi или instrument_uid
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type \Tinkoff\Invest\V1\Quotation $price
      *          Цена инструмента
      *     @type int $direction
@@ -96,7 +96,7 @@ class GetOrderPriceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значения Figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      * @return string
@@ -107,7 +107,7 @@ class GetOrderPriceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значения Figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      * @param string $var

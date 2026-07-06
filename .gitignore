@@ -2,3 +2,6 @@
 /vendor/
 /logs/*.log
 .vscode/
+/docs/
+.github/
+**/.DS_Store

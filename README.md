@@ -132,7 +132,7 @@ try {
   - &#10004; GetWithdrawLimits
   - &#10006; GetBrokerReport
   - &#10006; GetDividendsForeignIssuer
-  - &#10006; GetOperationsByCursor
+  - &#10004; GetOperationsByCursor
 - [OperationsStream](https://russianinvestments.github.io/investAPI/operations/)
   - &#10006; PortfolioStream
   - &#10006; PositionsStream

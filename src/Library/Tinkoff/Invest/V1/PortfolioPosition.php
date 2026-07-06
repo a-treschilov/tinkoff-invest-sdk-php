@@ -125,6 +125,18 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string ticker = 32;</code>
      */
     protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     */
+    protected $class_code = '';
+    /**
+     *Вариационная маржа (расчетная).
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MoneyValue var_margin_settled = 34;</code>
+     */
+    protected $var_margin_settled = null;
 
     /**
      * Constructor.
@@ -168,6 +180,10 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *           Рассчитанная доходность портфеля за день.
      *     @type string $ticker
      *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
+     *     @type \Tinkoff\Invest\V1\MoneyValue $var_margin_settled
+     *          Вариационная маржа (расчетная).
      * }
      */
     public function __construct($data = NULL) {
@@ -771,6 +787,68 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
+
+        return $this;
+    }
+
+    /**
+     *Вариационная маржа (расчетная).
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MoneyValue var_margin_settled = 34;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getVarMarginSettled()
+    {
+        return $this->var_margin_settled;
+    }
+
+    public function hasVarMarginSettled()
+    {
+        return isset($this->var_margin_settled);
+    }
+
+    public function clearVarMarginSettled()
+    {
+        unset($this->var_margin_settled);
+    }
+
+    /**
+     *Вариационная маржа (расчетная).
+     *
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MoneyValue var_margin_settled = 34;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setVarMarginSettled($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->var_margin_settled = $var;
 
         return $this;
     }

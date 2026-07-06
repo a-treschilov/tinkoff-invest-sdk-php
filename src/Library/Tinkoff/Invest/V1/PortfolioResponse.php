@@ -99,6 +99,12 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation daily_yield_relative = 16;</code>
      */
     protected $daily_yield_relative = null;
+    /**
+     *Общая стоимость смарт-активов в портфеле в рублях.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_dfa = 17;</code>
+     */
+    protected $total_amount_dfa = null;
 
     /**
      * Constructor.
@@ -134,6 +140,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *           Рассчитанная доходность портфеля за день в рублях.
      *     @type \Tinkoff\Invest\V1\Quotation $daily_yield_relative
      *          Относительная доходность в день в %.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_dfa
+     *          Общая стоимость смарт-активов в портфеле в рублях.
      * }
      */
     public function __construct($data = NULL) {
@@ -611,6 +619,42 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->daily_yield_relative = $var;
+
+        return $this;
+    }
+
+    /**
+     *Общая стоимость смарт-активов в портфеле в рублях.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_dfa = 17;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getTotalAmountDfa()
+    {
+        return $this->total_amount_dfa;
+    }
+
+    public function hasTotalAmountDfa()
+    {
+        return isset($this->total_amount_dfa);
+    }
+
+    public function clearTotalAmountDfa()
+    {
+        unset($this->total_amount_dfa);
+    }
+
+    /**
+     *Общая стоимость смарт-активов в портфеле в рублях.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_dfa = 17;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setTotalAmountDfa($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->total_amount_dfa = $var;
 
         return $this;
     }

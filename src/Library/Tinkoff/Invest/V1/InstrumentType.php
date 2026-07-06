@@ -77,6 +77,12 @@ class InstrumentType
      * Generated from protobuf enum <code>INSTRUMENT_TYPE_COMMODITY = 10;</code>
      */
     const INSTRUMENT_TYPE_COMMODITY = 10;
+    /**
+     *Цифровой актив.
+     *
+     * Generated from protobuf enum <code>INSTRUMENT_TYPE_DFA = 11;</code>
+     */
+    const INSTRUMENT_TYPE_DFA = 11;
 
     private static $valueToName = [
         self::INSTRUMENT_TYPE_UNSPECIFIED => 'INSTRUMENT_TYPE_UNSPECIFIED',
@@ -90,6 +96,7 @@ class InstrumentType
         self::INSTRUMENT_TYPE_CLEARING_CERTIFICATE => 'INSTRUMENT_TYPE_CLEARING_CERTIFICATE',
         self::INSTRUMENT_TYPE_INDEX => 'INSTRUMENT_TYPE_INDEX',
         self::INSTRUMENT_TYPE_COMMODITY => 'INSTRUMENT_TYPE_COMMODITY',
+        self::INSTRUMENT_TYPE_DFA => 'INSTRUMENT_TYPE_DFA',
     ];
 
     public static function name($value)

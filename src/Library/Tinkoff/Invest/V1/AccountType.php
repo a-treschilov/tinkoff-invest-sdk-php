@@ -43,6 +43,24 @@ class AccountType
      * Generated from protobuf enum <code>ACCOUNT_TYPE_INVEST_FUND = 4;</code>
      */
     const ACCOUNT_TYPE_INVEST_FUND = 4;
+    /**
+     *Дебетовый карточный счeт.
+     *
+     * Generated from protobuf enum <code>ACCOUNT_TYPE_DEBIT = 5;</code>
+     */
+    const ACCOUNT_TYPE_DEBIT = 5;
+    /**
+     *Накопительный счeт.
+     *
+     * Generated from protobuf enum <code>ACCOUNT_TYPE_SAVING = 6;</code>
+     */
+    const ACCOUNT_TYPE_SAVING = 6;
+    /**
+     *Смарт-счет.
+     *
+     * Generated from protobuf enum <code>ACCOUNT_TYPE_DFA = 7;</code>
+     */
+    const ACCOUNT_TYPE_DFA = 7;
 
     private static $valueToName = [
         self::ACCOUNT_TYPE_UNSPECIFIED => 'ACCOUNT_TYPE_UNSPECIFIED',
@@ -50,6 +68,9 @@ class AccountType
         self::ACCOUNT_TYPE_TINKOFF_IIS => 'ACCOUNT_TYPE_TINKOFF_IIS',
         self::ACCOUNT_TYPE_INVEST_BOX => 'ACCOUNT_TYPE_INVEST_BOX',
         self::ACCOUNT_TYPE_INVEST_FUND => 'ACCOUNT_TYPE_INVEST_FUND',
+        self::ACCOUNT_TYPE_DEBIT => 'ACCOUNT_TYPE_DEBIT',
+        self::ACCOUNT_TYPE_SAVING => 'ACCOUNT_TYPE_SAVING',
+        self::ACCOUNT_TYPE_DFA => 'ACCOUNT_TYPE_DFA',
     ];
 
     public static function name($value)

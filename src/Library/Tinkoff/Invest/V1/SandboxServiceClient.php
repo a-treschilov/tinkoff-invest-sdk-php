@@ -153,6 +153,21 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * GetSandboxOrderPrice — получить предварительную стоимость для лимитной заявки
+     * @param \Tinkoff\Invest\V1\GetOrderPriceRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetOrderPriceResponse>
+     */
+    public function GetSandboxOrderPrice(\Tinkoff\Invest\V1\GetOrderPriceRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOrderPrice',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetOrderPriceResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * GetSandboxPositions — список позиций по счету
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata
@@ -256,6 +271,51 @@ class SandboxServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxMaxLots',
         $argument,
         ['\Tinkoff\Invest\V1\GetMaxLotsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * PostSandboxStopOrder — выставить стоп-заявку
+     * @param \Tinkoff\Invest\V1\PostStopOrderRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostStopOrderResponse>
+     */
+    public function PostSandboxStopOrder(\Tinkoff\Invest\V1\PostStopOrderRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/PostSandboxStopOrder',
+        $argument,
+        ['\Tinkoff\Invest\V1\PostStopOrderResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * GetSandboxStopOrders — получить список активных стоп-заявок по счету
+     * @param \Tinkoff\Invest\V1\GetStopOrdersRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetStopOrdersResponse>
+     */
+    public function GetSandboxStopOrders(\Tinkoff\Invest\V1\GetStopOrdersRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxStopOrders',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetStopOrdersResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * CancelSandboxStopOrder — отменить стоп-заявку
+     * @param \Tinkoff\Invest\V1\CancelStopOrderRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CancelStopOrderResponse>
+     */
+    public function CancelSandboxStopOrder(\Tinkoff\Invest\V1\CancelStopOrderRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/CancelSandboxStopOrder',
+        $argument,
+        ['\Tinkoff\Invest\V1\CancelStopOrderResponse', 'decode'],
         $metadata, $options);
     }
 

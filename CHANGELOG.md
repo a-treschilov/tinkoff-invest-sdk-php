@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.3.15 - 2026.07.06
+
+- [feat] Update T-Invest API contracts to v1.49
+- [fix] Trust the Минцифры (Russian Trusted Root CA) and public CA chains instead of pinning a single leaf certificate, fixing `CERTIFICATE_VERIFY_FAILED: self signed certificate in certificate chain` after T-Bank rotated the server certificate
+- [fix] Set `grpc.ssl_target_name_override` to `invest-public-api.tbank.ru` to match the TLS identity actually served on that host
+- [tech] Rename `etc/tinkoff-ru.pem` to `etc/tbank.pem` (Tinkoff brand retired); `make update-ssl-certificate` replaced by `make inspect-ssl-certificate` (leaf-only, read-only) since the pem is now a CA bundle, not a single pinned cert
+
+## v0.3.14 - 2026.01.15
+
+- [feat] Update T-Invest API contracts to v1.44
+- [tech] Switch contracts repository to new T-Bank Invest API repo at `https://opensource.tbank.ru/invest/invest-contracts`
+- [tech] Update submodule tracking branch from `main` to `master`
+- [feat] Add method GetOperationsByCursor for paginated operations retrieval
+- [tech] Add Agent.md
+
 ## v0.3.13 - 2025.09.25
 
 - [feat] Update T-Invest API contracts to v1.40

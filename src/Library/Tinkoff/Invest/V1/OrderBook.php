@@ -75,6 +75,18 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
      */
     protected $order_book_type = 0;
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -102,6 +114,10 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *          UID инструмента.
      *     @type int $order_book_type
      *          Тип стакана.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -395,6 +411,58 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
         $this->order_book_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

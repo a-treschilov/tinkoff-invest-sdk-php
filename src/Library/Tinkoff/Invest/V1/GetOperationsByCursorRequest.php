@@ -22,7 +22,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     protected $account_id = '';
     /**
-     *Идентификатор инструмента — FIGI или UID инструмента.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      */
@@ -91,7 +91,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *     @type string $account_id
      *          Идентификатор счета клиента, обязательный параметр. Остальные параметры опциональны.
      *     @type string $instrument_id
-     *          Идентификатор инструмента — FIGI или UID инструмента.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type \Google\Protobuf\Timestamp $from
      *          Начало периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
@@ -144,7 +144,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента — FIGI или UID инструмента.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      * @return string
@@ -165,7 +165,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента — FIGI или UID инструмента.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      * @param string $var
