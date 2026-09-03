@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.3.16 - 2026.09.03
+
+- [fix] `UsersService::getAccounts()` raised a PHP `E_WARNING` (`foreach() argument must be of
+  type array|object, null given`) instead of failing cleanly when the gRPC call returned a `null`
+  response (e.g. an invalid API token). With `display_errors` on, that warning was echoed as raw
+  HTML into the response body ahead of the caller's own JSON error, breaking JSON parsing
+  downstream. Contracts confirmed still current at v1.49 (no newer release available); `src/Library`
+  regenerated from proto with no diff.
+
 ## v0.3.15 - 2026.07.06
 
 - [feat] Update T-Invest API contracts to v1.49

@@ -31,9 +31,11 @@ class UsersService
             ->wait();
 
         $accounts = [];
-        /** @var Account $account */
-        foreach ($response?->getAccounts()->getIterator() as $account) {
-            $accounts[] = $account;
+        if ($response !== null) {
+            /** @var Account $account */
+            foreach ($response->getAccounts()->getIterator() as $account) {
+                $accounts[] = $account;
+            }
         }
 
         return [$accounts, $status];
