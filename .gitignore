@@ -2,6 +2,8 @@
 /vendor/
 /logs/*.log
 .vscode/
-/docs/
-.github/
 **/.DS_Store
+/.claude/*.local.json
+/.claude/review-findings.json
+/.claude/review-applied.json
+/.phpunit.cache/

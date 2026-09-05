@@ -1,5 +1,42 @@
 # Changelog
 
+## v0.3.17 - 2026.09.04
+
+- [fix] `OperationsService::getOperations()`'s `$figi` filter called `$request->setState($figi)`
+  instead of `setFigi($figi)`, so filtering by instrument silently did nothing and clobbered the
+  `$state` filter instead.
+- [fix] `TIClient::getOperations()` was the only service getter without a return type
+  (`UsersServiceDecorator`/`InstrumentsServiceDecorator`/`MarketDataServiceDecorator` all declare
+  theirs); added `: OperationsServiceDecorator` to match.
+- [fix] `make check-ssl-certificate` hardcoded an absolute path outside this checkout
+  (`/Users/a.treschilov/Projects/tinkoff-invest-sdk-php/etc/tbank.pem`, missing
+  `hakkes-workspace/`), so the target failed here; switched to the repo-relative `etc/tbank.pem`.
+- [fix] every `docker exec -it` in the `Makefile` failed outside a real terminal
+  ("stdin is not a terminal"), which meant no target — including the new `make test` — could run
+  in CI or from an agent. Dropped `-it`; none of these commands read stdin or need a TTY.
+- [tech] Renamed `Agent.md` to `AGENTS.md` (git history preserved) with a `CLAUDE.md` symlink,
+  matching the other Hakkes repos; rewrote it as a terse router pointing into a new `docs/` tree
+  (`architecture.md`, `services.md`, `exceptions.md`, `codegen.md`, `workflow.md`, `testing.md`)
+  and corrected drift the old file had accumulated (e.g. `TIExceptionFactory::fromStatus()` →
+  the real `fromGrpcStatus()`, `ExceptionConfig::CODE_OVERRIDES` → `OVERRIDES`, and the
+  `InstrumentsService` method table, which was missing 6 of 14 methods).
+- [tech] Un-ignored `/docs/` and `.github/` so AI-context docs can be committed; added
+  `/.claude/*.local.json` to `.gitignore`.
+- [tech] Added a PHPUnit 12 scaffold: `phpunit.xml`, `make test` / `composer test`, and 19 unit
+  tests covering `TIClientOptions` and `TIExceptionFactory`'s 4-tier error mapping and retry
+  semantics — the first tests in this repo.
+- [tech] Added `.claude/settings.json` with a permission allowlist for this repo's own tooling and
+  a deny rule against editing `src/Library/**` or `etc/tbank.pem`.
+- [tech] Trimmed `.github/instructions/changelogs.instructions.md` to a pointer at `AGENTS.md` /
+  `docs/` so there is one source of truth for AI-facing conventions instead of two drifting copies.
+- [tech] `make code-sniffer` now passes cleanly (previously failed with 60+ pre-existing
+  violations): split `Exceptions/CoreExceptions.php` into one file per class (PSR-12), dropping the
+  now-unneeded `require_once` in `TIExceptionFactory`/`ExceptionMapper` (PSR-4 autoloading covers
+  it); wrapped long lines in `TIExceptionFactory`, `OperationsService`, and the
+  `Operations`/`InstrumentsServiceDecorator` `@method` docblocks; excluded
+  `PSR1.Files.SideEffects` for `examples/`, where a runnable script legitimately mixes a top-level
+  `require` with a declared helper function.
+
 ## v0.3.16 - 2026.09.03
 
 - [fix] `UsersService::getAccounts()` raised a PHP `E_WARNING` (`foreach() argument must be of

@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace ATreschilov\TinkoffInvestApiSdk\Exceptions;
 
-// Import simplified exception classes
-require_once __DIR__ . '/CoreExceptions.php';
-
 /**
  * Simplified factory for creating appropriate TI exceptions
  * Enterprise-focused with reduced complexity
@@ -20,12 +17,12 @@ class TIExceptionFactory
     {
         $message = $status->metadata['message'][0] ?? 'Unknown gRPC error';
         $code = (int)($status->details ?? $status->code);
-        
+
         // Parse additional metadata
-        $requestId = $status->metadata['x-tracking-id'][0] ?? 
-                    $status->metadata['x-request-id'][0] ?? 
+        $requestId = $status->metadata['x-tracking-id'][0] ??
+                    $status->metadata['x-request-id'][0] ??
                     null;
-        
+
         // First try to match by specific T-Bank error codes
         if ($code >= 30000) {
             $exception = self::createTBankSpecificException($code, $message, $context);
@@ -63,25 +60,25 @@ class TIExceptionFactory
      * Create rate limit exception with additional rate limit info
      */
     private static function createRateLimitException(
-        \stdClass $status, 
-        string $message, 
-        int $code, 
+        \stdClass $status,
+        string $message,
+        int $code,
         array $context
     ): RateLimitException {
-        $remaining = isset($status->metadata['x-ratelimit-remaining']) 
-            ? (int)$status->metadata['x-ratelimit-remaining'][0] 
+        $remaining = isset($status->metadata['x-ratelimit-remaining'])
+            ? (int)$status->metadata['x-ratelimit-remaining'][0]
             : null;
-        
-        $resetTime = isset($status->metadata['x-ratelimit-reset']) 
-            ? (int)$status->metadata['x-ratelimit-reset'][0] 
+
+        $resetTime = isset($status->metadata['x-ratelimit-reset'])
+            ? (int)$status->metadata['x-ratelimit-reset'][0]
             : null;
-        
-        $limit = isset($status->metadata['x-ratelimit-limit']) 
-            ? (int)$status->metadata['x-ratelimit-limit'][0] 
+
+        $limit = isset($status->metadata['x-ratelimit-limit'])
+            ? (int)$status->metadata['x-ratelimit-limit'][0]
             : null;
 
         $exception = new RateLimitException($message, $code, null, $context);
-        
+
         return $exception->withRateLimitInfo($remaining, $resetTime, $limit);
     }
 
@@ -89,12 +86,12 @@ class TIExceptionFactory
      * Create exception from HTTP response
      */
     public static function fromHttpResponse(
-        int $statusCode, 
-        array $response, 
+        int $statusCode,
+        array $response,
         array $context = []
     ): TIException {
         $message = $response['message'] ?? $response['error'] ?? 'HTTP error';
-        
+
         return match ($statusCode) {
             400 => new ValidationException($message, $statusCode, null, $context),
             401 => new AuthenticationException($message, $statusCode, null, $context),
@@ -119,8 +116,8 @@ class TIExceptionFactory
      * Create configuration error
      */
     public static function configurationError(
-        string $message, 
-        array $context = [], 
+        string $message,
+        array $context = [],
         ?\Throwable $previous = null
     ): ValidationException {
         return new ValidationException($message, 1000, $previous, $context);
@@ -130,11 +127,13 @@ class TIExceptionFactory
      * Create validation error with specific validation details
      */
     public static function validationError(
-        string $message, 
-        array $validationErrors = [], 
+        string $message,
+        array $validationErrors = [],
         array $context = []
     ): ValidationException {
-        return new ValidationException($message, 3000, null, array_merge($context, ['validation_errors' => $validationErrors]));
+        $mergedContext = array_merge($context, ['validation_errors' => $validationErrors]);
+
+        return new ValidationException($message, 3000, null, $mergedContext);
     }
 
     /**
@@ -154,8 +153,9 @@ class TIExceptionFactory
      */
     public static function isRetryable(TIException $exception): bool
     {
-        return $exception instanceof RateLimitException ||
-               (method_exists($exception, 'getCode') && $exception->getCode() >= 70000 && $exception->getCode() < 90000);
+        $code = $exception->getCode();
+
+        return $exception instanceof RateLimitException || ($code >= 70000 && $code < 90000);
     }
 
     /**

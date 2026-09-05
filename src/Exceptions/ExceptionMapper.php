@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace ATreschilov\TinkoffInvestApiSdk\Exceptions;
 
-// Import the core exception classes
-require_once __DIR__ . '/CoreExceptions.php';
-
 /**
  * Simplified exception mapper for enterprise usage
  * Focuses on essential patterns with reduced complexity

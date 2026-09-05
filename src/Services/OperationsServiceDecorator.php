@@ -11,7 +11,7 @@ use Tinkoff\Invest\V1\WithdrawLimitsResponse;
 
 /**
  * @method PortfolioResponse getPortfolio(string $accountId)
- * @method RepeatedField getOperations(string $accountId, ?\DateTime $from = null, ?\DateTime $to = null, ?int $state = null, ?string $figi = null)
+ * @method RepeatedField getOperations(string $accountId, ?\DateTime $from, ?\DateTime $to, ?int $state, ?string $figi)
  * @method WithdrawLimitsResponse getWithdrawLimits(string $accountId)
  */
 class OperationsServiceDecorator extends BaseDecorator

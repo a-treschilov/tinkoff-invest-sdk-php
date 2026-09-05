@@ -73,7 +73,7 @@ class TIClient
         return $this->userService;
     }
 
-    public function getOperations()
+    public function getOperations(): OperationsServiceDecorator
     {
         if ($this->operationsService === null) {
             $this->operationsService = new OperationsServiceDecorator($this);

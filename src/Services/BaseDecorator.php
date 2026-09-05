@@ -37,25 +37,24 @@ class BaseDecorator
             try {
                 list($response, $status) = call_user_func_array(array($this->service, $method), $parameters);
                 $retryAttempt++;
-                
+
                 if ($status->code === 0) {
                     return $response;
                 }
-                
+
                 // Create exception from gRPC status
                 $context = [
                     'method' => $method,
                     'retry_attempt' => $retryAttempt,
                     'parameters_count' => count($parameters),
                 ];
-                
+
                 $lastException = TIExceptionFactory::fromGrpcStatus($status, $context);
-                
+
                 // If retries are disabled or this is not a retryable exception, throw immediately
                 if (!$this->options->isRateLimitRetry() || !TIExceptionFactory::isRetryable($lastException)) {
                     throw $lastException;
                 }
-                
             } catch (\Throwable $e) {
                 if ($e instanceof TIException) {
                     $lastException = $e;
@@ -68,12 +67,11 @@ class BaseDecorator
                     ];
                     $lastException = TIExceptionFactory::networkError($e, $context);
                 }
-                
+
                 if (!$this->options->isRateLimitRetry() || !TIExceptionFactory::isRetryable($lastException)) {
                     throw $lastException;
                 }
             }
-            
         } while ($retryAttempt < 5 && TIExceptionFactory::isRetryable($lastException));
 
         // If we've exhausted all retries, throw the last exception

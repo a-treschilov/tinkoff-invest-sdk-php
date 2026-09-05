@@ -18,18 +18,18 @@ class ExceptionConfig
         '/Missing parameter:/' => MissingParameterException::class,
         '/is invalid/' => InvalidParameterException::class,
         '/period.*exceed/' => ValidationException::class,
-        
+
         // Trading business logic (critical for trading)
         '/forbidden.*trading|Trading.*forbidden/' => TradingForbiddenException::class,
         '/margin/' => InsufficientMarginException::class,
         '/Account.*closed/' => AccountClosedException::class,
         '/Account.*blocked/' => AccountBlockedException::class,
-        
+
         // Business rules (essential)
         '/qualified.*investor/' => QualifiedInvestorRequiredException::class,
         '/maximum.*amount/' => ValidationException::class,
         '/insufficient.*fund/' => InsufficientFundsException::class,
-        
+
         // Rate limiting (crucial for enterprise)
         '/limit.*exceed|Too many requests/' => RateLimitException::class,
     ];
@@ -41,7 +41,7 @@ class ExceptionConfig
         '30000-39999' => ValidationException::class,    // All validation errors
         '40000-49999' => AuthenticationException::class, // Auth errors
         '50000-59999' => ApiException::class,           // Not found errors
-        '70000-79999' => ApiException::class,           // Internal errors  
+        '70000-79999' => ApiException::class,           // Internal errors
         '80000-89999' => RateLimitException::class,     // Rate limits
         '90000-99999' => BusinessException::class,      // Business logic
     ];

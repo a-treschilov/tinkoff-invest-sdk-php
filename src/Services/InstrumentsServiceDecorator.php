@@ -14,11 +14,13 @@ use Tinkoff\Invest\V1\Instrument;
 use Tinkoff\Invest\V1\Share;
 
 /**
- * @method Instrument getInstrumentBy(int $idType, ?string $classCode, string $id) $idType (1 - figi, 2 - ticker, 3 - Уникальный идентификатор, 0 - значение не определено)
+ * $idType: 1 = figi, 2 = ticker, 3 = instrument UID, 0 = undefined.
+ *
+ * @method Instrument getInstrumentBy(int $idType, ?string $classCode, string $id)
  * @method Currency|null getCurrencyBy(int $idType, ?string $classCode, string $id)
  * @method RepeatedField getCurrencies(?int $instrumentStatus = 1)
  * @method RepeatedField getBonds(?int $instrumentStatus = 1)
- * @method Bond|null getBondBy(int $idType, ?string $classCode, string $id) $idType (1 - figi, 2 - ticker, 3 - Уникальный идентификатор, 0 - значение не определено)
+ * @method Bond|null getBondBy(int $idType, ?string $classCode, string $id)
  * @method RepeatedField getBondCoupons(string $instrumentId, \DateTime $from, \DateTime $to)
  * @method RepeatedField getBondEvents(\DateTime $from, \DateTime $to, string $instrumentId, int $eventType)
  * @method RepeatedField getDividends(string $instrumentId, \DateTime $from, \DateTime $to)

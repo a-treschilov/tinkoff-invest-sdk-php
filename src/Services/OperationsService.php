@@ -62,7 +62,7 @@ class OperationsService
             $request->setState($state);
         }
         if (null !== $figi) {
-            $request->setState($figi);
+            $request->setFigi($figi);
         }
 
         /** @var OperationsResponse $response */
@@ -133,7 +133,8 @@ class OperationsService
         }
 
         /** @var GetOperationsByCursorResponse $response */
-        list($response, $status) = $this->client->GetOperationsByCursor($request, [], TIClient::SPECIAL_OPTIONS)->wait();
+        $call = $this->client->GetOperationsByCursor($request, [], TIClient::SPECIAL_OPTIONS);
+        list($response, $status) = $call->wait();
 
         return [$response, $status];
     }

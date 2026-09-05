@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make test:*)",
+      "Bash(make code-sniffer:*)",
+      "Bash(make composer-install:*)",
+      "Bash(make composer-outdated:*)",
+      "Bash(make inspect-ssl-certificate:*)",
+      "Bash(make check-ssl-certificate:*)",
+      "Bash(docker exec tinkoff_invest_sdk_php:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git status:*)",
+      "Bash(git show:*)",
+      "Bash(git blame:*)",
+      "Bash(git submodule status:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs"
+    ],
+    "deny": [
+      "Edit(./src/Library/**)",
+      "Write(./src/Library/**)",
+      "Edit(./etc/tbank.pem)",
+      "Write(./etc/tbank.pem)"
+    ]
+  }
+}
