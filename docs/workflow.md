@@ -87,7 +87,7 @@ This is invariant 4. Both files move together:
 
 1. `CHANGELOG.md` — add a new section at the **top**, above the previous latest:
    ```markdown
-   ## v0.3.17 - 2026.09.03
+   ## vX.Y.Z - YYYY.MM.DD
 
    - [feat] ...
    - [fix] ...
@@ -106,7 +106,7 @@ The SDK is distributed through **Packagist**, and the Hakkes API pins it exactly
 
 ```json
 // tinkoff_invest_analytics/composer.json
-"a.treschilov/tinkoff-invest-api-sdk": "v0.3.15"
+"a.treschilov/tinkoff-invest-api-sdk": "v0.3.16"
 ```
 
 There is **no `repositories` block** in the consumer — no path repo, no VCS repo. Consequences:

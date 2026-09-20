@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.3.17 - 2026.09.04
+## v0.3.16 - 2026.09.04
 
 - [fix] `OperationsService::getOperations()`'s `$figi` filter called `$request->setState($figi)`
   instead of `setFigi($figi)`, so filtering by instrument silently did nothing and clobbered the
@@ -36,9 +36,12 @@
   `Operations`/`InstrumentsServiceDecorator` `@method` docblocks; excluded
   `PSR1.Files.SideEffects` for `examples/`, where a runnable script legitimately mixes a top-level
   `require` with a declared helper function.
-
-## v0.3.16 - 2026.09.03
-
+- [tech] `images/php/php.ini` no longer re-declares `extension=grpc.so` (the base image already
+  enables it, so this only produced a "Module already loaded" warning) and defaults
+  `grpc.grpc_verbosity`/`grpc.grpc_trace` to quiet. gRPC's native logging runs in every PHP process
+  in the dev container — `phpcs`, `phpunit`, `composer` included — so the previous `debug`/`all`
+  defaults made every command pay a large log dump. Override per invocation with
+  `-e GRPC_VERBOSITY=debug -e GRPC_TRACE=all` when actually debugging a channel.
 - [fix] `UsersService::getAccounts()` raised a PHP `E_WARNING` (`foreach() argument must be of
   type array|object, null given`) instead of failing cleanly when the gRPC call returned a `null`
   response (e.g. an invalid API token). With `display_errors` on, that warning was echoed as raw
