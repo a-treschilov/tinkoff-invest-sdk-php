@@ -8,7 +8,13 @@ use ATreschilov\TinkoffInvestApiSdk\TIClient;
 use Google\Protobuf\Internal\RepeatedField;
 
 /**
- * @method RepeatedField getCandles(\DateTime $from, \DateTime $to, int $interval, ?string $instrumentId)
+ * @method RepeatedField getCandles(
+ *     \DateTime $from,
+ *     \DateTime $to,
+ *     int $interval,
+ *     ?string $instrumentId,
+ *     ?int $candleSourceType = null
+ * )
  * @method RepeatedField getLastPrices(array $instrumentId)
  */
 class MarketDataServiceDecorator extends BaseDecorator

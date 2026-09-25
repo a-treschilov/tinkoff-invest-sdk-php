@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.3.17 - 2026.09.25
+
+- [feature] `MarketDataService::getCandles()` accepts an optional `?int $candleSourceType`
+  (`GetCandlesRequest\CandleSource`), set on the request only when passed — lets consumers ask
+  for exchange-only candles (`CANDLE_SOURCE_EXCHANGE`) instead of the API's default mix. Omitting
+  it leaves the request unchanged. Covered by `tests/Unit/GetCandlesRequestTest.php`.
+
 ## v0.3.16 - 2026.09.04
 
 - [fix] `OperationsService::getOperations()`'s `$figi` filter called `$request->setState($figi)`

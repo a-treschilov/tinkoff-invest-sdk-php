@@ -29,13 +29,15 @@ class MarketDataService
      * @param \DateTime $to Окончание запрашиваемого периода
      * @param int $interval Интервал запрошенных свечей
      * @param string|null $instrumentId Идентификатор инструмента, принимает значение figi или instrument_uid.
+     * @param int|null $candleSourceType Тип источника свечи.
      * @return array
      */
     public function getCandles(
         \DateTime $from,
         \DateTime $to,
         int $interval,
-        ?string $instrumentId
+        ?string $instrumentId,
+        ?int $candleSourceType = null
     ): array {
         $request = new GetCandlesRequest([
             'from' => new Timestamp(['seconds' => $from->getTimestamp()]),
@@ -43,6 +45,10 @@ class MarketDataService
             'interval' => $interval,
             'instrument_id' => $instrumentId
         ]);
+
+        if ($candleSourceType !== null) {
+            $request->setCandleSourceType($candleSourceType);
+        }
 
         /** @var GetCandlesResponse $response */
         list($response, $status) = $this->client->GetCandles($request, [], TIClient::SPECIAL_OPTIONS)
